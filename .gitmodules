@@ -2,3 +2,8 @@
 	path = TDG22012
 	url = https://github.com/Onmi-Engineering/TDG22012.git
 	branch = stagging
+
+[submodule "Onmi-Engineering/TDG22012"]
+	path = Onmi-Engineering/TDG22012
+	url = git@github.com:Onmi-Engineering/TDG22012.git
+	branch = stagging
