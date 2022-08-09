@@ -14,8 +14,7 @@
 
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'sale', 'purchase','crm','purchase_own_documents'],
-
+    'depends': ['base', 'sale', 'purchase','crm'],
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
