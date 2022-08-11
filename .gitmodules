@@ -2,3 +2,7 @@
 	path = TDG22012-turbo
 	url = git@github.com:Onmi-Engineering/TDG22012-turbo.git
 	branch = main
+[submodule "odoo-apps-store"]
+	path = odoo-apps-store
+	url = git@github.com:Onmi-Engineering/odoo-apps-store.git
+	branch = turboplastic
