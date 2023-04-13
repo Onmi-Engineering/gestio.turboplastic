@@ -6,3 +6,8 @@
 	path = odoo-apps-store
 	url = git@github.com:Onmi-Engineering/odoo-apps-store.git
 	branch = turboplastic
+
+[submodule "OCA/l10n-spain"]
+	path = OCA/l10n-spain
+	url = git@github.com:OCA/l10n-spain.git
+	branch = 15.0
