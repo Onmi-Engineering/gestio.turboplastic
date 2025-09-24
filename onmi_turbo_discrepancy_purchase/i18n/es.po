@@ -1,0 +1,220 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* onmi_turbo_discrepancy_purchase
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-24 12:48+0000\n"
+"PO-Revision-Date: 2023-03-24 13:53+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_discrepancy_purchase.onmi_view_negative_discrepancy_purchase_form
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_discrepancy_purchase.onmi_view_positive_discrepancy_purchase_form
+msgid ""
+"<strong>\n"
+"                            Indicate qty on every line.\n"
+"                        </strong>"
+msgstr ""
+"<strong>\n"
+"                            Indique la cantidad discrepada en cada línea.\n"
+"                        </strong>"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_discrepancy_purchase.onmi_view_negative_discrepancy_purchase_form
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_discrepancy_purchase.onmi_view_positive_discrepancy_purchase_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_purchase_order__check_invoices
+msgid "Check invoices"
+msgstr "Revisar facturas"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_discrepancy_purchase.onmi_view_negative_discrepancy_purchase_form
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_discrepancy_purchase.onmi_view_positive_discrepancy_purchase_form
+msgid "Create Discrepancy"
+msgstr "Crear Discrepancia"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_discrepancy_purchase.onmi_purchase_order_form_inherit_discrepancies
+msgid "Create Negative Discrepancy"
+msgstr "Crear Discrepancia Negativa"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_discrepancy_purchase.onmi_purchase_order_form_inherit_discrepancies
+msgid "Create Positive Discrepancy"
+msgstr "Crear Discrepancia Positiva"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_discrepancy_lines_purchase__create_uid
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_neg_discrepancy_purchase__create_uid
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_pos_discrepancy_purchase__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_discrepancy_lines_purchase__create_date
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_neg_discrepancy_purchase__create_date
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_pos_discrepancy_purchase__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_discrepancy_purchase.onmi_purchase_order_form_inherit_discrepancies
+msgid "Discrepancy has been done. Please, you have to check new invoice."
+msgstr ""
+"La discrepancia ha sido realizada. Por favor, revise la nueva factura."
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model:ir.model,name:onmi_turbo_discrepancy_purchase.model_discrepancy_lines_purchase
+msgid "Discrepancy lines Purchase"
+msgstr "Líneas de deiscrepancia"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_discrepancy_lines_purchase__display_name
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_neg_discrepancy_purchase__display_name
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_pos_discrepancy_purchase__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_discrepancy_lines_purchase__id
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_neg_discrepancy_purchase__id
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_pos_discrepancy_purchase__id
+msgid "ID"
+msgstr "Identificación"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model:ir.model,name:onmi_turbo_discrepancy_purchase.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_discrepancy_lines_purchase____last_update
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_neg_discrepancy_purchase____last_update
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_pos_discrepancy_purchase____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_discrepancy_lines_purchase__write_uid
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_neg_discrepancy_purchase__write_uid
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_pos_discrepancy_purchase__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_discrepancy_lines_purchase__write_date
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_neg_discrepancy_purchase__write_date
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_pos_discrepancy_purchase__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_neg_discrepancy_purchase__lines_id
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_pos_discrepancy_purchase__lines_id
+msgid "Lines"
+msgstr "Líneas"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_discrepancy_purchase.turboplastic_purchase_order_kpis_tree_inherit_discrep
+msgid "Negative Discrepancy"
+msgstr "Discrepancia Negativa"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model:ir.actions.act_window,name:onmi_turbo_discrepancy_purchase.onmi_act_neg_discrepancy_purchase
+msgid "Negative Discrepancy Purchase"
+msgstr "Discrepancia Negativa Compra"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_discrepancy_lines_purchase__order_id
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_neg_discrepancy_purchase__order_id
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_neg_discrepancy_purchase__order_ids
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_pos_discrepancy_purchase__order_id
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_pos_discrepancy_purchase__order_ids
+msgid "Order"
+msgstr "Pedido"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_discrepancy_purchase.turboplastic_purchase_order_kpis_tree_inherit_discrep
+msgid "Positive Discrepancy"
+msgstr "Discrepancia Positiva"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model:ir.actions.act_window,name:onmi_turbo_discrepancy_purchase.onmi_act_pos_discrepancy_purchase
+msgid "Positive Discrepancy Purchase"
+msgstr "Discrepancia de compra positiva"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_discrepancy_lines_purchase__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_discrepancy_lines_purchase__purchase_line
+msgid "Purchase Line"
+msgstr "Línea de pedido de compra"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model:ir.model,name:onmi_turbo_discrepancy_purchase.model_purchase_order
+msgid "Purchase Order"
+msgstr "Pedido de compra"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_purchase.field_discrepancy_lines_purchase__qty
+msgid "Qty"
+msgstr "Cantidad"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: code:addons/onmi_turbo_discrepancy_purchase/models/purchase_order.py:0
+#, python-format
+msgid ""
+"There is no invoiceable line. If a product has a control policy based on "
+"received quantity, please make sure that a quantity has been received."
+msgstr ""
+"No hay líneas facturables. Si un producto tiene una política basada en "
+"cantidades recibidas, por favor, asegúrese de que la cantidad ha sido "
+"recibida."
+
+#. module: onmi_turbo_discrepancy_purchase
+#: code:addons/onmi_turbo_discrepancy_purchase/models/neg_discrepancy_purchase.py:0
+#: code:addons/onmi_turbo_discrepancy_purchase/models/pos_discrepancy_purchase.py:0
+#, python-format
+msgid ""
+"There is no invoices created or there are more than one invoice retaled "
+"with purchase/s.\n"
+"Please check it."
+msgstr ""
+"No hay facturas creadas o hay más de una factura relacionada con esta/s "
+"compra/s.\n"
+"Por favor, revíselo."
+
+#. module: onmi_turbo_discrepancy_purchase
+#: code:addons/onmi_turbo_discrepancy_purchase/models/pos_discrepancy_purchase.py:0
+#, python-format
+msgid ""
+"You can process a negative discrepancy with a invoice confirmed, invoice: %s"
+msgstr ""
+"No puede procesar una discrepancia negativa con una factura confirmada, la "
+"factura es: %s"
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model:ir.model,name:onmi_turbo_discrepancy_purchase.model_neg_discrepancy_purchase
+msgid "neg.discrepancy.purchase"
+msgstr ""
+
+#. module: onmi_turbo_discrepancy_purchase
+#: model:ir.model,name:onmi_turbo_discrepancy_purchase.model_pos_discrepancy_purchase
+msgid "pos.discrepancy.purchase"
+msgstr ""

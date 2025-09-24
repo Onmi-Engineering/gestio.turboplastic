@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>        
+        <record id="onmi_view_stock_picking_form_inherit_5" model="ir.ui.view">
+            <field name="name">onmi.view.stock.picking.form.inherit5</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='weighing_ids']/list/field[@name='product_id']" position="after">
+                    <field name="code_led"/>
+                </xpath>
+                <xpath expr="//field[@name='trailer_id']" position="before">
+                    <field name="date_planned" 
+                    />             
+                </xpath>
+            </field>
+        </record>   
+
+    </data>
+</odoo> 

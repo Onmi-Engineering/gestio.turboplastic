@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- region Categoría de modulo -->
+        <record model="ir.module.category" id="onmi_module_category_logistic">
+            <field name="name">Logistic</field>
+            <field name="sequence">1</field>
+        </record>
+        <!-- endregion -->
+
+        <!-- region Grupos asociados al módulo logística -->
+        <record id="group_logistic_employee" model="res.groups">
+            <field name="name">Employee</field>
+            <field name="category_id" ref="onmi_turbo_bascule_and_receptions.onmi_module_category_logistic"/>
+        </record>
+        <record id="group_logistic_administrator" model="res.groups">
+            <field name="name">Administrator</field>
+            <field name="implied_ids" eval="[(4, ref('onmi_turbo_bascule_and_receptions.group_logistic_employee'))]"/>
+            <field name="category_id" ref="onmi_turbo_bascule_and_receptions.onmi_module_category_logistic"/>
+        </record>
+        <!-- endregion -->
+
+        <!-- region Accesos por modelo y grupo -->
+        <!-- region Accesos para LOGISTICA/ADMIN: MODELOS license.plate, carriage.order & trailer -->
+        <record id="license_plate_model_access_right_logistic_admin" model="ir.model.access">
+            <field name="name">license_plate_model_access_logistic_admin</field>
+            <field name="model_id" ref="model_license_plate"/>
+            <field name="group_id" ref="group_logistic_administrator"/>
+            <field name="active">1</field>
+            <field name="perm_read">1</field>
+            <field name="perm_write">1</field>
+            <field name="perm_create">1</field>
+            <field name="perm_unlink">1</field>
+        </record>
+        <record id="trailer_model_access_right_logistic_admin" model="ir.model.access">
+            <field name="name">trailer_model_access_right_logistic_admin</field>
+            <field name="model_id" ref="model_trailer"/>
+            <field name="group_id" ref="group_logistic_administrator"/>
+            <field name="active">1</field>
+            <field name="perm_read">1</field>
+            <field name="perm_write">1</field>
+            <field name="perm_create">1</field>
+            <field name="perm_unlink">1</field>
+        </record>
+        <record id="carriage_order_model_access_right_logistic_admin" model="ir.model.access">
+            <field name="name">carriage_order_model_access_right_logistic_admin</field>
+            <field name="model_id" ref="model_carriage_order"/>
+            <field name="group_id" ref="group_logistic_administrator"/>
+            <field name="active">1</field>
+            <field name="perm_read">1</field>
+            <field name="perm_write">1</field>
+            <field name="perm_create">1</field>
+            <field name="perm_unlink">1</field>
+        </record>
+
+        <!-- endregion -->
+        <!-- region Accesos para LOGISTICA/EMPLEADO: MODELOS license.plate, carriage.order & trailer -->
+        <record id="license_plate_model_access_right_logistic_employee" model="ir.model.access">
+            <field name="name">license_plate_model_access_logistic_employee</field>
+            <field name="model_id" ref="model_license_plate"/>
+            <field name="group_id" ref="group_logistic_employee"/>
+            <field name="active">1</field>
+            <field name="perm_read">1</field>
+            <field name="perm_write">0</field>
+            <field name="perm_create">0</field>
+            <field name="perm_unlink">0</field>
+        </record>
+        <record id="trailer_model_access_right_logistic_employee" model="ir.model.access">
+            <field name="name">trailer_model_access_right_logistic_employee</field>
+            <field name="model_id" ref="model_trailer"/>
+            <field name="group_id" ref="group_logistic_employee"/>
+            <field name="active">1</field>
+            <field name="perm_read">1</field>
+            <field name="perm_write">0</field>
+            <field name="perm_create">0</field>
+            <field name="perm_unlink">0</field>
+        </record>
+        <record id="carriage_order_model_access_right_logistic_employee" model="ir.model.access">
+            <field name="name">carriage_order_model_access_right_logistic_employee</field>
+            <field name="model_id" ref="model_carriage_order"/>
+            <field name="group_id" ref="group_logistic_employee"/>
+            <field name="active">1</field>
+            <field name="perm_read">1</field>
+            <field name="perm_write">1</field>
+            <field name="perm_create">1</field>
+            <field name="perm_unlink">1</field>
+        </record>
+
+        <!-- endregion -->
+        <!--region Accesos para VENTAS: MODELOS  license.plate, carriage.order,weighiing & trailer -->
+        <record id="license_plate_model_access_right_sales" model="ir.model.access">
+            <field name="name">license_plate_model_access_sales</field>
+            <field name="model_id" ref="model_license_plate"/>
+            <field name="group_id" ref="sales_team.group_sale_salesman_all_leads"/>
+            <field name="active">1</field>
+            <field name="perm_read">1</field>
+            <field name="perm_write">0</field>
+            <field name="perm_create">0</field>
+            <field name="perm_unlink">0</field>
+        </record>
+        <record id="trailer_model_access_right_sales" model="ir.model.access">
+            <field name="name">trailer_model_access_right_sales</field>
+            <field name="model_id" ref="model_trailer"/>
+            <field name="group_id" ref="sales_team.group_sale_salesman_all_leads"/>
+            <field name="active">1</field>
+            <field name="perm_read">1</field>
+            <field name="perm_write">0</field>
+            <field name="perm_create">0</field>
+            <field name="perm_unlink">0</field>
+        </record>
+        <record id="carriage_order_model_access_right_sales" model="ir.model.access">
+            <field name="name">carriage_order_model_access_right_sales</field>
+            <field name="model_id" ref="model_carriage_order"/>
+            <field name="group_id" ref="sales_team.group_sale_salesman_all_leads"/>
+            <field name="active">1</field>
+            <field name="perm_read">1</field>
+            <field name="perm_write">1</field>
+            <field name="perm_create">1</field>
+            <field name="perm_unlink">0</field>
+        </record>
+        <record id="weighing_model_access_right_sales" model="ir.model.access">
+            <field name="name">weighing_model_access_right_sales</field>
+            <field name="model_id" ref="model_weighing"/>
+            <field name="group_id" ref="sales_team.group_sale_salesman_all_leads"/>
+            <field name="active">1</field>
+            <field name="perm_read">1</field>
+            <field name="perm_write">1</field>
+            <field name="perm_create">1</field>
+            <field name="perm_unlink">1</field>
+        </record>
+
+        <!--endregion-->
+        <!--region Accesos para COMPRAS: MODELOS  license.plate, carriage.order,weighiing & trailer -->
+        <record id="license_plate_model_access_right_purchase" model="ir.model.access">
+            <field name="name">license_plate_model_access_purchase</field>
+            <field name="model_id" ref="model_license_plate"/>
+            <field name="group_id" ref="purchase.group_purchase_user"/>
+            <field name="active">1</field>
+            <field name="perm_read">1</field>
+            <field name="perm_write">0</field>
+            <field name="perm_create">0</field>
+            <field name="perm_unlink">0</field>
+        </record>
+        <record id="trailer_model_access_right_purchase" model="ir.model.access">
+            <field name="name">trailer_model_access_right_purchase</field>
+            <field name="model_id" ref="model_trailer"/>
+            <field name="group_id" ref="purchase.group_purchase_user"/>
+            <field name="active">1</field>
+            <field name="perm_read">1</field>
+            <field name="perm_write">0</field>
+            <field name="perm_create">0</field>
+            <field name="perm_unlink">0</field>
+        </record>
+        <record id="carriage_order_model_access_right_purchase" model="ir.model.access">
+            <field name="name">carriage_order_model_access_right_purchase</field>
+            <field name="model_id" ref="model_carriage_order"/>
+            <field name="group_id" ref="purchase.group_purchase_user"/>
+            <field name="active">1</field>
+            <field name="perm_read">1</field>
+            <field name="perm_write">1</field>
+            <field name="perm_create">1</field>
+            <field name="perm_unlink">0</field>
+        </record>
+        <record id="weighing_model_access_right_purchase" model="ir.model.access">
+            <field name="name">weighing_model_access_right_purchase</field>
+            <field name="model_id" ref="model_weighing"/>
+            <field name="group_id" ref="purchase.group_purchase_user"/>
+            <field name="active">1</field>
+            <field name="perm_read">1</field>
+            <field name="perm_write">1</field>
+            <field name="perm_create">1</field>
+            <field name="perm_unlink">1</field>
+        </record>
+
+        <!--endregion-->
+        <!-- endregion  -->
+        <!-- region REGLAS DE REGISTRO-->
+        <record id="carriage_order_comp_rule" model="ir.rule">
+            <field name="name">Carriage orders multi company rule</field>
+            <field name="model_id" ref="model_carriage_order"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        </record>
+        <!-- endregion -->
+    </data>
+</odoo>

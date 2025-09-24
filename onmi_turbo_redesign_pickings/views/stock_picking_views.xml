@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="onmi_stock_picking_form_inherit_add_delivery_service" model="ir.ui.view">
+            <field name="name">onmi.stock.picking.form.inherit.add.delivery.service</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='picking_type_id']" position="after">
+                    <field name="delivery_service"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

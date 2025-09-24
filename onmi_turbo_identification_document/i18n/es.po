@@ -1,0 +1,499 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* onmi_turbo_identification_document
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-18 11:43+0000\n"
+"PO-Revision-Date: 2022-11-18 12:47+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: onmi_turbo_identification_document
+#: model:ir.actions.report,print_report_name:onmi_turbo_identification_document.onmi_action_report_identification_document
+msgid ""
+"'ID - %s - %s' % (object.partner_id.name or '',\n"
+"                object.name)\n"
+"            "
+msgstr ""
+"'DI - %s - %s' % (object.partner_id.name or '',\n"
+"                object.name)\n"
+"            "
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_external_layout_standard_stock_identification_document
+msgid "( Art. 3, Anexo III R.D. 553/2020)"
+msgstr ""
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid ""
+"<br/>\n"
+"                                        Date:"
+msgstr ""
+"<br/>\n"
+"                                        Fecha:"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_external_layout_standard_stock_identification_document
+msgid ""
+"<span class=\"page\"/>\n"
+"                        /\n"
+"                        <span class=\"topage\"/>"
+msgstr ""
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid ""
+"<strong>\n"
+"                                                # Delivery Order\n"
+"                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                Número de orden de entrega\n"
+"                                            </strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid ""
+"<strong>\n"
+"                                                CHARACTERISTICS OF THE WASTE THAT IS TRANSFERRED\n"
+"                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                CARACTERÍSTICAS DEL RESIDUO QUE SE TRASLADA\n"
+"                                            </strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid ""
+"<strong>\n"
+"                                                Code according to European Waste List (E.W.L.):\n"
+"                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                Código según Lista Europea de Residuos (L.E.R.):\n"
+"                                            </strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid ""
+"<strong>\n"
+"                                                Kg. Gross, including containers:\n"
+"                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                Kg. Brutos, incluso recipientes:\n"
+"                                            </strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid ""
+"<strong>\n"
+"                                                Net Weight (kg.)\n"
+"                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                Cantidad Kg. Netos\n"
+"                                            </strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid ""
+"<strong>\n"
+"                                                Remarkable features for transport and handling:\n"
+"                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                Características remarcables para su transporte y manejo:\n"
+"                                            </strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid ""
+"<strong>\n"
+"                                                Transfer notification (TN):\n"
+"                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                Notificación de traslado (NT):\n"
+"                                            </strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid ""
+"<strong>\n"
+"                                                Treatment Contract:\n"
+"                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                Contrato de tratamiento:\n"
+"                                            </strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid ""
+"<strong>\n"
+"                                                Treatment to which one is going to submit:\n"
+"                                            </strong>"
+msgstr ""
+"<strong>\n"
+"                                                Tratamiento al que se va a someter:\n"
+"                                            </strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid "<strong># License Plate</strong>"
+msgstr "<strong>Nº matricula:</strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_company_for_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_partner_for_identification_document
+msgid "<strong>Address:</strong>"
+msgstr "<strong>Dirección:</strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_company_for_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_partner_for_identification_document
+msgid "<strong>Bussiness Name/ Name:</strong>"
+msgstr "<strong>Razón social/Nombre:</strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_company_for_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_partner_for_identification_document
+msgid "<strong>C.N.A.E.:</strong>"
+msgstr ""
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid "<strong>CARRIER</strong>"
+msgstr "<strong>TRANSPORTISTA</strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_company_for_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_partner_for_identification_document
+msgid "<strong>City:</strong>"
+msgstr "<strong>Municipio:</strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid "<strong>Code according to tables in Annex 1 of RD 952/1997:</strong>"
+msgstr "<strong>Código según tablas del Anexo 1 del RD 952/1997:</strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_company_for_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_partner_for_identification_document
+msgid "<strong>Country:</strong>"
+msgstr "<strong>País:</strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid "<strong>Delivery date:</strong>"
+msgstr "<strong>Fecha de Entrega:</strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_company_for_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_partner_for_identification_document
+msgid "<strong>E-mail:</strong>"
+msgstr ""
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid "<strong>First Transfer: Init date:</strong>"
+msgstr "<strong>Primer traslado: Fecha de inicio:</strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_external_layout_standard_stock_identification_document
+msgid "<strong>IDENTIFICATION DOCUMENT</strong>"
+msgstr "<strong>DOCUMENTO IDENTIFICACIÓN</strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_company_for_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_partner_for_identification_document
+msgid "<strong>Mobile:</strong>"
+msgstr "<strong>Móvil:</strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_company_for_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_partner_for_identification_document
+msgid "<strong>NIF:</strong>"
+msgstr ""
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_company_for_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_partner_for_identification_document
+msgid "<strong>NIMA:</strong>"
+msgstr ""
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid "<strong>Operator type:</strong>"
+msgstr "<strong>Tipo de operador:</strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_company_for_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_partner_for_identification_document
+msgid "<strong>RPGR:</strong>"
+msgstr ""
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_company_for_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_partner_for_identification_document
+msgid "<strong>State 2:</strong>"
+msgstr "<strong>Com. Autónoma:</strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_company_for_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_partner_for_identification_document
+msgid "<strong>State:</strong>"
+msgstr "<strong>Provincia:</strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid "<strong>TRANSFER DESTINATION</strong>"
+msgstr "<strong>DESTINO DEL TRASLADO</strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid "<strong>TRANSFER OPERATOR</strong>"
+msgstr "<strong>OPERADOR DEL TRASLADO</strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid "<strong>TRANSFER ORIGIN</strong>"
+msgstr "<strong>ORIGEN DEL TRASLADO</strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_company_for_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_partner_for_identification_document
+msgid "<strong>Telephone:</strong>"
+msgstr "<strong>Teléfono:</strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid "<strong>User:</strong>"
+msgstr "<strong>Responsable:</strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid "<strong>Waste description:</strong>"
+msgstr "<strong>Descripción del residuo:</strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_company_for_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_partner_for_identification_document
+msgid "<strong>ZIP:</strong>"
+msgstr "<strong>C.P.:</strong>"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid ""
+"Accepted:\n"
+"                                            <i class=\"fa fa-square-o\">Yes</i>\n"
+"                                            <i class=\"fa fa-square-o\">No</i>\n"
+"                                            <br/>\n"
+"                                            Incidences:"
+msgstr ""
+"Aceptado:\n"
+"                                            <i class=\"fa fa-square-o\">SI</i>\n"
+"                                            <i class=\"fa fa-square-o\">NO</i>\n"
+"                                            <br/>\n"
+"                                            Incidencias:"
+
+#. module: onmi_turbo_identification_document
+#: model:ir.model.fields,field_description:onmi_turbo_identification_document.field_res_partner__cnae
+#: model:ir.model.fields,field_description:onmi_turbo_identification_document.field_res_users__cnae
+msgid "C.N.A.E."
+msgstr ""
+
+#. module: onmi_turbo_identification_document
+#: model:ir.model,name:onmi_turbo_identification_document.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: onmi_turbo_identification_document
+#: model:ir.model.fields,field_description:onmi_turbo_identification_document.field_stock_picking__contract_treatment
+msgid "Contract treatment"
+msgstr "Contrato de Tratamiento"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid "D/Dª."
+msgstr ""
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid "D/Dª. (Name and Surname)"
+msgstr "D/Dª. (Nombre y Apellidos)"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid "DESTINY sign:"
+msgstr "Firma DESTINATARIO:"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_external_layout_standard_stock_identification_document
+msgid "Document #"
+msgstr "Documento n.º"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_stock_picking_view_form_inherit_di
+msgid "Document Identification"
+msgstr "Documento Identificación"
+
+#. module: onmi_turbo_identification_document
+#: model:ir.model.fields,field_description:onmi_turbo_identification_document.field_res_partner__document_user_id
+#: model:ir.model.fields,field_description:onmi_turbo_identification_document.field_res_users__document_user_id
+msgid "Document User"
+msgstr "Responsable del documento"
+
+#. module: onmi_turbo_identification_document
+#: model:ir.model.fields,field_description:onmi_turbo_identification_document.field_stock_picking__ewl
+msgid "E.W.L."
+msgstr "L.E.R."
+
+#. module: onmi_turbo_identification_document
+#: model:ir.model.fields,field_description:onmi_turbo_identification_document.field_stock_picking__gross_weight
+msgid "Gross weight"
+msgstr "Peso Bruto"
+
+#. module: onmi_turbo_identification_document
+#: model:ir.actions.report,name:onmi_turbo_identification_document.onmi_action_report_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_view_partner_form_inherit_id_fields
+msgid "Identification Document"
+msgstr "Documento de Identificación"
+
+#. module: onmi_turbo_identification_document
+#: model:ir.model.fields.selection,name:onmi_turbo_identification_document.selection__res_partner__operator_type__last_manager
+msgid "Last Manager"
+msgstr "Gestor final"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_external_layout_standard_stock_identification_document
+msgid "Logo"
+msgstr ""
+
+#. module: onmi_turbo_identification_document
+#: model:ir.model.fields.selection,name:onmi_turbo_identification_document.selection__res_partner__operator_type__manager
+msgid "Manager"
+msgstr "Gestor"
+
+#. module: onmi_turbo_identification_document
+#: model:ir.model.fields,field_description:onmi_turbo_identification_document.field_res_partner__nima
+#: model:ir.model.fields,field_description:onmi_turbo_identification_document.field_res_users__nima
+msgid "NIMA"
+msgstr ""
+
+#. module: onmi_turbo_identification_document
+#: model:ir.model.fields,field_description:onmi_turbo_identification_document.field_stock_picking__di_net_weight
+msgid "Net weight"
+msgstr "Peso neto"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid "ORIGIN sign:"
+msgstr "Firma ORIGEN:"
+
+#. module: onmi_turbo_identification_document
+#: model:ir.model.fields,field_description:onmi_turbo_identification_document.field_res_partner__operator_type
+#: model:ir.model.fields,field_description:onmi_turbo_identification_document.field_res_users__operator_type
+msgid "Operator Type"
+msgstr "Tipo de operador"
+
+#. module: onmi_turbo_identification_document
+#: model:ir.model.fields.selection,name:onmi_turbo_identification_document.selection__res_partner__operator_type__producer
+msgid "Producer"
+msgstr "Productor"
+
+#. module: onmi_turbo_identification_document
+#: model:ir.model.fields,field_description:onmi_turbo_identification_document.field_stock_picking__product_description
+msgid "Product description"
+msgstr "Descripción del producto"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid "Quantity received:"
+msgstr "Cantidad recibida:"
+
+#. module: onmi_turbo_identification_document
+#: model:ir.model.fields,field_description:onmi_turbo_identification_document.field_res_partner__rpgr
+#: model:ir.model.fields,field_description:onmi_turbo_identification_document.field_res_users__rpgr
+msgid "RPGR"
+msgstr ""
+
+#. module: onmi_turbo_identification_document
+#: model:ir.model.fields,field_description:onmi_turbo_identification_document.field_stock_picking__characterist
+msgid "Remarkable features for transport and handling"
+msgstr "Características remarcables para su transporte y manejo"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid "Tabla 1:"
+msgstr ""
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid "Tabla 2:"
+msgstr ""
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid "Tabla 3:"
+msgstr ""
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid "Tabla 4:"
+msgstr ""
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid "Tabla 5:"
+msgstr ""
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid "Tabla 6:"
+msgstr ""
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_report_identification_document_document
+msgid "Tabla 7:"
+msgstr ""
+
+#. module: onmi_turbo_identification_document
+#: model:ir.model,name:onmi_turbo_identification_document.model_stock_picking
+msgid "Transfer"
+msgstr "Albarán"
+
+#. module: onmi_turbo_identification_document
+#: model:ir.model.fields,field_description:onmi_turbo_identification_document.field_stock_picking__tn
+msgid "Transfer notification"
+msgstr "Notificación de traslado"
+
+#. module: onmi_turbo_identification_document
+#: model:ir.model.fields,field_description:onmi_turbo_identification_document.field_stock_picking__treatment
+msgid "Treatment to receive"
+msgstr "Tratamiento al que se va a someter"
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_external_layout_standard_stock_identification_document
+msgid ""
+"i: In the case of waste producers or managers registered in the Waste Production and\n"
+"                        Management Registry."
+msgstr ""
+"i: En caso de productores o gestores de residuos inscritos en el Registro de Producción y\n"
+"                            Gestión de Residuos."
+
+#. module: onmi_turbo_identification_document
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_identification_document.onmi_tbody_company_for_identification_document
+msgid "logistica@uplusrecycling.com"
+msgstr ""

@@ -1,0 +1,90 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* onmi_turbo_weghings_improvements
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-03 12:58+0000\n"
+"PO-Revision-Date: 2023-02-03 14:00+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.2\n"
+
+#. module: onmi_turbo_weghings_improvements
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_weghings_improvements.onmi_report_delivery_document_inherit_tracking
+msgid "<strong>Code L.E.R</strong>"
+msgstr "<strong>Código L.E.R</strong>"
+
+#. module: onmi_turbo_weghings_improvements
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_weghings_improvements.onmi_report_delivery_document_inherit_tracking
+msgid "<strong>Date weigh-in:</strong>"
+msgstr "<strong>Fecha pesaje:</strong>"
+
+#. module: onmi_turbo_weghings_improvements
+#: model:ir.model.fields,field_description:onmi_turbo_weghings_improvements.field_stock_picking__date_planned
+msgid "Date final weight"
+msgstr "Fecha peso final"
+
+#. module: onmi_turbo_weghings_improvements
+#: model:ir.model.fields,field_description:onmi_turbo_weghings_improvements.field_weighing__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: onmi_turbo_weghings_improvements
+#: model:ir.actions.server,name:onmi_turbo_weghings_improvements.menu_action_funcion12
+msgid "Description Update"
+msgstr "Actualización descripción "
+
+#. module: onmi_turbo_weghings_improvements
+#: model:ir.model.fields,field_description:onmi_turbo_weghings_improvements.field_stock_move_line__qty_done
+msgid "Done"
+msgstr "Hecho"
+
+#. module: onmi_turbo_weghings_improvements
+#: model:ir.model.fields,field_description:onmi_turbo_weghings_improvements.field_stock_move__code_led
+#: model:ir.model.fields,field_description:onmi_turbo_weghings_improvements.field_weighing__code_led
+msgid "L.E.R"
+msgstr ""
+
+#. module: onmi_turbo_weghings_improvements
+#: model:ir.model.fields,field_description:onmi_turbo_weghings_improvements.field_stock_rule__sale_line_id
+msgid "Origin Sale Order Line"
+msgstr "Línea de pedidos de venta en origen"
+
+#. module: onmi_turbo_weghings_improvements
+#: model:ir.model,name:onmi_turbo_weghings_improvements.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Movimientos de Producto (Stock Move Line)"
+
+#. module: onmi_turbo_weghings_improvements
+#: model:ir.model,name:onmi_turbo_weghings_improvements.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento de existencias"
+
+#. module: onmi_turbo_weghings_improvements
+#: model:ir.model,name:onmi_turbo_weghings_improvements.model_stock_rule
+msgid "Stock Rule"
+msgstr "Regla de Inventario"
+
+#. module: onmi_turbo_weghings_improvements
+#: model:ir.model,name:onmi_turbo_weghings_improvements.model_stock_picking
+msgid "Transfer"
+msgstr "Albarán"
+
+#. module: onmi_turbo_weghings_improvements
+#: model:ir.model.fields,field_description:onmi_turbo_weghings_improvements.field_stock_move__weighing_id
+#: model:ir.model.fields,field_description:onmi_turbo_weghings_improvements.field_stock_move_line__weighing_id
+msgid "Weighing"
+msgstr "Pesaje"
+
+#. module: onmi_turbo_weghings_improvements
+#: model:ir.model,name:onmi_turbo_weghings_improvements.model_weighing
+msgid "Weighing records"
+msgstr "Registros de pesajes"

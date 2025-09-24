@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="menu_action_hr_attendance" model="ir.actions.server">
+            <field name="name">Revised attendance</field>
+            <field name="model_id" ref="model_hr_attendance" />
+            <field name="type">ir.actions.server</field>
+            <field name="state">code</field>
+            <field name="code">
+                records.update_hr_attendance()
+            </field>
+            <field name="binding_model_id" ref="model_hr_attendance" />
+        </record>
+
+        <record id="onmi_hr_attendance_inherit" model="ir.ui.view">
+            <field name="name">onmi.hr.attendance.inheri</field>
+            <field name="model">hr.attendance</field>
+            <field name="inherit_id" ref="hr_attendance.view_attendance_tree" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='employee_id']" position="before">
+                    <header>
+                       
+                        <button
+                            name="confirm_turbo"
+                            type="object"
+                            string="Revised Turboplastic"
+                            class="oe-highlight"
+                            groups="onmi_turbo_attendances.group_turbo_employee_attendances"
+                        />
+                        <button name="confirm_adviser" type="object" string="Revised adviser"
+                            class="oe-highlight" groups="onmi_turbo_attendances.group_adviser_employee_attendances"/>
+                            
+                            <button
+                            name="tocheck_turbo"
+                            type="object"
+                            string="Por revisar "
+                            class="oe-highlight"
+                            groups="onmi_turbo_attendances.group_turbo_employee_attendances"
+                        />
+
+                    </header>
+                </xpath>
+                <xpath expr="//field[@name='check_out']" position="after">
+                    <field name="state_attendance" widget="badge"
+                        decoration-success="state_attendance == 'revised_v2' or state_attendance == 'revised_v2'"
+                        decoration-warning="state_attendance == 'tocheck'"
+                        decoration-info="state_attendance == 'draft' or state_attendance == 'revised'"></field>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="onmi_hr_attendance_inherit_form" model="ir.ui.view">
+            <field name="name">onmi.hr.attendance.inherit.form</field>
+            <field name="model">hr.attendance</field>
+            <field name="inherit_id" ref="hr_attendance.hr_attendance_view_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//sheet" position="before">
+                    <header>
+                        <field name="state_attendance" widget="statusbar" />
+                    </header>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="calendar.mail_menu_calendar" model="ir.ui.menu">
+            <field name="groups_id"
+                eval="[(6,0,[ref('onmi_turbo_attendances.group_never_attendances_quiosco')])]" />
+        </record>
+        <record id="mail.menu_root_discuss" model="ir.ui.menu">
+            <field name="groups_id"
+                eval="[(6,0,[ref('onmi_turbo_attendances.group_never_attendances_quiosco')])]" />
+        </record>
+        <!--<record id="base.menu_board_root" model="ir.ui.menu">
+            <field name="groups_id"
+                eval="[(6,0,[ref('onmi_turbo_attendances.group_never_attendances_quiosco')])]" />
+        </record>-->
+        <record id="utm.menu_link_tracker_root" model="ir.ui.menu">
+            <field name="groups_id"
+                eval="[(6,0,[ref('onmi_turbo_attendances.group_never_attendances_quiosco')])]" />
+        </record>
+        <record id="hr.menu_hr_root" model="ir.ui.menu">
+            <field name="groups_id"
+                eval="[(6,0,[ref('onmi_turbo_attendances.group_hide_employee_attendances')])]" />
+        </record>
+        <record id="hr_attendance.menu_hr_attendance_root" model="ir.ui.menu">
+            <field name="groups_id"
+                eval="[(6,0,[ref('onmi_turbo_attendances.group_hide_employee_attendances')])]" />
+        </record>
+
+        <record id="view_hr_attendance_kanban_inherit" model="ir.ui.view">
+            <field name="name">hr.attendance.kanban.inherit</field>
+            <field name="model">hr.attendance</field>
+            <field name="inherit_id" ref="hr_attendance.view_hr_attendance_kanban" />
+            <field name="arch" type="xml">
+
+                <xpath expr="//kanban" position="replace">
+                    <kanban class="o_kanban_mobile" sample="1">
+                        <field name="employee_id" />
+                        <field name="check_in" />
+                        <field name="check_out" />
+                        <templates>
+                            <t t-name="kanban-box">
+                                <div
+                                    t-attf-class="oe_kanban_global_click oe_kanban_card d-flex flex-column">
+                                    <div class="o_dropdown_kanban dropdown">
+                                        <a class="dropdown-toggle o-no-caret btn" role="button"
+                                            data-toggle="dropdown" data-display="static" href="#"
+                                            aria-label="Dropdown menu" title="Dropdown menu">
+                                            <span class="fa fa-ellipsis-v" />
+                                        </a>
+                                        <div class="dropdown-menu" role="menu">
+                                            <t t-if="widget.editable">
+                                                <a role="menuitem" type="edit" class="dropdown-item">
+                                                    Edit</a>
+                                            </t>
+                                            <t t-if="widget.deletable">
+                                                <a role="menuitem" type="delete"
+                                                    class="dropdown-item">Delete</a>
+                                            </t>
+                                            <ul class="oe_kanban_colorpicker" data-field="color" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- <img
+                                            t-att-src="kanban_image('hr.employee', 'avatar_128', record.employee_id.raw_value)"
+                                            t-att-title="record.employee_id.value"
+                                            t-att-alt="record.employee_id.value"
+                                            class="oe_kanban_avatar o_image_24_cover mr4" /> -->
+                                        <span class="o_kanban_record_title">
+                                            <strong>
+                                                <t t-esc="record.employee_id.value" />
+                                            </strong>
+                                        </span>
+                                    </div>
+                                    <hr class="mt4 mb8" />
+                                    <div class="o_kanban_record_subtitle">
+                                        <i class="fa fa-calendar" aria-label="Period" role="img"
+                                            title="Period"></i>
+                                <t t-esc="record.check_in.value" /> - <t
+                                            t-esc="record.check_out.value" />
+                                    </div>
+                                </div>
+                            </t>
+                        </templates>
+                    </kanban>
+                </xpath>
+                <xpath expr="//kanban" position="attributes">
+                    <attribute name="default_group_by">state_attendance</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,79 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* onmi_turbo_attendances
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-25 14:47+0000\n"
+"PO-Revision-Date: 2023-05-25 16:51+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.2\n"
+
+#. module: onmi_turbo_attendances
+#: model:ir.model,name:onmi_turbo_attendances.model_hr_attendance
+msgid "Attendance"
+msgstr "Asistencia"
+
+#. module: onmi_turbo_attendances
+#: model:ir.model.fields,field_description:onmi_turbo_attendances.field_hr_employee__date_old
+msgid "Date old"
+msgstr "Fecha antigüedad"
+
+#. module: onmi_turbo_attendances
+#: model:ir.model,name:onmi_turbo_attendances.model_hr_employee
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: onmi_turbo_attendances
+#: model:res.groups,name:onmi_turbo_attendances.group_never_attendances_quiosco
+msgid "Never Quiosco user"
+msgstr "Usuarios sin Quiosco"
+
+#. module: onmi_turbo_attendances
+#: model:ir.model.fields,field_description:onmi_turbo_attendances.field_hr_employee__affiliation_number_id
+msgid "Nº Affiliation"
+msgstr "Nº  de afiliación"
+
+#. module: onmi_turbo_attendances
+#: model:res.groups,name:onmi_turbo_attendances.group_attendances_quiosco
+msgid "Quiosco user"
+msgstr "Usuario Quiosco"
+
+#. module: onmi_turbo_attendances
+#: model:ir.model.fields.selection,name:onmi_turbo_attendances.selection__hr_attendance__state_attendance__revised_v2
+msgid "Revised Adviser"
+msgstr "Revisado Asesor"
+
+#. module: onmi_turbo_attendances
+#: model:ir.model.fields.selection,name:onmi_turbo_attendances.selection__hr_attendance__state_attendance__revised
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_attendances.onmi_hr_attendance_inherit
+msgid "Revised Turboplastic"
+msgstr "Revisado Turbo Plastic"
+
+#. module: onmi_turbo_attendances
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_attendances.onmi_hr_attendance_inherit
+msgid "Revised adviser"
+msgstr "Revisado Asesor"
+
+#. module: onmi_turbo_attendances
+#: model:ir.actions.server,name:onmi_turbo_attendances.menu_action_hr_attendance
+msgid "Revised attendance"
+msgstr "Asistencias revisadas"
+
+#. module: onmi_turbo_attendances
+#: model:ir.model.fields,field_description:onmi_turbo_attendances.field_hr_attendance__state_attendance
+msgid "State Attendance"
+msgstr "Estado asistencias"
+
+#. module: onmi_turbo_attendances
+#: model:ir.model.fields.selection,name:onmi_turbo_attendances.selection__hr_attendance__state_attendance__tocheck
+msgid "To Check"
+msgstr "Por revisar "

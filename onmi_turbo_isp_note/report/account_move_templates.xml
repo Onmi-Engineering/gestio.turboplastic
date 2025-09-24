@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_invoice_document_isp" inherit_id="account.report_invoice_document">
+            <xpath expr="//div[hasclass('page')]" position="inside">
+                <div t-if="o.has_isp" class="row mt-4">
+                    <div class="col-12 text-center" style="border-top: 1px solid #dee2e6; padding-top: 10px;">
+                         Operación sujeta a la inversión del sujeto pasivo según los artículos 84.1 2ºC de la Ley 37/1992 del IVA.                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

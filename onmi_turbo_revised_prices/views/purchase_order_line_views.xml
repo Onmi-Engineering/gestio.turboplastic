@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+     
+        <record id="purchase_revised_prices_tree" model="ir.ui.view">
+            <field name="name">purchase.revised.prices.tree</field>
+            <field name="model">purchase.order.line</field>
+            <field name="arch" type="xml">               
+                <list string="Revised lines" editable="bottom" create="0" >
+                    <header>
+                        <button
+                            name='action_confirm_revised'
+                            string="Revised"
+                            type='object'                           
+                            class="oe_highlight"
+                        />                 
+                    </header>               
+                    <field name="order_id" readonly="1"/>
+                    <field name="partner_id" readonly="1"/>
+                    <field name="date_approve" readonly="1"/> 
+                    <field name="product_id" readonly="1"/>
+                    <field name="price_unit" widget="monetary"/>                                      
+                </list>
+            </field>            
+        </record>
+
+        <record id="action_purchase_revised_price_tree" model="ir.actions.act_window">
+            <field name="name">Revised prices</field>
+            <field name="res_model">purchase.order.line</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{}</field>
+            <field name="domain">[('order_id.check_revised', '=', False),('order_id.invoice_status', '!=', 'invoiced'),('order_id.state', '!=', 'cancel')]</field>
+            <field name="view_id" ref="purchase_revised_prices_tree"/>
+            <field name="view_ids" eval="[(5, 0, 0),
+                    (0, 0, {'view_mode': 'list', 'view_id': ref('purchase_revised_prices_tree')}),
+                    ]"/>
+        </record>
+
+        <menuitem
+        action='action_purchase_revised_price_tree'
+        id='menu_revised_prices'
+        parent='purchase.menu_procurement_management'    
+        name="Revised prices"
+        sequence="18"           
+        /> 
+               
+    </data>
+</odoo>

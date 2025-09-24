@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="onmi_iherit_sale_view_order_form" model="ir.ui.view">
+            <field name="name">onmi_iherit_sale_view_order_form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='product_template_id']" position="after">
+                    <field name="package"/>
+                    <field name="package_type"/>
+                    <field name="container"/>
+                    <field name="seal"/>
+                </xpath>
+                <xpath expr="//field[@name='note']" position="after">
+                    <group>
+                        <field name="so_total_pkg"/>
+                    </group>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

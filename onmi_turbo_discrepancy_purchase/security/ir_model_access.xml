@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="discrepancy_lines_purchase_model_access_right" model="ir.model.access">
+            <field name="name">discrepancy_lines_purchase_model_access_right</field>
+            <field name="model_id" ref="model_discrepancy_lines_purchase"/>
+            <field name="active">1</field>
+            <field name="perm_read">1</field>
+            <field name="perm_write">1</field>
+            <field name="perm_create">1</field>
+            <field name="perm_unlink">1</field>
+        </record>
+        <record id="pos_discrepancy_purchase_model_access_right" model="ir.model.access">
+            <field name="name">pos_discrepancy_purchase_model_access_right</field>
+            <field name="model_id" ref="model_pos_discrepancy_purchase"/>
+            <field name="active">1</field>
+            <field name="perm_read">1</field>
+            <field name="perm_write">1</field>
+            <field name="perm_create">1</field>
+            <field name="perm_unlink">1</field>
+        </record>
+        <record id="neg_discrepancy_purchase_model_access_right" model="ir.model.access">
+            <field name="name">neg_discrepancy_purchase_model_access_right</field>
+            <field name="model_id" ref="model_neg_discrepancy_purchase"/>
+            <field name="active">1</field>
+            <field name="perm_read">1</field>
+            <field name="perm_write">1</field>
+            <field name="perm_create">1</field>
+            <field name="perm_unlink">1</field>
+        </record>
+
+    </data>
+</odoo>

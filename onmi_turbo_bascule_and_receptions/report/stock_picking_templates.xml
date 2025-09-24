@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="onmi_report_stock_picking_inherit" inherit_id="stock.report_picking">
+            <xpath expr="//div[@name='div_sched_date']" position="after">
+                <div class="col-auto" name="div_license_plate">
+                    <strong>License plate:</strong>
+                    <p t-field="o.license_plate_id.name"/>
+                </div>
+                <div class="col-auto" name="div_trailer">
+                    <strong>Trailer:</strong>
+                    <p t-field="o.trailer_id.name"/>
+                </div>
+            </xpath>
+        </template>
+
+        <template id="onmi_report_delivery_document_inherit" inherit_id="stock.report_delivery_document">
+            <xpath expr="//div[@name='div_sched_date']" position="after">
+                <div class="col-auto" name="div_license_plate">
+                    <strong>License plate:</strong>
+                    <p t-field="o.license_plate_id.name"/>
+                </div>
+                <div class="col-auto" name="div_trailer">
+                    <strong>Trailer:</strong>
+                    <p t-field="o.trailer_id.name"/>
+                </div>
+            </xpath>
+            <xpath expr="//table[@name='stock_move_table']/thead/tr/th[@name='th_sm_ordered']" position="after">
+                <th name="th_sm_waste">
+                    <strong>Waste</strong>
+                </th>
+            </xpath>
+            <xpath expr="//table[@name='stock_move_table']/tbody/tr/td[2]" position="after">
+                <td>
+                    <span t-field="move.waste_qty"/>
+                    <span t-field="move.product_uom"/>
+                </td>
+            </xpath>
+            <xpath expr="//th[@name='th_sml_qty_ordered']" position="after">
+                <th name="th_sml_waste">
+                    <strong>Waste</strong>
+                </th>
+            </xpath>
+
+            <xpath expr="//table[@name='stock_move_line_table']" position="after">
+                <table class="table table-sm mt48" style="width:50%;margin-left: 50%;">
+                    <tr width="50%">
+                        <th>
+                            <strong>Total Ordered</strong>
+                        </th>
+                        <th>
+                            <strong>Total wasted</strong>
+                        </th>
+                        <th>
+                            <strong>Total Delivered</strong>
+                        </th>
+                    </tr>
+                    <tr width="50%">
+                        <td style="text-align: center;">
+                            <span t-field="o.total_ordered"/> kg
+                        </td>
+                        <td style="text-align: center;">
+                            <span t-field="o.total_wasted"/> kg
+                        </td>
+                        <td style="text-align: center;">
+                            <span t-field="o.total_delivered"/> kg
+                        </td>
+                    </tr>
+                </table>
+            </xpath>
+
+        </template>
+        <template id="onmi_stock_report_delivery_aggregated_move_lines_inherit_waste"
+                  inherit_id="stock.stock_report_delivery_aggregated_move_lines">
+            <xpath expr="//td[@name='move_line_aggregated_quantity']" position="before">
+                <td>
+                    <span t-esc="aggregated_lines[line]['waste_qty']"/>
+                </td>
+            </xpath>
+        </template>
+    </data>
+</odoo>

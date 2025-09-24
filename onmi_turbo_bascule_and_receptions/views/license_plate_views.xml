@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Form view license plate -->
+        <record id="onmi_license_plate_form_view" model="ir.ui.view">
+            <field name="name">onmi_license_plate_form_view</field>
+            <field name="model">license.plate</field>
+            <field name="arch" type="xml">
+                <form string="License">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button type="object" name="action_view_weighings" class="oe_stat_button" icon="fa-truck" invisible="weighing_count == 0" modifiers="{'invisible': [['weighing_count', '=', 0]]}">
+                                <field name="weighing_count" widget="statinfo" string="Weighings" modifiers="{'readonly': true}"/>
+                            </button>
+                        </div>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" placeholder="Identificator"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="create_date"/>
+                            </group>
+                            <group>
+                                <field name="type"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Tree view license plate-->
+        <record id="onmi_license_plate_tree_view" model="ir.ui.view">
+            <field name="name">onmi_license_plate_tree_view</field>
+            <field name="model">license.plate</field>
+            <field name="arch" type="xml">
+                <list string="License">
+                    <field name="name"/>
+                    <field name="type"/>
+                    <field name="description"/>
+                </list>
+            </field>
+        </record>
+
+    </data>
+</odoo>

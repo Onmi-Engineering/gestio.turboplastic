@@ -1,0 +1,33 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* onmi_turbo_dates_report_picking
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-22 16:34+0000\n"
+"PO-Revision-Date: 2022-12-22 17:35+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: onmi_turbo_dates_report_picking
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_dates_report_picking.onmi_report_delivery_document_inherit_entry_and_close_date
+msgid "<strong>Entry Date:</strong>"
+msgstr "<strong>Fecha de Entrada:</strong>"
+
+#. module: onmi_turbo_dates_report_picking
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_dates_report_picking.onmi_report_delivery_document_inherit_entry_and_close_date
+msgid "<strong>Output date:</strong>"
+msgstr "<strong>Fecha de Salida:</strong>"
+
+#. module: onmi_turbo_dates_report_picking
+#: model:ir.model,name:onmi_turbo_dates_report_picking.model_stock_picking
+msgid "Transfer"
+msgstr "Albarán"

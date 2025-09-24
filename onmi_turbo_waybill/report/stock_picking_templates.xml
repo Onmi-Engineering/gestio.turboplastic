@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data><!-- External layout for stock pickings [Waybill] -->
+        <template id="onmi_external_layout_stock_pickings_waybill">
+            <t t-if="not o" t-set="o" t-value="doc"/>
+
+            <t t-if="not company">
+                <!-- Multicompany -->
+                <t t-if="company_id">
+                    <t t-set="company" t-value="company_id"/>
+                </t>
+                <t t-elif="o and 'company_id' in o and o.company_id.sudo()">
+                    <t t-set="company" t-value="o.company_id.sudo()"/>
+                </t>
+                <t t-else="else">
+                    <t t-set="company" t-value="res_company"/>
+                </t>
+            </t>
+
+            <t t-call="onmi_turbo_waybill.onmi_external_layout_standard_stock_picking_waybill">
+                <t t-out="0"/>
+            </t>
+
+        </template>
+        <!-- External layout standard for stock pickings [Waybill]-->
+        <template id="onmi_external_layout_standard_stock_picking_waybill">
+            <div t-attf-class="header o_company_#{company.id}_layout" t-att-style="report_header_style">
+                <div class="row">
+                    <div class="col-3 mb4">
+                        <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-height: 145px;"
+                             alt="Logo"/>
+
+                    </div>
+                    <div class="col-9 text-right" style="margin-top:22px;" t-field="company.company_details_waybill"
+                         name="moto"/>
+                </div>
+                <div t-if="company.logo or company.report_header" class="row zero_min_height">
+                    <div class="col-12">
+                        <div style="border-bottom: 1px solid black;"/>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <strong>Waybill</strong>
+                </div>
+                <!--                <div class="row">-->
+                <!--                    <div class="col-8" name="company_address">-->
+                <!--                        <span t-if="company.company_details_waybill" t-field="company.company_details_waybill"/>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+            </div>
+
+            <div t-attf-class="article o_report_layout_standard o_company_#{company.id}_layout {{  'o_layout_background' if company.layout_background in ['Geometric', 'Custom']  else  '' }}"
+                 t-attf-style="background-image: url({{ 'data:image/png;base64,%s' % company.layout_background_image.decode('utf-8') if company.layout_background_image and company.layout_background == 'Custom' else '/base/static/img/bg_background_template.jpg' if company.layout_background == 'Geometric' else ''}});"
+                 t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id"
+                 t-att-data-oe-lang="o and o.env.context.get('lang')">
+                <div class="pt-5">
+                    <!-- This div ensures that the address is not cropped by the header. -->
+                    <t t-call="web.address_layout"/>
+                </div>
+                <t t-out="0"/>
+            </div>
+
+            <div t-attf-class="footer o_standard_footer o_company_#{company.id}_layout">
+                <div class="text-center" style="border-top: 1px solid black;">
+                    <ul class="list-inline mb4">
+                        <div t-field="company.report_footer_waybill"/>
+                    </ul>
+                    <div t-if="report_type == 'pdf'" class="text-muted">
+                        Page:
+                        <span class="page"/>
+                        /
+                        <span class="topage"/>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <!-- Template unit Waybill-->
+        <template id="onmi_report_waybill_document">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="onmi_turbo_waybill.onmi_external_layout_stock_pickings_waybill">
+                        <div class="page">
+                            <table style="width:100%; border:2px solid black; border-collapse: collapse; margin-top: 15px; font-size: 13px;">
+                                <!--region CARGADOR CONTRACTUAL -->
+                                <tr>
+                                    <td style="text-align: center; border:2px solid black; padding: 4px;" colspan="3">
+                                        <strong>CONTRACTUAL SHIPPER</strong>
+                                    </td>
+                                </tr>
+                                <tr style="height:70px;">
+                                    <td style="vertical-align: middle; text-align: center; border:2px solid black; padding: 4px;" colspan="3">
+                                        <div t-field="o.contractual_shipper"/>
+                                    </td>
+                                </tr>
+                                <!--endregion-->
+
+                                <!--region TRANSPORTISTA EFECTIVO -->
+                                <tr>
+                                    <td colspan="3" style="text-align: center; border:2px solid black; padding: 4px;">
+                                        <strong>CASH CARRIER</strong>
+                                    </td>
+                                </tr>
+                                <tr style="height:60px;">
+                                    <td colspan="3" style="vertical-align: middle; text-align: center; border:2px solid black; padding: 4px;">
+
+                                    </td>
+                                </tr>
+                                <!--endregion-->
+
+                                <!--region LUGARES -->
+                                <tr>
+                                    <td colspan="2" style="text-align: center; border:2px solid black; padding: 4px; width:50%;">
+                                        <strong>BIRTHPLACE</strong>
+                                    </td>
+                                    <td style="text-align: center; border:2px solid black; padding: 4px;">
+                                        <strong>DESTINATION PLACE</strong>
+                                    </td>
+                                </tr>
+                                <tr style="height:80px;">
+                                    <td colspan="2" style="text-align: center; border:2px solid black; padding: 4px; width:50%; font-size: 12px;">
+                                        <t t-if="o.picking_type_id.sequence_code == 'OUT'">
+                                            <div t-field="o.company_id.partner_id"
+                                                 t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
+                                        </t>
+                                        <t t-else="">
+                                            <div t-field="o.partner_id"
+                                                 t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
+                                        </t>
+                                    </td>
+                                    <td style="text-align: center; border:2px solid black; padding: 4px; font-size: 12px;">
+                                        <t t-if="o.picking_type_id.sequence_code == 'IN'">
+                                            <div t-field="o.company_id.partner_id"
+                                                 t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
+                                        </t>
+                                        <t t-else="">
+                                            <div t-field="o.partner_id"
+                                                 t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;, &quot;phone&quot;], &quot;no_marker&quot;: True, &quot;phone_icons&quot;: True}"/>
+                                        </t>
+                                    </td>
+                                </tr>
+                                <!--endregion-->
+
+                                <!--region MATRICULAS -->
+                                <tr>
+                                    <td colspan="2" style="text-align: center; border:2px solid black; padding: 4px;">
+                                        <strong>LICENSE PLATE</strong>
+                                    </td>
+                                    <td style="text-align: center; border:2px solid black; padding: 4px;">
+                                        <strong>TRAILER</strong>
+                                    </td>
+                                </tr>
+                                <tr style="height:30px;">
+                                    <td colspan="2" style="vertical-align: middle; text-align: center; border:2px solid black; padding: 4px; font-size: 14px;">
+                                        <span style="vertical-align: center;" t-field="o.license_plate_id.name"/>
+                                    </td>
+                                    <td style="vertical-align: middle; text-align: center; border:2px solid black; padding: 4px; font-size: 14px;">
+                                        <span t-field="o.trailer_id.name"/>
+                                    </td>
+                                </tr>
+                                <!--endregion-->
+
+                                <!--region MERCANCÍA -->
+                                <tr>
+                                    <td colspan="2" style="vertical-align: center;text-align: center; border:2px solid black; padding: 4px;">
+                                        <strong>COMMODITY NATURE</strong>
+                                    </td>
+                                    <td style="vertical-align: center; text-align: center; border:2px solid black; padding: 4px;">
+                                        <strong>COMMODITY WEIGHT</strong>
+                                    </td>
+                                </tr>
+                                <tr style="height:60px;">
+                                    <td colspan="2" style="vertical-align: middle; text-align: center; border:2px solid black; padding: 4px;">
+                                        <div t-field="o.commodity"/>
+                                    </td>
+                                    <td style="vertical-align: middle; text-align: center; border:2px solid black; padding: 4px;">
+                                        <t>Net: <span t-field="o.net_weight"/> kg</t>
+                                    </td>
+                                </tr>
+                                <!--endregion-->
+
+                                <!--region OBSERVACIONES -->
+                                <tr>
+                                    <td colspan="2" style="text-align: center; border:2px solid black; padding: 4px;">
+                                        <strong>SHIPPER COMMENTS</strong>
+                                    </td>
+                                    <td style="text-align: center; border:2px solid black; padding: 4px;">
+                                        <strong>COMMENTS</strong>
+                                    </td>
+                                </tr>
+                                <tr style="height:70px;">
+                                    <td colspan="2" style="vertical-align: middle; text-align: center; border:2px solid black; padding: 4px;">
+
+                                    </td>
+                                    <td style="vertical-align: middle; text-align: center; border:2px solid black; padding: 4px;">
+                                        <span t-field="o.comments"/>
+                                    </td>
+                                </tr>
+                                <!--endregion-->
+
+                                <!--region FECHA REALIZACIÓN -->
+                                <tr>
+                                    <td colspan="2" style="text-align: center; border:2px solid black; padding: 4px;">
+                                        <strong>COMPLETION DATE</strong>
+                                    </td>
+                                    <td style="text-align: center; border:2px solid black; padding: 4px;">
+                                        <span t-esc="context_timestamp(o.date_done).strftime('%d-%m-%Y')"/>
+                                    </td>
+                                </tr>
+                                <!--endregion-->
+
+                                <!--region FIRMAS -->
+                                <tr style="height:90px;">
+                                    <td style="width:25%; position:relative; text-align: center; vertical-align: bottom; border:2px solid black; padding: 4px;">
+                                        <!-- Cambiado de to_text a image_data_uri -->
+                                        <img align="left"
+                                             t-if="o.signature_waybill"
+                                             t-att-src="image_data_uri(o.signature_waybill)"
+                                             style="position:absolute; max-width: 160px; max-height: 70px; top: 5px; left: 5px;"/>
+                                        <!-- Cambiado de to_text a image_data_uri -->
+                                        <img t-if="o.company_id.stamp"
+                                             t-att-src="image_data_uri(o.company_id.stamp)"
+                                             style="max-width: 160px; max-height: 70px; opacity: 100%;"/>
+                                        <br/>
+                                        <span style="font-size: 11px;">Charger Signature</span>
+                                    </td>
+
+                                    <td style="width:25%; position:relative; text-align: center; vertical-align: bottom; border:2px solid black; padding: 4px;">
+                                        <span style="font-size: 11px;">Shipper Signature</span>
+                                    </td>
+                                    <td style="width:50%; position:relative; text-align: center; vertical-align: bottom; border:2px solid black; padding: 4px;">
+                                        <span style="font-size: 11px;">Signature, Date or Receiver Stamp</span>
+                                    </td>
+                                </tr>
+                                <!--endregion-->
+
+                            </table>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+        <template id="onmi_report_waybill">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="onmi_turbo_waybill.onmi_report_waybill_document" t-lang="o.partner_id.lang"/>
+            </t>
+        </template>
+    </data>
+</odoo>

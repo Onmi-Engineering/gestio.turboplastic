@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="report_weighing_tree_view" model="ir.ui.view">
+            <field name="name">weighing.tree</field>
+            <field name="model">weighing</field>
+            <field name="arch" type="xml">
+                <list string="Weighings" create="0">
+                    <field name="picking_id"/>
+                    <field name="license_plate_id"/>
+                    <field name="trailer_id"/>
+                    <field name="date_done_picking"/>
+                    <field name="type"/>
+                    <field name="final_weight"/>
+                    <field name="waste"/>
+                    <field name="partner_picking" string="Partner"/>
+                    <field name="product_id"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="report_weighing_pivot_view" model="ir.ui.view">
+            <field name="name">weighing.pivot</field>
+            <field name="model">weighing</field>
+            <field name="arch" type="xml">
+                <pivot string="Weighings" display_quantity="0" sample="0">
+                    <field name="partner_picking" type="row"/>
+                    <field name="final_weight_calculate" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="report_weighing_search_view" model="ir.ui.view">
+            <field name="name">report.weighing.search.view</field>
+            <field name="model">weighing</field>
+            <field name="arch" type="xml">
+                <search string="Search Weighing">
+                    <field name="picking_id" string="Picking"
+                           filter_domain="[('picking_id.name', 'ilike', self)]"/>
+                    <field name="product_id" string="Product"
+                           filter_domain="['|','|',('product_id', 'ilike', self),('product_id.name', 'ilike', self), ('product_id', 'ilike', self)]"/>
+                    <field name="partner_picking" string="Partner"
+                           filter_domain="[('partner_picking', 'ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="weighing_act_window" model="ir.actions.act_window">
+            <field name="name">Weighings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">weighing</field>
+            <field name="view_mode">list,pivot</field>
+            <field name="domain">[('state', '=', 'confirmed'), ('company_id','=', allowed_company_ids[0])]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="onmi_turbo_report_weighings.report_weighing_search_view"/>
+            <field name="view_ids"
+                   eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'list', 'view_id': ref('onmi_turbo_report_weighings.report_weighing_tree_view')}),
+                          (0, 0, {'view_mode': 'pivot', 'view_id': ref('onmi_turbo_report_weighings.report_weighing_pivot_view')})]"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    This is a view like a report for records to review.
+                    You don't have registers with this conditions.
+                </p>
+            </field>
+        </record>
+        <menuitem name="Reports"
+                  id="reports_menu"
+                  parent="onmi_turbo_bascule_and_receptions.main_menu_logistic_module"
+                  sequence="3"
+        />
+        <menuitem name="Weighings"
+                  id="weighing_menu"
+                  parent="reports_menu"
+                  action="weighing_act_window"
+        />
+
+    </data>
+</odoo>

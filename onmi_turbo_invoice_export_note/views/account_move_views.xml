@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+
+        <record id="onmi_account_move_form_inherit_import_invocies" model="ir.ui.view">
+            <field name="name">onmi.account.move.form.inherit.import.invoices</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                
+                <xpath expr="//field[@name='payment_reference']" position="attributes">
+                    <!--TODO: Result from 'attrs' -> 'invisible' conversion without also overriding 'states' attribute
+                         Check if this field tag contained a states attribute in any of the parent views, in which case it should be combined into this 'invisible' attribute
+                         (If any states attributes existed in parent views, they'll also be marked with a TODO)-->
+                    <attribute name="invisible">move_type not in ['out_invoice', 'out_refund', 'in_invoice', 'in_refund', 'out_receipt', 'in_receipt']</attribute>
+                    <!--TODO: Result from converting 'attrs' attribute override without options for ['required', 'readonly', 'column_invisible'] to separate attributes
+                         Remove redundant empty tags below for any of those attributes that are not present in the field tag in any of the parent views
+                         If someone later adds one of these attributes in the parent views, they would likely be unaware it's still overridden in this view, resulting in unexpected behaviour, which should be avoided-->
+                    <attribute name="required"/>
+                    <attribute name="readonly"/>
+                    <attribute name="column_invisible"/>
+                </xpath>
+                <xpath expr="//field[@name='payment_reference']" position="after">
+                    <field name="x_studio_exportacion" string="Exportacion" widget="boolean_toggle"/>
+                </xpath>
+                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field[@name='invoice_line_ids']/list[1]/field[@name='sequence']" position="after">
+                    <field name="x_studio_eta" optional="show"/>
+                    <field name="x_studio_packages" optional="show"/>
+                    <field name="inv_package_type" optional="show" string="Type packages"/>
+                    <field name="x_studio_container_no" optional="show"/>
+                    <field name="x_studio_seal_no" optional="show"/>
+                </xpath>
+                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field[@name='invoice_line_ids']/list[1]/field[@name='account_id']" position="after">
+                    <field name="x_studio_gross_weight" optional="show"/>
+                </xpath>
+                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field[@name='invoice_line_ids']/list[1]/field[@name='tax_ids']" position="after">
+                    <field name="x_studio_contrat_no_line" optional="show"/>
+                </xpath>
+                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field[@name='invoice_line_ids']/form[1]/sheet[1]/field[@name='partner_id']" position="before">
+                    <field name="x_studio_eta" string="Eta"/>
+                    <field name="x_studio_packages" string="Packages"/>
+                    <field name="inv_package_type" string="Type packages"/>
+                    <field name="x_studio_container_no" string="Container no"/>
+                    <field name="x_studio_seal_no" string="Seal No"/>
+                </xpath>
+                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field[@name='invoice_line_ids']/form[1]/sheet[1]/group[1]/field[@name='quantity']" position="after">
+                    <field name="x_studio_gross_weight" string="Gross Weight"/>
+                </xpath>
+                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/field[@name='invoice_line_ids']/form[1]/sheet[1]/group[1]/field[@name='discount']" position="after">
+                    <field name="x_studio_contrat_no_line" string="Contrat no line"/>
+                </xpath>
+                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[1]/group[1]/group[1]/field[@name='narration']" position="before">
+                    <field name="x_studio_hs_code" string="HS CODE" invisible="not x_studio_exportacion"/>
+                    <field name="x_studio_total_kg" string="TOTAL (kg)" invisible="not x_studio_exportacion"/>
+                </xpath>
+                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[2]/field[@name='line_ids']/list[1]/field[@name='account_id']" position="before">
+                    <field name="x_studio_eta" optional="show" invisible="1"/>
+                    <field name="x_studio_packages" optional="show" invisible="1"/>
+                    <field name="inv_package_type" optional="show" invisible="1"/>
+                    <field name="x_studio_container_no" optional="show" invisible="1"/>
+                    <field name="x_studio_seal_no" optional="show" invisible="1"/>
+                    <field name="x_studio_gross_weight" optional="show" invisible="1"/>
+                    <field name="x_studio_contrat_no_line" optional="show" invisible="1"/>
+                </xpath>
+
+                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[4]" position="after">
+
+                    <page name="export_invoices" string="Exportacion" invisible="not x_studio_exportacion">                       
+                        <group>
+                            <group name="invoice" string="INVOICE">
+                                <field name="note" string="Note" placeholder="Escriba su nota aquí..."/>
+                                <field name="invoice_incoterm_id" string="Incoterm"/>
+                                <field name="x_studio_origin" string="ORIGIN"/>
+                                <field name="x_studio_port_of_loading" string="PORT OF LOADING"/>
+                                <field name="x_studio_port_of_discharge" string="PORT OF DISCHARGE"/>
+                                <field name="x_studio_contrat_no" string="CONTRAT NO"/>
+                            </group>
+                            <group name="packing_list" string="PACKING LIST">
+                                <field name="x_studio_bl" string="BL"/>
+                                <field name="x_studio_vessel" string="VESSEL"/>                                
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

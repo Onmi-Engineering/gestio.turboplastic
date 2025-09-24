@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="onmi_report_striped_document_inherit" inherit_id="web.external_layout_striped">
+            <xpath expr="//div[@class='o_footer_content border-top pt-2 text-center']" position="replace">
+                <t t-if="o">
+                    <t t-if="o._table == 'account_move'">
+                        <ul t-if="o.show_first or o.show_second or o.show_third or o.show_santander" style="list-style:none;">
+                            <li t-if="o.show_first">
+                                <span t-field="o.first_iban" style="color: grey;"/>
+                            </li>
+                            <li t-if="o.show_second">
+                                <span t-field="o.second_iban" style="color: grey;"/>
+                            </li>
+                            <li t-if="o.show_third">
+                                <span t-field="o.third_iban" style="color: grey;"/>
+                            </li>
+                            <li t-if="o.show_santander">
+                                <span t-field="o.santander_iban" style="color: grey;"/>
+                            </li>
+                        </ul>
+                    </t>
+                    <t t-else="">
+                        <ul class="list-inline">
+                            <div t-field="company.report_footer"/>
+                        </ul>
+                    </t>
+                </t>
+            </xpath>
+        </template>
+    </data>
+</odoo>

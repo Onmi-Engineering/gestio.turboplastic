@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Form Inherit view stock picking -->
+        <record id="onmi_stock_picking_form_inherit_add_weighings" model="ir.ui.view">
+            <field name="name">onmi.stock.picking.form.inherit.add.weighings</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string=" Weighings" name="weighing">
+                        <group>
+                            <group>
+                                <field name="weighings_is_required"/>
+                            </group>
+                            <group>
+
+                                <button name="action_recalculate_weighings" type="object" string="Recalculate weighings"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="license_plate_id"/>
+                            </group>
+                            <group>
+                                <field name="trailer_id"/>
+                            </group>
+                            <group>
+                                <field name="upload_date"/>
+                            </group>
+                        </group>
+                        <field name="weighing_ids" mode="list" context="{'default_type': 'output', 'default_picking_id': id}">
+                            <list editable="bottom" create="false" delete="false">
+                                <field name="product_id" readonly="1"/>
+                                <field name="first_weight"/>
+                                <field name="second_weight"/>
+                                <field name="waste"/>
+                                <field name="final_weight" readonly="1"/>
+                                <field name="state" readonly="1" widget="badge" decoration-success="state == 'confirmed'" decoration-info="state == 'new'" decoration-danger="state == 'on_weighing'"/>
+                                <field name="upload_date" optional="show"/>
+                                <field name="license_plate_id" optional="show"/>
+                                <field name="trailer_id" optional="show"/>
+                            </list>
+                        </field>
+                        <field name="active_reconfirm_new_weighings" invisible="True"/>
+                        <field name="confirmed_weighings" invisible="True"/>
+
+                        <field name="text_warning" readonly="True" invisible="not active_reconfirm_new_weighings" style="color:red ! important;"/>
+                        <button name="action_reconfirm_weighings" type="object" string="Reconfirm weighings" invisible="not active_reconfirm_new_weighings"/>
+                        <button name="action_confirm_weighings" type="object" string="Confirm weighings" invisible="active_reconfirm_new_weighings or confirmed_weighings"/>
+                        <button name="action_reset_weighings" type="object" string="Reset weighings" invisible="not confirmed_weighings"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+        <record id="onmi_stock_picking_form_button_action" model="ir.ui.view">
+            <field name="name">onmi.stock.picking.form.button.action</field>
+            <field name="model">stock.picking</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <field name="weighing_ids"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

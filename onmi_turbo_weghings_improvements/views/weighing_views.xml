@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="onmi_view_sale_order_form_inherit_wehhing_view" model="ir.ui.view">
+            <field name="name">onmi.sale.order.form.inherit.wehhing.view</field>
+            <field name="model">weighing</field>
+            <field name="inherit_id" ref="onmi_turbo_report_weighings.report_weighing_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//list/field['product_id']" position="after">
+                    <field name="description"/>
+                </xpath>                                                                
+            </field>
+        </record>
+    </data>
+</odoo>

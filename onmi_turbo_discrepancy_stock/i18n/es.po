@@ -1,0 +1,209 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* onmi_turbo_discrepancy_stock
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-14 12:49+0000\n"
+"PO-Revision-Date: 2023-03-14 13:49+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_discrepancy_stock.onmi_view_positive_discrepancy_form
+msgid ""
+"<strong>\n"
+"                            Indicate qty on every line.\n"
+"                        </strong>"
+msgstr ""
+"<strong>\n"
+"                            Indique la cantidad discrepada en cada línea.\n"
+"                        </strong>"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_discrepancy_stock.onmi_view_positive_discrepancy_form
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_discrepancy_stock.onmi_view_stock_return_picking_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_sale_order__check_invoices
+msgid "Check invoices"
+msgstr "Revisar facturas"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_discrepancy_stock.onmi_view_positive_discrepancy_form
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_discrepancy_stock.onmi_view_stock_return_picking_form
+msgid "Create Discrepancy"
+msgstr "Crear Discrepancia"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_discrepancy_stock.onmi_sale_order_form_inherit_add_button_discrepancy
+msgid "Create Negative Discrepancy"
+msgstr "Crear Discrepancia Negativa"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_discrepancy_stock.onmi_sale_order_form_inherit_add_button_discrepancy
+msgid "Create Positive Discrepancy"
+msgstr "Crear Discrepancia Positiva"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_discrepancy_lines__create_uid
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_pos_discrepancy_sale__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_discrepancy_lines__create_date
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_pos_discrepancy_sale__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model:ir.model,name:onmi_turbo_discrepancy_stock.model_discrepancy_lines
+msgid "Description"
+msgstr "Descripción"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_discrepancy_stock.onmi_sale_order_form_inherit_add_button_discrepancy
+msgid "Discrepancy has been done. Please, you have to check new invoice."
+msgstr "La discrepancia ha sido realizada. Por favor, revise la nueva factura."
+
+#. module: onmi_turbo_discrepancy_stock
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_stock_return_picking__discrep_process
+msgid "Discrepancy process"
+msgstr "Proceso discrepancia"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_discrepancy_lines__display_name
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_pos_discrepancy_sale__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_discrepancy_lines__id
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_pos_discrepancy_sale__id
+msgid "ID"
+msgstr "Identificación"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_stock_return_picking__invoice_ids
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_stock_return_picking__invoice_id
+msgid "Invoice to revert"
+msgstr "Factura a revertir"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_discrepancy_lines____last_update
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_pos_discrepancy_sale____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_discrepancy_lines__write_uid
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_pos_discrepancy_sale__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_discrepancy_lines__write_date
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_pos_discrepancy_sale__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_pos_discrepancy_sale__lines_id
+msgid "Lines"
+msgstr "Líneas"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model:ir.actions.act_window,name:onmi_turbo_discrepancy_stock.onmi_act_stock_return_picking
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_discrepancy_stock.onmi_sale_order_tree_inherit_add_button_discrepancy
+msgid "Negative Discrepancy"
+msgstr "Revertir Transferencia"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_discrepancy_lines__order_id
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_discrepancy_lines__order_ids
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_pos_discrepancy_sale__order_id
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_pos_discrepancy_sale__order_ids
+msgid "Order"
+msgstr "Pedido"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_discrepancy_lines__order_line
+msgid "Order Line"
+msgstr "Línea del pedido"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model:ir.actions.act_window,name:onmi_turbo_discrepancy_stock.onmi_act_pos_discrepancy_sale
+msgid "Positive Discrepancy Sale"
+msgstr "Discrepancia de venta positiva"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_discrepancy_stock.onmi_sale_order_tree_inherit_add_button_discrepancy
+msgid "Possitive Discrepancy"
+msgstr "Discrepancia Positiva"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_discrepancy_lines__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_discrepancy_lines__qty
+msgid "Qty"
+msgstr "Cantidad"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_discrepancy_stock.onmi_view_stock_return_picking_form
+msgid "Return"
+msgstr "Devolver"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model:ir.model,name:onmi_turbo_discrepancy_stock.model_stock_return_picking
+msgid "Return Picking"
+msgstr "Albarán de devolución"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_stock_return_picking__sale_id
+#: model:ir.model.fields,field_description:onmi_turbo_discrepancy_stock.field_stock_return_picking__sale_ids
+msgid "Sale"
+msgstr "Venta"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model:ir.model,name:onmi_turbo_discrepancy_stock.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: onmi_turbo_discrepancy_stock
+#: code:addons/onmi_turbo_discrepancy_stock/models/pos_discrepancy_sale.py:0
+#: code:addons/onmi_turbo_discrepancy_stock/models/sale_order.py:0
+#, python-format
+msgid "There is not posted invoices on this sale order"
+msgstr "No hay Facturas confirmadas en este pedido de venta"
+
+#. module: onmi_turbo_discrepancy_stock
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_discrepancy_stock.onmi_view_stock_return_picking_form
+msgid ""
+"You have to indicate picking and invoice to reverse and quantities of discrepancy\n"
+"                            on every lines. With this data the system can do the negative discrepancy."
+msgstr ""
+"Tiene que indicar albarán y factura a revertir, así como cantidades discrepadas\n"
+"                            de cada línea. Con estos datos, el sistema podrá realizar la discrepancia negativa."
+
+#. module: onmi_turbo_discrepancy_stock
+#: model:ir.model,name:onmi_turbo_discrepancy_stock.model_pos_discrepancy_sale
+msgid "pos.discrepancy.sale"
+msgstr "discrepancia positiva venta"

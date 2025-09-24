@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_property_form" model="ir.ui.view">
+        <field name="name">res.partner.property.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="account.view_partner_property_form"/>
+        <field name="arch" type="xml">
+            <field name="property_supplier_payment_term_id" position="before">
+                <field name="supplier_user_id"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="onmi_action_contacts" model="ir.actions.act_window">
+        <field name="name">Contacts</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanba,list,form,map,activity</field>
+        <field name="search_view_id" ref="base.view_res_partner_filter"/>
+        <field name="domain">['|',('supplier_user_id', '=', uid),('supplier_user_id','=',False)]</field>
+        <field name="context">{'default_is_company': True}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a Contact in your address book
+            </p>
+            <p>
+                Odoo helps you track all activities related to your contacts.
+            </p>
+        </field>
+    </record>
+    <menuitem id="onmi_res_partner_menu_own_contacts"
+              name="Contacts"
+              action="onmi_action_contacts"
+              parent="contacts.menu_contacts"
+              groups="purchase_own_documents.own_purchase_order_documents"
+              sequence="1"/>
+    <menuitem id="contacts.res_partner_menu_contacts"
+              name="Contacts"
+              action="contacts.action_contacts"
+              parent="contacts.menu_contacts"
+              groups="purchase_own_documents.group_all_documents_admin"
+              sequence="2"/>
+</odoo>

@@ -1,0 +1,70 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* onmi_turbo_supplier_contact
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-08-08 16:11+0000\n"
+"PO-Revision-Date: 2022-08-08 18:13+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: onmi_turbo_supplier_contact
+#: model:ir.model,name:onmi_turbo_supplier_contact.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: onmi_turbo_supplier_contact
+#: model:ir.actions.act_window,name:onmi_turbo_supplier_contact.onmi_action_contacts
+#: model:ir.ui.menu,name:onmi_turbo_supplier_contact.onmi_res_partner_menu_own_contacts
+msgid "Contacts"
+msgstr "Contactos"
+
+#. module: onmi_turbo_supplier_contact
+#: model_terms:ir.actions.act_window,help:onmi_turbo_supplier_contact.onmi_action_contacts
+msgid "Create a Contact in your address book"
+msgstr "Crear un contacto en su libro de direcciones"
+
+#. module: onmi_turbo_supplier_contact
+#: model_terms:ir.actions.act_window,help:onmi_turbo_supplier_contact.onmi_action_contacts
+msgid "Odoo helps you track all activities related to your contacts."
+msgstr "Odoo le ayuda a registrar actividades de sus contactos."
+
+#. module: onmi_turbo_supplier_contact
+#: model:ir.model,name:onmi_turbo_supplier_contact.model_purchase_order
+msgid "Purchase Order"
+msgstr "Pedido de compra"
+
+#. module: onmi_turbo_supplier_contact
+#: model:ir.model.fields,field_description:onmi_turbo_supplier_contact.field_res_partner__supplier_user_id
+#: model:ir.model.fields,field_description:onmi_turbo_supplier_contact.field_res_users__supplier_user_id
+msgid "Supplier agent"
+msgstr "Responsable de Compra"
+
+#. module: onmi_turbo_supplier_contact
+#: model:ir.model.fields,help:onmi_turbo_supplier_contact.field_res_partner__supplier_user_id
+#: model:ir.model.fields,help:onmi_turbo_supplier_contact.field_res_users__supplier_user_id
+msgid "The internal supplier agent in charge of this contact."
+msgstr "Responsable de compra a cargo de este contacto."
+
+#. module: onmi_turbo_supplier_contact
+#: model:res.groups,name:onmi_turbo_supplier_contact.onmi_group_supplier_agent
+msgid "User: Own Documents Only"
+msgstr "Usuario: Sólo Documentos Propios"
+
+#. module: onmi_turbo_supplier_contact
+#: model:res.groups,comment:onmi_turbo_supplier_contact.onmi_group_supplier_agent
+msgid ""
+"the user will have access to his own data in the purchase and contacts "
+"application."
+msgstr ""
+"el usuario tendrá acceso a sus propios datos en los módulos contactos "
+"y compras."

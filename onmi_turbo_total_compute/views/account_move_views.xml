@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+
+        <record id="onmi_account_move_form_inherit_import_invocies" model="ir.ui.view">
+            <field name="name">onmi.account.move.form.inherit.import.invoices</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml"> 
+                <xpath expr="//field[@name='narration']" position="before">
+                  <field name="total_kg" invisible="not x_studio_exportacion"/>
+                  <field name="total_pkg" invisible="not x_studio_exportacion"/>
+                  </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

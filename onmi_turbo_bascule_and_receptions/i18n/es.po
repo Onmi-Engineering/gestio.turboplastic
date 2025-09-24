@@ -1,0 +1,713 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* onmi_turbo_bascule_and_receptions
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-22 16:42+0000\n"
+"PO-Revision-Date: 2022-12-22 17:44+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_report_delivery_document_inherit
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_report_stock_picking_inherit
+msgid "<strong>License plate:</strong>"
+msgstr "<strong>Matrícula:</strong>"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_report_delivery_document_inherit
+msgid "<strong>Total Delivered</strong>"
+msgstr "<strong>Total entregado</strong>"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_report_delivery_document_inherit
+msgid "<strong>Total Ordered</strong>"
+msgstr "<strong>Total pedido</strong>"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_report_delivery_document_inherit
+msgid "<strong>Total wasted</strong>"
+msgstr "<strong>Total merma</strong>"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_report_delivery_document_inherit
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_report_stock_picking_inherit
+msgid "<strong>Trailer:</strong>"
+msgstr "<strong>Remolque:</strong>"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_report_delivery_document_inherit
+msgid "<strong>Waste</strong>"
+msgstr "<strong>Merma</strong>"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_stock_picking__active_reconfirm_new_weighings
+msgid "Active new weighings"
+msgstr "Activar pesos reconfirmados"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:res.groups,name:onmi_turbo_bascule_and_receptions.group_logistic_administrator
+msgid "Administrator"
+msgstr "Administrador"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_carriage_order__partner_shipping_alt
+msgid "Alternative Delivery Address"
+msgstr "Dirección de entrega alternativa"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_carriage_order__weight
+msgid "Approximate weight"
+msgstr "Peso aproximado"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: code:addons/onmi_turbo_bascule_and_receptions/models/stock_picking.py:0
+#, python-format
+msgid ""
+"CARRIAGE ORDER NOT PROCESSED\n"
+"Carriage order related to this picking is not processed. You will know that "
+"this is done if license plate and trailer take some value.\n"
+"Contact logistic workers to ask  for this."
+msgstr ""
+"SOLICITUD DE TRANSPORTE NO PROCESADA\n"
+"La solicitud de transporte relacionada con esta transferencia no está "
+"procesada. Sabrás si lo está cuando tanto matrícula como remolque tengan "
+"algún dato.\n"
+"Contacte con trabajadores logísticos relacionados con esto."
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.carriage_order_form_view
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields.selection,name:onmi_turbo_bascule_and_receptions.selection__carriage_order__state__cancel
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.ui.menu,name:onmi_turbo_bascule_and_receptions.carriage_order_menu_logistic_module
+msgid "Carriage"
+msgstr "Transporte"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.carriage_order_form_view
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.carriage_order_form_view_for_action
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.carriage_order_tree_view
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.carriage_order_tree_view_for_action
+msgid "Carriage Order"
+msgstr "Solicitud de Transporte"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.carriage_order_search_view
+msgid "Carriage Order Search"
+msgstr "Búsqueda Solicitudes de Transporte"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.actions.act_window,name:onmi_turbo_bascule_and_receptions.onmi_action_carriage_order
+#: model:ir.model,name:onmi_turbo_bascule_and_receptions.model_carriage_order
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_purchase_order__carriage_count
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_sale_order__carriage_count
+#: model:ir.ui.menu,name:onmi_turbo_bascule_and_receptions.carriage_order_submenu_logistic_module
+msgid "Carriage Orders"
+msgstr "Solicitudes de Transporte"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_purchase_order_form_inherit_add_button_carriage
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_sale_order_form_inherit_add_button_carriage
+msgid "Carriages"
+msgstr "Transportes"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_purchase_order__carriage_ids
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_sale_order__carriage_ids
+msgid "Carriages associated to this manufacturing order"
+msgstr "Transportes asociadas a esta solicitud"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_carriage_order__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_stock_picking_form_inherit_add_weighings
+msgid "Confirm weighings"
+msgstr "Confirmar pesajes"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields.selection,name:onmi_turbo_bascule_and_receptions.selection__weighing__state__confirmed
+msgid "Confirmed"
+msgstr "Confirmado"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_stock_picking__confirmed_weighings
+msgid "Confirmed Weighing"
+msgstr "Pesaje confirmado"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_carriage_order__contact
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_weighing__contact
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_purchase_order_form_inherit_add_button_carriage
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_sale_order_form_inherit_add_button_carriage
+msgid "Create carriage order"
+msgstr "Crear solicitud de transporte"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_carriage_order__create_uid
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_license_plate__create_uid
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_trailer__create_uid
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_weighing__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_carriage_order__create_date
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_license_plate__create_date
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_trailer__create_date
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_weighing__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields.selection,name:onmi_turbo_bascule_and_receptions.selection__carriage_order__state__confirm
+msgid "Delivered"
+msgstr "Entregado"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_carriage_order__delivery_date
+msgid "Delivery Date"
+msgstr "Fecha de entrega"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_license_plate__description
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_trailer__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_carriage_order__display_name
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_license_plate__display_name
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_trailer__display_name
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_weighing__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:res.groups,name:onmi_turbo_bascule_and_receptions.group_logistic_employee
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_weighing__final_weight
+msgid "Final Weight"
+msgstr "Peso final"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_weighing__first_weight
+msgid "First Weight"
+msgstr "Primer peso"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: code:addons/onmi_turbo_bascule_and_receptions/models/weighing.py:0
+#, python-format
+msgid ""
+"First Weight can´t be upper than second one on Weighings from Sale Orders.\n"
+"Please, check this value for the correct calculation.\n"
+msgstr ""
+"El primer peso no pueded ser mayor que el segundo en pesajes de Pedidos de "
+"Venta.\n"
+"Por favor, revise este valor para que el cálculo sea correcto.\n"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.ui.menu,name:onmi_turbo_bascule_and_receptions.fleet_menu_logistic_module
+msgid "Fleet"
+msgstr "Flota"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.carriage_order_search_view
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_carriage_order__id
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_license_plate__id
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_trailer__id
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_weighing__id
+msgid "ID"
+msgstr "ID"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_license_plate__name
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_trailer__name
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_license_plate_form_view
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_trailer_form_view
+msgid "Identificator"
+msgstr "Identificador"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.carriage_order_form_view
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.carriage_order_form_view_for_action
+msgid "Information"
+msgstr "Información"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields.selection,name:onmi_turbo_bascule_and_receptions.selection__weighing__type__input
+msgid "Input"
+msgstr "Entrada"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_carriage_order____last_update
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_license_plate____last_update
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_trailer____last_update
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_weighing____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_carriage_order__write_uid
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_license_plate__write_uid
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_trailer__write_uid
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_weighing__write_uid
+msgid "Last Updated by"
+msgstr "Última modificación por"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_carriage_order__write_date
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_license_plate__write_date
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_trailer__write_date
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_weighing__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_license_plate_form_view
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_license_plate_tree_view
+msgid "License"
+msgstr "Matrícula"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.actions.act_window,name:onmi_turbo_bascule_and_receptions.onmi_action_license_plate
+#: model:ir.model,name:onmi_turbo_bascule_and_receptions.model_license_plate
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_carriage_order__license_plate_id
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_stock_picking__license_plate_id
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_trailer__license_plate_id
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_weighing__license_plate_id
+msgid "License Plate"
+msgstr "Matrícula"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.ui.menu,name:onmi_turbo_bascule_and_receptions.license_plate_menu_logistic_module
+msgid "License plate"
+msgstr "Matrícula"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.module.category,name:onmi_turbo_bascule_and_receptions.onmi_module_category_logistic
+#: model:ir.ui.menu,name:onmi_turbo_bascule_and_receptions.main_menu_logistic_module
+msgid "Logistic"
+msgstr "Logística"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: code:addons/onmi_turbo_bascule_and_receptions/models/carriage_order.py:0
+#, python-format
+msgid ""
+"MISSING DATA TO FILL\n"
+"You have to fill data of license plate and trailer to processed.\n"
+"Please, check if it is occurring."
+msgstr ""
+"FALTAN DATOS A RELLENAR\n"
+"Tiene que rellenar los datos de Matrícula y Remolque para procesar la "
+"solicitud.\n"
+"Por favor, revise si esto está ocurriendo."
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_weighing__move_line_id
+msgid "Move Line"
+msgstr "Operación de albarán"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: code:addons/onmi_turbo_bascule_and_receptions/models/carriage_order.py:0
+#: model:ir.model.fields.selection,name:onmi_turbo_bascule_and_receptions.selection__carriage_order__state__draft
+#: model:ir.model.fields.selection,name:onmi_turbo_bascule_and_receptions.selection__weighing__state__new
+#, python-format
+msgid "New"
+msgstr "Nuevo"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.carriage_order_search_view
+msgid "Not Processed"
+msgstr "No procesado"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_carriage_order__processed
+msgid "Not Processed/ Processed"
+msgstr "No procesado/ Procesado"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields.selection,name:onmi_turbo_bascule_and_receptions.selection__weighing__state__on_weighing
+msgid "On weighing"
+msgstr "En pesaje"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_carriage_order__origin
+msgid "Origin"
+msgstr "Origen"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.carriage_order_form_view
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.carriage_order_form_view_for_action
+msgid "Other information"
+msgstr "Otra información"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields.selection,name:onmi_turbo_bascule_and_receptions.selection__weighing__type__output
+msgid "Output"
+msgstr "Salida"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: code:addons/onmi_turbo_bascule_and_receptions/models/stock_picking.py:0
+#, python-format
+msgid ""
+"PICKING DONE OR CANCEL\n"
+"You can't reset weighings if picking is on state Done or cancel.\n"
+"Please, check if it is occurring."
+msgstr ""
+"TRANSFERECIA HECHA O CANCELADA\n"
+"No puedes reiniciar los pesajes si la transferencia está en el estado hecho "
+"o cancelado.\n"
+"Por favor, revise si esto está ocurriendo."
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_carriage_order__pick_up_date
+msgid "Pick Up Date"
+msgstr "Fecha de Recogida"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_weighing__picking_id
+msgid "Picking"
+msgstr "Transferencia"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.carriage_order_form_view
+msgid "Process"
+msgstr "Procesar"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields.selection,name:onmi_turbo_bascule_and_receptions.selection__carriage_order__state__processed
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.carriage_order_search_view
+msgid "Processed"
+msgstr "Procesado"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields.selection,name:onmi_turbo_bascule_and_receptions.selection__carriage_order__state__processing
+msgid "Processing"
+msgstr "Procesando"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_weighing__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model,name:onmi_turbo_bascule_and_receptions.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Movimientos de Producto (Stock Move Line)"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_weighing__purchase_id
+msgid "Purchase"
+msgstr "Orden de Compra"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model,name:onmi_turbo_bascule_and_receptions.model_purchase_order
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.carriage_order_search_view
+msgid "Purchase Order"
+msgstr "Pedido de compra"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_carriage_order__purchase_order_id
+msgid "Purchase Order #"
+msgstr "Pedido de Compra"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_stock_picking_form_inherit_add_weighings
+msgid "Recalculate weighings"
+msgstr "Recalcular Pesajes"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_stock_picking_form_inherit_add_weighings
+msgid "Reconfirm weighings"
+msgstr "Reconfirmar pesajes"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_stock_picking_form_inherit_add_weighings
+msgid "Reset weighings"
+msgstr "Reiniciar pesajes"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.carriage_order_form_view
+msgid "Return to Processing"
+msgstr "Volver a Procesando"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_weighing__sale_id
+msgid "Sale"
+msgstr "Pedido de Venta"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.carriage_order_search_view
+msgid "Sale Order"
+msgstr "Pedido de Venta"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_carriage_order__sale_order_id
+msgid "Sale Order #"
+msgstr "Pedido de Venta"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model,name:onmi_turbo_bascule_and_receptions.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_weighing__second_weight
+msgid "Second Weight"
+msgstr "Segundo peso"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: code:addons/onmi_turbo_bascule_and_receptions/models/weighing.py:0
+#, python-format
+msgid ""
+"Second Weight can´t be upper than first one on Weighings from Purchase "
+"Orders.\n"
+"Please, check these values for the correct calculation.\n"
+msgstr ""
+"El segundo peso no puede ser mayor que el primero en pesajes de Órdenes de "
+"Compra.\n"
+"Por favor, revise esos valores para el cálculo correcto.\n"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: code:addons/onmi_turbo_bascule_and_receptions/models/stock_picking.py:0
+#, python-format
+msgid ""
+"Some Final Weight are <= 0.\n"
+"Maybe you forgot to put some weight on any lines of Weighing.\n"
+"Please, check if it is occurring."
+msgstr ""
+"Algún peso final es menor o igual a cero.\n"
+"Quizá olvidó incluir algún peso dentro de las líneas de pesajes.\n"
+"Por favor, revise si esto está ocurriendo."
+
+#. module: onmi_turbo_bascule_and_receptions
+#: code:addons/onmi_turbo_bascule_and_receptions/models/stock_picking.py:0
+#, python-format
+msgid ""
+"Some weighings are different from qty on picking.\n"
+"If you want to take this weight you can press on the next button.\n"
+msgstr ""
+"Algunos pesajes tienen un peso final diferente su demanda.\n"
+"Si quiere escoger estos nuevos pesos, presione el siguiente botón.\n"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_weighing__state
+msgid "State"
+msgstr "Estado"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_carriage_order__state
+msgid "Status"
+msgstr "Estado"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model,name:onmi_turbo_bascule_and_receptions.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento de existencias"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_stock_picking__text_warning
+msgid "Text Warning"
+msgstr "Texto de aviso"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,help:onmi_turbo_bascule_and_receptions.field_carriage_order__state
+msgid ""
+"The current state of your carriage order:- New: Fully editable- Processing: "
+"No longer editable- Processed: Processed- Validated: Finished- Cancelled: "
+"Cancelled"
+msgstr ""
+"Estado de su solicitud de transporte:-Nuevo: completamente editable- "
+"Procesando: no editable- Procesado: Procesado- Validado: Finalizado- "
+"Cancelado: Cancelado"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_stock_picking__total_delivered
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_stock_picking__total_ordered
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_stock_picking__total_wasted
+msgid "Total ordered"
+msgstr "Total pedido"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.actions.act_window,name:onmi_turbo_bascule_and_receptions.onmi_action_trailer
+#: model:ir.model,name:onmi_turbo_bascule_and_receptions.model_trailer
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_carriage_order__trailer_id
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_stock_picking__trailer_id
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_weighing__trailer_id
+#: model:ir.ui.menu,name:onmi_turbo_bascule_and_receptions.trailer_menu_logistic_module
+msgid "Trailer"
+msgstr "Remolque"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model,name:onmi_turbo_bascule_and_receptions.model_stock_picking
+msgid "Transfer"
+msgstr "Albarán"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_license_plate__type
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_weighing__type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_carriage_order__weight_uom
+msgid "Unit of Measure"
+msgstr "Unidad de medida"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.actions.act_window,help:onmi_turbo_bascule_and_receptions.onmi_action_weighing
+msgid "View Weighings"
+msgstr "Vista Pesajes"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.actions.act_window,help:onmi_turbo_bascule_and_receptions.onmi_action_weighing
+msgid "View Weighings, register weighing."
+msgstr "Ver pesajes y registrarlos."
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.actions.act_window,help:onmi_turbo_bascule_and_receptions.onmi_action_carriage_order
+msgid "View carriage orders"
+msgstr "Vista Solicitudes de Transporte"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.actions.act_window,help:onmi_turbo_bascule_and_receptions.onmi_action_carriage_order
+msgid "View invoices, register carriage orders."
+msgstr "Ver solicitudes de transporte y registrarlas."
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.actions.act_window,help:onmi_turbo_bascule_and_receptions.onmi_action_license_plate
+msgid "View invoices, register license plates."
+msgstr "Ver matrículas y registrarlas."
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.actions.act_window,help:onmi_turbo_bascule_and_receptions.onmi_action_trailer
+msgid "View invoices, register trailers."
+msgstr "Ver remolques y registrarlos."
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.actions.act_window,help:onmi_turbo_bascule_and_receptions.onmi_action_license_plate
+msgid "View license plate"
+msgstr "Ver matrícula"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.actions.act_window,help:onmi_turbo_bascule_and_receptions.onmi_action_trailer
+msgid "View trailer"
+msgstr "Ver remolque"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: code:addons/onmi_turbo_bascule_and_receptions/models/stock_picking.py:0
+#, python-format
+msgid ""
+"WEIGHINGS NOT CONFIRMED\n"
+"There are some weighing lines that are not confirmed.\n"
+"Please, check if it is occurring."
+msgstr ""
+"PESAJES NO CONFIRMADOS\n"
+"Hay alguna/s líneas de pesajes que no están confirmadas.\n"
+"Por favor, revise si esto ocurre."
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_weighing__waste
+msgid "Waste"
+msgstr "Merma"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_stock_move__waste_qty
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_stock_move_line__waste_qty
+msgid "Waste qty"
+msgstr "Cantidad mermada"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_license_plate__weighing_count
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_trailer__weighing_count
+msgid "Weighing Count"
+msgstr "Cuenta de pesajes"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model,name:onmi_turbo_bascule_and_receptions.model_weighing
+msgid "Weighing records"
+msgstr "Registros de pesajes"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.actions.act_window,name:onmi_turbo_bascule_and_receptions.onmi_action_weighing
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_license_plate__weighing_ids
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_stock_picking__weighing_ids
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_trailer__weighing_ids
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_license_plate_form_view
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_stock_picking_form_inherit_add_weighings
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_trailer_form_view
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.weighing_form_view
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.weighing_tree_view
+msgid "Weighings"
+msgstr "Pesajes"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_stock_picking__weighings_is_required
+msgid "Weighings is required"
+msgstr "Los pesajes son obligatorios"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.constraint,message:onmi_turbo_bascule_and_receptions.constraint_trailer_name_uniq_trailer
+msgid "You can not have two trailers with the same name!"
+msgstr "¡No puedes tener dos remolques con el mismo nombre!"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.constraint,message:onmi_turbo_bascule_and_receptions.constraint_license_plate_name_uniq_license_plate
+msgid "Yqou can not have two license plates with the same name!"
+msgstr "¡No puedes tener dos matrículas con el mismo nombre!"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields.selection,name:onmi_turbo_bascule_and_receptions.selection__license_plate__type__external
+msgid "external"
+msgstr "externo"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields.selection,name:onmi_turbo_bascule_and_receptions.selection__license_plate__type__internal
+msgid "internal"
+msgstr "interno"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_report_delivery_document_inherit
+msgid "kg"
+msgstr "kg."
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model:ir.model.fields,field_description:onmi_turbo_bascule_and_receptions.field_carriage_order__name
+msgid "name"
+msgstr "nombre"
+
+#. module: onmi_turbo_bascule_and_receptions
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_trailer_form_view
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_bascule_and_receptions.onmi_trailer_tree_view
+msgid "trailer"
+msgstr "remolque"

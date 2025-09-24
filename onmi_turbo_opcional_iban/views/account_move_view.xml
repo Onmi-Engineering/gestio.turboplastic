@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="onmi_view_account_move_iban_inherit" model="ir.ui.view">
+            <field name="name">onmi.view.account.move.iban.inherit</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='invoice_date']" position="after">
+                    <field name="id_company" invisible="1"/>
+                </xpath>
+                <xpath expr="//page[@name='other_info']" position="after">
+                    <page id="optional_iban" string="Select accounts" name="iban" invisible="company_id != 1">
+                        <group name="accounts" string="Accounts">
+                            <group class="col-6">
+                                <field name="show_first"/>
+                                <field name="first_iban" string=""/>
+                                <field name="show_second"/>
+                                <field name="second_iban" string=""/>
+                            </group>
+                            <group class="col-6">
+                                <field name="show_third"/>
+                                <field name="third_iban" string=""/>
+                                <field name="show_santander"/>
+                                <field name="santander_iban" string=""/>
+                            </group>
+                        </group>
+                        <group name="export_accounts" string="Export Accounts">
+                            <group class="col-6">
+                                <field name="show_export_cajamar"/>
+                                <field name="cajamar_export_text" string=""/>
+                                <field name="show_four"/>
+                                <field name="four_iban" string=""/>
+                            </group>
+                            <group class="col-6">
+                                <field name="show_export_santander"/>
+                                <field name="santander_export_text" string=""/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="onmi_view_base_document_layout_form_inherit_add_company_details_picking" model="ir.ui.view">
+            <field name="name">onmi.view.base.document.layout.form.inherit.add.company.details.picking</field>
+            <field name="model">base.document.layout</field>
+            <field name="inherit_id" ref="web.view_base_document_layout"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='company_details']" position="after">
+                    <field name="company_details_waybill"/>
+                </xpath>
+
+                <xpath expr="//field[@name='report_footer']" position="after">
+                    <field name="report_footer_waybill"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

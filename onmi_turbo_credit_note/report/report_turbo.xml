@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="onmi_action_report_exportacion_document" model="ir.actions.report">
+      <field name="name">Factura Exportacion</field>
+      <field name="model">account.move</field>
+      <field name="report_type">qweb-pdf</field>
+      <field name="report_name">onmi_turbo_credit_note.onmi_report_exportacion</field>
+      <field name="report_file">onmi_turbo_credit_note.onmi_report_exportacion</field>      
+      <field name="binding_model_id" ref="account.model_account_move"/>
+      <field name="binding_type">report</field>      
+  </record>
+  </data>
+</odoo>

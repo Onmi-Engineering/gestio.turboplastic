@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="onmi_action_license_plate" model="ir.actions.act_window">
+        <field name="name">License Plate</field>
+        <field name="res_model">license.plate</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="onmi_license_plate_tree_view"/>
+        <!--            <field name="search_view_id" ref="onmi_view_account_move_filter_commission_sales"/>-->
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+                    (0, 0, {'view_mode': 'list', 'view_id': ref('onmi_license_plate_tree_view')}),
+                    ]"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                View license plate
+            </p>
+            <p>
+                View invoices, register license plates.
+            </p>
+        </field>
+    </record>
+
+    <record id="onmi_action_trailer" model="ir.actions.act_window">
+        <field name="name">Trailer</field>
+        <field name="res_model">trailer</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="onmi_trailer_tree_view"/>
+        <!--            <field name="search_view_id" ref="onmi_view_account_move_filter_commission_sales"/>-->
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+                    (0, 0, {'view_mode': 'list', 'view_id': ref('onmi_trailer_tree_view')}),
+                    ]"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                View trailer
+            </p>
+            <p>
+                View invoices, register trailers.
+            </p>
+        </field>
+    </record>
+
+    <record id="onmi_action_carriage_order" model="ir.actions.act_window">
+        <field name="name">Carriage Orders</field>
+        <field name="res_model">carriage.order</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="carriage_order_tree_view"/>
+        <field name="search_view_id" ref="carriage_order_search_view"/>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+                    (0, 0, {'view_mode': 'list', 'view_id': ref('carriage_order_tree_view')}),
+                    (0, 0, {'view_mode': 'form', 'view_id': ref('carriage_order_form_view')}),
+                    ]"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                View carriage orders
+            </p>
+            <p>
+                View invoices, register carriage orders.
+            </p>
+        </field>
+    </record>
+
+    <record id="onmi_action_weighing" model="ir.actions.act_window">
+        <field name="name">Weighings</field>
+        <field name="res_model">weighing</field>
+        <field name="view_mode">list</field>
+        <field name="view_id" ref="weighing_tree_view"/>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+                    (0, 0, {'view_mode': 'list', 'view_id': ref('weighing_tree_view')}),
+                    ]"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                View Weighings
+            </p>
+            <p>
+                View Weighings, register weighing.
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+            id="main_menu_logistic_module"
+            name="Logistic"
+            web_icon="onmi_turbo_bascule_and_receptions,static/description/logistic_icon.png"
+            groups="group_logistic_employee,group_logistic_administrator"
+            sequence="137"
+    />
+    <menuitem
+            id="carriage_order_menu_logistic_module"
+            name="Carriage"
+            parent="main_menu_logistic_module"
+            sequence="1"
+    />
+    <menuitem
+            id="fleet_menu_logistic_module"
+            name="Fleet"
+            parent="main_menu_logistic_module"
+            groups="group_logistic_administrator"
+            sequence="2"
+    />
+    <menuitem
+            id="carriage_order_submenu_logistic_module"
+            name="Carriage Orders"
+            action="onmi_action_carriage_order"
+            parent="carriage_order_menu_logistic_module"
+            sequence="1"
+    />
+    <menuitem
+            id="trailer_menu_logistic_module"
+            name="Trailer"
+            action="onmi_action_trailer"
+            parent="fleet_menu_logistic_module"
+            sequence="1"
+    />
+    <menuitem
+            id="license_plate_menu_logistic_module"
+            name="License plate"
+            action="onmi_action_license_plate"
+            parent="fleet_menu_logistic_module"
+            sequence="2"
+    />
+</odoo>

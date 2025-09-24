@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Form Inherit view sale order -->
+        <record id="onmi_sale_order_form_inherit_add_button_carriage" model="ir.ui.view">
+            <field name="name">onmi.sale.order.form.inherit.add.button.carriage</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+<!--                <xpath expr="//header" position="inside">-->
+<!--                    <button name="action_create_carriage_order" type="object" string="Create carriage order" invisible="state != 'sale'"/>-->
+<!--                </xpath>-->
+
+                <xpath expr="//sheet/div[@name='button_box']" position="inside">
+                    <button type="object" name="action_view_carriage" class="oe_stat_button" icon="fa-truck" invisible="carriage_count == 0" modifiers="{&quot;invisible&quot;: [[&quot;delivery_count&quot;, &quot;=&quot;, 0]]}">
+                        <field name="carriage_count" widget="statinfo" string="Carriages" modifiers="{&quot;readonly&quot;: true}"/>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+         <record id="onmi_inherit_sale_view_quotation_tree" model="ir.ui.view">
+            <field name="name">onmi_inherit_sale_view_quotation_tree</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_quotation_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="license_plate_id" optional="show"/>
+                    <field name="trailer_id" optional="show"/>
+                    <field name="upload_date" optional="show"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

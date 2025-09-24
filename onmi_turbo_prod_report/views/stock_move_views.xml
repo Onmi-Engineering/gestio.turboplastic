@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Search view inherited -->
+    <record id="onmi_view_move_search_inherit_reported_date" model="ir.ui.view">
+        <field name="name">onmi.stock.move.search.inherit.reported.date</field>
+        <field name="model">stock.move</field>
+        <field name="inherit_id" ref="stock.view_move_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='today']" position="after">
+                <filter string="Date reported" name="reported_date" date="reported_date"
+                        help="Date from report"/>
+            </xpath>
+            <xpath expr="//filter[@name='groupby_date']" position="after">
+                <filter string="Reported Date" name="groupby_reported_date" domain="[]"
+                        context="{'group_by': 'reported_date'}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

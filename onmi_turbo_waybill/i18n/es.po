@@ -1,0 +1,216 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* onmi_turbo_waybill
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-18 10:03+0000\n"
+"PO-Revision-Date: 2022-10-18 12:03+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: onmi_turbo_waybill
+#: model:ir.actions.report,print_report_name:onmi_turbo_waybill.onmi_action_report_waybill
+msgid ""
+"'Waybill - %s - %s' % (object.partner_id.name or '',\n"
+"                object.name)\n"
+"            "
+msgstr ""
+"'Carta de Porte - %s - %s' % (object.partner_id.name or '',\n"
+"                object.name)\n"
+"            "
+
+#. module: onmi_turbo_waybill
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_waybill.onmi_report_waybill_document
+msgid ""
+"<br/>\n"
+"                                        Charger Signature"
+msgstr ""
+"<br/>\n"
+"                                        Firma Cargador"
+
+#. module: onmi_turbo_waybill
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_waybill.onmi_report_waybill_document
+msgid "<strong>BIRTHPLACE</strong>"
+msgstr "<strong>LUGAR DE ORIGEN</strong>"
+
+#. module: onmi_turbo_waybill
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_waybill.onmi_report_waybill_document
+msgid "<strong>CASH CARRIER</strong>"
+msgstr "<strong>TRANSPORTISTA EFECTIVO</strong>"
+
+#. module: onmi_turbo_waybill
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_waybill.onmi_report_waybill_document
+msgid "<strong>COMMENTS</strong>"
+msgstr "<strong>OBSERVACIONES</strong>"
+
+#. module: onmi_turbo_waybill
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_waybill.onmi_report_waybill_document
+msgid "<strong>COMMODITY NATURE</strong>"
+msgstr "<strong>NATURALEZA DE MERCANCÍA</strong>"
+
+#. module: onmi_turbo_waybill
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_waybill.onmi_report_waybill_document
+msgid "<strong>COMMODITY WEIGHT</strong>"
+msgstr "<strong>PESO DE MERCANCÍA</strong>"
+
+#. module: onmi_turbo_waybill
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_waybill.onmi_report_waybill_document
+msgid "<strong>COMPLETION DATE</strong>"
+msgstr "<strong>FECHA REALIZACIÓN</strong>"
+
+#. module: onmi_turbo_waybill
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_waybill.onmi_report_waybill_document
+msgid "<strong>CONTRACTUAL SHIPPER</strong>"
+msgstr "<strong>CARGADOR CONTRACTUAL</strong>"
+
+#. module: onmi_turbo_waybill
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_waybill.onmi_report_waybill_document
+msgid "<strong>DESTINATION PLACE</strong>"
+msgstr "<strong>LUGAR DE DESTINO</strong>"
+
+#. module: onmi_turbo_waybill
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_waybill.onmi_report_waybill_document
+msgid "<strong>LICENSE PLATE</strong>"
+msgstr "<strong>MATRÍCULA DE VEHÍCULO</strong>"
+
+#. module: onmi_turbo_waybill
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_waybill.onmi_report_waybill_document
+msgid "<strong>SHIPPER COMMENTS</strong>"
+msgstr "<strong>OBSERVACIONES DEL TRANSPORTISTA</strong>"
+
+#. module: onmi_turbo_waybill
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_waybill.onmi_report_waybill_document
+msgid "<strong>TRAILER</strong>"
+msgstr "<strong>MATRÍCULA DE REMOLQUE</strong>"
+
+#. module: onmi_turbo_waybill
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_waybill.onmi_external_layout_standard_stock_picking_waybill
+msgid "<strong>Waybill</strong>"
+msgstr "<strong>Carta de Porte</strong>"
+
+#. module: onmi_turbo_waybill
+#: model:ir.model.fields,field_description:onmi_turbo_waybill.field_stock_picking__comments
+msgid "Comments"
+msgstr "Observaciones"
+
+#. module: onmi_turbo_waybill
+#: model:ir.model,name:onmi_turbo_waybill.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: onmi_turbo_waybill
+#: model:ir.model.fields,field_description:onmi_turbo_waybill.field_base_document_layout__company_details_waybill
+#: model:ir.model.fields,field_description:onmi_turbo_waybill.field_res_company__company_details_waybill
+msgid "Company Details Waybill"
+msgstr "Detalles de compañía Carta de porte"
+
+#. module: onmi_turbo_waybill
+#: model:ir.model,name:onmi_turbo_waybill.model_base_document_layout
+msgid "Company Document Layout"
+msgstr "Diseño de documentos de la empresa"
+
+#. module: onmi_turbo_waybill
+#: model:ir.model.fields,field_description:onmi_turbo_waybill.field_stock_picking__contractual_shipper
+msgid "Contractual Shipper"
+msgstr "Cargador Contractual"
+
+#. module: onmi_turbo_waybill
+#: model:ir.model.fields,help:onmi_turbo_waybill.field_base_document_layout__report_footer_waybill
+#: model:ir.model.fields,help:onmi_turbo_waybill.field_res_company__report_footer_waybill
+msgid "Footer text displayed at the bottom of Waybill report."
+msgstr "Pie de página mostrado abajo del PDF Carta de Porte."
+
+#. module: onmi_turbo_waybill
+#: model:ir.model.fields,help:onmi_turbo_waybill.field_base_document_layout__company_details_waybill
+#: model:ir.model.fields,help:onmi_turbo_waybill.field_res_company__company_details_waybill
+msgid "Header text displayed at the top of Waybill report."
+msgstr "Encabezado mostrado arriba del PDF Carta de Porte."
+
+#. module: onmi_turbo_waybill
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_waybill.onmi_external_layout_standard_stock_picking_waybill
+msgid "Logo"
+msgstr "Logo"
+
+#. module: onmi_turbo_waybill
+#: model:ir.model.fields,field_description:onmi_turbo_waybill.field_stock_picking__commodity
+msgid "Nature of commodity"
+msgstr "Naturaleza de Mercancía"
+
+#. module: onmi_turbo_waybill
+#: model:ir.model.fields,field_description:onmi_turbo_waybill.field_stock_picking__net_weight
+msgid "Net Weight"
+msgstr "Peso neto"
+
+#. module: onmi_turbo_waybill
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_waybill.onmi_report_waybill_document
+msgid "Net:"
+msgstr "Neto:"
+
+#. module: onmi_turbo_waybill
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_waybill.onmi_external_layout_standard_stock_picking_waybill
+msgid ""
+"Page:\n"
+"                        <span class=\"page\"/>\n"
+"                        /\n"
+"                        <span class=\"topage\"/>"
+msgstr ""
+"Página:\n"
+"                        <span class=\"page\"/>\n"
+"                        /\n"
+"                        <span class=\"topage\"/>"
+
+#. module: onmi_turbo_waybill
+#: model:ir.model.fields,field_description:onmi_turbo_waybill.field_base_document_layout__report_footer_waybill
+#: model:ir.model.fields,field_description:onmi_turbo_waybill.field_res_company__report_footer_waybill
+msgid "Report Footer Waybill"
+msgstr "Pie de pagina Carta de Porte"
+
+#. module: onmi_turbo_waybill
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_waybill.onmi_report_waybill_document
+msgid "Shipper Signature"
+msgstr "Firma Transportista"
+
+#. module: onmi_turbo_waybill
+#: model:ir.model.fields,field_description:onmi_turbo_waybill.field_stock_picking__signature
+msgid "Signature"
+msgstr "Firma"
+
+#. module: onmi_turbo_waybill
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_waybill.onmi_report_waybill_document
+msgid "Signature, Date or Reveiver Stamp"
+msgstr "Firma, fecha o Sello del destinatario"
+
+#. module: onmi_turbo_waybill
+#: model:ir.model.fields,field_description:onmi_turbo_waybill.field_res_company__stamp
+msgid "Stamp"
+msgstr "Sello"
+
+#. module: onmi_turbo_waybill
+#: model:ir.model.fields,field_description:onmi_turbo_waybill.field_stock_picking__total_net_weight
+msgid "Total Net Weight"
+msgstr "Peso neto total"
+
+#. module: onmi_turbo_waybill
+#: model:ir.model,name:onmi_turbo_waybill.model_stock_picking
+msgid "Transfer"
+msgstr "Albarán"
+
+#. module: onmi_turbo_waybill
+#: model:ir.actions.report,name:onmi_turbo_waybill.onmi_action_report_waybill
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_waybill.onmi_view_stock_picking_form_inherit_add_waybill_page
+msgid "Waybill"
+msgstr "Carta de Porte"
+
+#. module: onmi_turbo_waybill
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_waybill.onmi_report_waybill_document
+msgid "kg"
+msgstr "kg"

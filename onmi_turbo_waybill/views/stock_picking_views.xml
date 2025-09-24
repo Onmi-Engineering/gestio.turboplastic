@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="onmi_view_stock_picking_form_inherit_add_waybill_page" model="ir.ui.view">
+            <field name="name">onmi.view.stock.picking.form.inherit.add.waybill.page</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Waybill" name="waybill">
+                        <group>
+                            <group>
+                                <field name="contractual_shipper"/>
+                            </group>
+                            <group>
+                                <field name="comments"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="signature_waybill" widget="signature"/>
+                        </group>
+                        <group>
+                            <field name="commodity" readonly="True"/>
+                        </group>
+                        <group>
+                            <field name="net_weight"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

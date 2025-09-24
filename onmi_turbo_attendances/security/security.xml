@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- grupo para el usuario tablet-->
+        <record id="group_attendances_quiosco" model="res.groups">
+            <field name="name">Quiosco user</field>
+        </record>
+        
+        <!-- grupo sin acceso asistencias-->
+        <record id="group_never_attendances_quiosco" model="res.groups">
+            <field name="name">Never Quiosco user</field>
+        </record>
+
+        <!-- Grupo para administración empleados/asistencias-->
+        <record id="group_hide_employee_attendances" model="res.groups">
+            <field name="name">Hide employee/attendances</field>
+        </record>
+         <!-- Grupo para administración empleados/asistencias/gestor-->
+        <record id="group_adviser_employee_attendances" model="res.groups">
+            <field name="name">Adviser employee/attendances</field>
+        </record>
+        <!-- Grupo para administración empleados/asistencias/turbo-->
+        <record id="group_turbo_employee_attendances" model="res.groups">
+            <field name="name">Turbo employee/attendances</field>
+        </record>
+
+        <record id="calendar_event_model_access" model="ir.model.access">
+            <field name="name">calendar_event_model_access</field>
+            <field name="model_id" ref="calendar.model_calendar_event"/>
+            <!-- <field name="group_id" ref="onmi_turbo_attendances.group_attendances_quiosco"/> -->
+            <field name="active">0</field>
+            <field name="perm_read">0</field>
+            <field name="perm_write">0</field>
+            <field name="perm_create">0</field>
+            <field name="perm_unlink">0</field>
+        </record>
+    </data>
+</odoo>

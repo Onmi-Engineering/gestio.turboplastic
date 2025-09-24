@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="onmi_report_invoice_exportacion_inherit_total_kg"
+            inherit_id="onmi_turbo_credit_note.onmi_report_exportacion_document">
+            <!-- Usando una expresión XPath más general para encontrar el div que contiene "TOTAL (kg)" -->
+            <xpath expr="//strong[contains(text(), 'TOTAL (kg)')]/../.." position="replace">
+                <div class="col-3">
+                    <span>
+                        <strong>TOTAL (kg):</strong>
+                    </span>
+                    <span t-field="doc.total_kg"/>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

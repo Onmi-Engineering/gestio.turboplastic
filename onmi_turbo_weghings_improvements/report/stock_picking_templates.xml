@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="onmi_report_delivery_document_inherit_tracking"
+            inherit_id="stock.report_delivery_document">
+            <xpath expr="//table[@class='table table-borderless mt48']/thead/tr/th[1]" position="after">
+                <t t-set="code" t-value="o.weighing_ids" />
+               <t t-foreach="code" t-as="move">
+                <th t-if="move.code_led" name="th_sm_codeled1">
+                    <strong>Code L.E.R</strong>
+                </th>
+            </t>
+            </xpath>
+            <xpath expr="//table[@name='stock_move_table']/thead/tr/th[1]" position="after">
+                <t t-set="code" t-value="o.weighing_ids" />
+                <t t-foreach="code" t-as="move">
+                <th t-if="move.code_led" name="th_sm_codeled2">                   
+                    <strong>Code L.E.R</strong>
+                </th>
+               </t>
+            </xpath>
+            <xpath expr="//table[@name='stock_move_table']/tbody/tr/td" position="after">
+                <td t-if="move.weighing_id.code_led"  class="text-center" name="th_sm_codeled5">
+                    <span t-field="move.weighing_id.code_led" />
+                </td>
+            </xpath>
+            <xpath expr="//div[@name='div_license_plate']" position="before">
+                <div t-if="o.weighing_ids" class="col-auto" name="div_date_planned">
+                    <strong>Date weigh-in:</strong>
+                    <p t-if="o.date_planned" t-field="o.date_planned" />
+                </div>
+            </xpath>
+        </template>
+        <template id="onmi_report_delivery_aggregated_document_inherit_code_led"
+            inherit_id="stock.stock_report_delivery_aggregated_move_lines">
+            <xpath expr="//td[1]" position="after">
+                <t t-set="code" t-value="o.weighing_ids" />
+                <t t-foreach="code" t-as="move">
+                <td t-if="move.code_led" class="text-center" name="move_line_aggregated_led_code">
+                    <span t-esc="aggregated_lines[line]['code_led']" />
+                    <br></br>
+                </td>
+            </t>
+            </xpath>
+        </template>
+    </data>
+</odoo>

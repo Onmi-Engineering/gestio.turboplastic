@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="onmi_view_purchase_order_form_inherit_agree" model="ir.ui.view">
+            <field name="name">onmi.view.purchase.order.form.inherit.agree</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                
+                <xpath expr="//field[@name='order_line']/list/field[@name='qty_received']" position="replace">
+                    <field name="qty_received" groups="!onmi_turbo_purchase_agreements.group_antonio_puig"/>
+                    
+    
+                </xpath>
+                <xpath expr="//button[@name='action_view_invoice']" position="attributes">
+                    <attribute name="groups">!onmi_turbo_purchase_agreements.group_antonio_puig</attribute>
+                    
+    
+                </xpath>
+            </field>
+        </record>        
+    </data>
+</odoo>

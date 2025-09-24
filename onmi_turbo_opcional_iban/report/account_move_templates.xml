@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="onmi_report_invoice_exportacion_inherit_accounts"
+                  inherit_id="onmi_turbo_credit_note.onmi_report_exportacion_document">
+            <xpath expr="//div[@name='accounts']/t" position="replace">
+                <t t-if="o.show_export_cajamar">
+                    <br/>
+                    <span t-field="o.cajamar_export_text"/>
+                </t>
+                <t t-if="o.show_export_santander">
+                    <br/>
+                    <span t-field="o.santander_export_text"/>
+                </t>
+                <t t-if="o.show_four">
+                    <br/>
+                    <span t-field="o.four_iban"/>
+                </t>
+            </xpath>
+        </template>
+    </data>
+</odoo>

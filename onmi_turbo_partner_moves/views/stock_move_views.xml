@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="onmi_stock_move_tree_inherit_partner_picking" model="ir.ui.view">
+            <field name="name">stock.move.tree.inherit.partner.picking</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='reference']" position="after">
+                    <field name="partner_picking_id" string="Partner of Picking"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="onmi_view_move_form_inherit_partner_picking" model="ir.ui.view">
+            <field name="name">stock.move.form.inherit.partner.picking</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='reference']" position="after">
+                    <field name="partner_picking_id" string="Partner of Picking"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="onmi_view_move_search_inherit_contact_picking" model="ir.ui.view">
+            <field name="name">onmi.stock.move.search.inherit.contact.picking</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_search"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='by_product']" position="inside">
+                    <filter string="Contact Picking" name="by_partner_picking" domain="[]"
+                            context="{'group_by': 'partner_picking_id'}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

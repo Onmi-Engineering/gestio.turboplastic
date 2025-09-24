@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="onmi_report_delivery_document_inherit_entry_and_close_date"
+                  inherit_id="stock.report_delivery_document">
+            <xpath expr="//div[@name='div_sched_date']" position="before">
+                <div t-if="o.scheduled_date" class="col-auto" name="div_scheduled_date">
+                    <strong>Entry Date:</strong>
+                    <p t-field="o.scheduled_date"/>
+                </div>
+            </xpath>
+            <xpath expr="//div[@name='div_sched_date']/strong" position="replace">
+                <strong>Output date:</strong>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

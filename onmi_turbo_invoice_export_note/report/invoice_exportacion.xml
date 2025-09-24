@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="onmi_report_invoice_exportacion_inherit_note"
+                  inherit_id="onmi_turbo_credit_note.onmi_report_exportacion_document">
+            <xpath expr="//div[@name='ports']" position="before">
+                <t t-if="doc.note">
+                    <div name="note" class="col-4 small">
+                        <span t-field="doc.note"/>
+                    </div>
+                </t>
+            </xpath>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="onmi_action_report_waybill" model="ir.actions.report">
+            <field name="name">Waybill</field>
+            <field name="model">stock.picking</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">onmi_turbo_waybill.onmi_report_waybill</field>
+            <field name="report_file">onmi_turbo_waybill.onmi_report_waybill</field>
+            <field name="print_report_name">'Waybill - %s - %s' % (object.partner_id.name or '',
+                object.name)
+            </field>
+            <field name="paperformat_id" ref="base.paperformat_euro"/>
+            <field name="binding_model_id" ref="model_stock_picking"/>
+            <field name="binding_type">report</field>
+        </record>
+
+    </data>
+</odoo>

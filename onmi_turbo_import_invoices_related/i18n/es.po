@@ -1,0 +1,85 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* onmi_turbo_import_invoices_related
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-27 20:14+0000\n"
+"PO-Revision-Date: 2022-11-27 21:15+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: onmi_turbo_import_invoices_related
+#: model:ir.model.fields,field_description:onmi_turbo_import_invoices_related.field_account_move_related__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: onmi_turbo_import_invoices_related
+#: model:ir.model.fields,field_description:onmi_turbo_import_invoices_related.field_account_move_related__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: onmi_turbo_import_invoices_related
+#: model:ir.model.fields,field_description:onmi_turbo_import_invoices_related.field_account_move_related__display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: onmi_turbo_import_invoices_related
+#: model:ir.model.fields,field_description:onmi_turbo_import_invoices_related.field_account_move_related__id
+msgid "ID"
+msgstr "Identificador"
+
+#. module: onmi_turbo_import_invoices_related
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_import_invoices_related.onmi_account_move_form_inherit_import_invocies
+msgid "Import Invoices"
+msgstr "Facturas de Importación"
+
+#. module: onmi_turbo_import_invoices_related
+#: model:ir.model.fields,field_description:onmi_turbo_import_invoices_related.field_account_move_related__invoice_id
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: onmi_turbo_import_invoices_related
+#: model:ir.model.fields,field_description:onmi_turbo_import_invoices_related.field_account_bank_statement_line__invoice_related_ids
+#: model:ir.model.fields,field_description:onmi_turbo_import_invoices_related.field_account_move__invoice_related_ids
+#: model:ir.model.fields,field_description:onmi_turbo_import_invoices_related.field_account_payment__invoice_related_ids
+msgid "Invoice Related"
+msgstr "Factura Relacionada"
+
+#. module: onmi_turbo_import_invoices_related
+#: model:ir.model,name:onmi_turbo_import_invoices_related.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: onmi_turbo_import_invoices_related
+#: model:ir.model.fields,field_description:onmi_turbo_import_invoices_related.field_account_move_related____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: onmi_turbo_import_invoices_related
+#: model:ir.model.fields,field_description:onmi_turbo_import_invoices_related.field_account_move_related__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: onmi_turbo_import_invoices_related
+#: model:ir.model.fields,field_description:onmi_turbo_import_invoices_related.field_account_move_related__write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: onmi_turbo_import_invoices_related
+#: model:ir.model.fields,field_description:onmi_turbo_import_invoices_related.field_account_move_related__name
+msgid "Number"
+msgstr "Número"
+
+#. module: onmi_turbo_import_invoices_related
+#: model:ir.model,name:onmi_turbo_import_invoices_related.model_account_move_related
+msgid "account.move.related"
+msgstr "account.move.related"

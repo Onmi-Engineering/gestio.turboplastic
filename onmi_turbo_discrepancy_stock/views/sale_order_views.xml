@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+
+        <record id="onmi_sale_order_form_inherit_add_button_discrepancy" model="ir.ui.view">
+            <field name="name">onmi.sale.order.form.inherit.add.button.discrepancy</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+<!--                <xpath expr="//header" position="inside">-->
+<!--                    <button name="action_dicrepancy_sale_order_massive" type="object" string="Create Negative Discrepancy" invisible="state != 'sale' or (state == 'sale' and check_invoices)"/>-->
+<!--                    <button name="action_positive_dicrepancy_sale_order" type="object" string="Create Positive Discrepancy" invisible="state != 'sale' or (state == 'sale' and check_invoices)"/>-->
+<!--                </xpath>-->
+                <xpath expr="//sheet/div[2]" position="inside">
+                    <field name="check_invoices" invisible="1"/>
+                    <div name="message_alert" style="color: #e50a0a !important;text-align: center;" invisible="not check_invoices">
+                        Discrepancy has been done. Please, you have to check new invoice.
+                    </div>
+                </xpath>
+            </field>
+        </record>
+        <record id="onmi_sale_order_tree_inherit_add_button_discrepancy" model="ir.ui.view">
+            <field name="name">onmi_sale_order_tree_inherit_add_button_discrepancy</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_tree"/>
+            <field name="arch" type="xml">
+<!--                <xpath expr="//field[@name='message_needaction']" position="before">-->
+<!--                    <header>-->
+<!--                        <button name="action_dicrepancy_sale_order_massive" type="object" string="Negative Discrepancy"/>-->
+<!--                        <button name="action_positive_dicrepancy_sale_order" type="object" string="Possitive Discrepancy"/>-->
+<!--                    </header>-->
+<!--                </xpath>-->
+            </field>
+        </record>
+    </data>
+</odoo>

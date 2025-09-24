@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="onmi_account_move_form_inherit_import_invocies" model="ir.ui.view">
+            <field name="name">onmi.account.move.form.inherit.import.invoices</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page name="import_invoices" string="Import Invoices">
+                        <field name="invoice_related_ids" widget="section_and_note_one2many">
+                            <list editable="bottom">
+                                <field name="invoice_id"/>
+                            </list>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="onmi_view_partner_form_inherit_id_fields" model="ir.ui.view">
+            <field name="name">onmi.view.partner.form.inherit.id.fields</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Identification Document" name="identification_document">
+                        <group>
+                            <group>
+                                <field name="nima"/>
+                                <field name="cnae"/>
+                                <field name="rpgr"/>
+                            </group>
+                            <group>
+                                <field name="document_user_id"/>
+                                <field name="operator_type"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

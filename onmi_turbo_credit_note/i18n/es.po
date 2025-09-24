@@ -1,0 +1,236 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* onmi_turbo_credit_note
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-28 16:34+0000\n"
+"PO-Revision-Date: 2022-11-28 16:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: onmi_turbo_credit_note
+#: model:ir.actions.report,print_report_name:onmi_turbo_credit_note.onmi_action_report_exportacion_document
+msgid "Export Invoice"
+"'ID - %s - %s' % (object.partner_id.name or '',\n"
+"        object.name)\n"
+"      "
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_credit_note.onmi_report_exportacion_document
+msgid "<br/>CREDIT NOTE"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_credit_note.onmi_report_exportacion_document
+msgid "<br/>INVOICE"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_credit_note.onmi_report_exportacion_document
+msgid ""
+"<span>\n"
+"        \n"
+"        BANK NAME: CAJAMAR CAJA RURAL<br/>ADRESS: AV.MIGUEL DE CERVANTES 9,30009 MURCIA(ESPAÑA)<br/>EURO ACCOUNT: ES35 0236 01272021 6393<br/>BIC: CCRIES2AXXX\n"
+"        \n"
+"        <br/></span>"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_credit_note.onmi_report_exportacion_document
+msgid ""
+"<span>\n"
+"        \n"
+"        RECICLADOS MEDIOAMBIENTALES TURBO PLASTIC S.L.<br/>CTRA. CARTAGENA -ALHAMA KM 25.<br/>30320 FUENTE ALAMO DE MURCIA (URCIA) ESPAÑA<br/>TAX ID: ESB30768253\n"
+"        \n"
+"        <br/></span>"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_credit_note.onmi_report_exportacion_document
+msgid ""
+"<span>\n"
+"                  <strong>CREDIT NOTE NO:</strong>\n"
+"          <br/>\n"
+"                </span>"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_credit_note.onmi_report_exportacion_document
+msgid ""
+"<span>\n"
+"                  <strong>HS CODE:</strong>\n"
+"                  <br/>\n"
+"                </span>"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_credit_note.onmi_report_exportacion_document
+msgid ""
+"<span>\n"
+"                  <strong>INCOTERM:</strong>\n"
+"          <br/>\n"
+"                </span>"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_credit_note.onmi_report_exportacion_document
+msgid ""
+"<span>\n"
+"                  <strong>PORT OF LOADING:</strong>\n"
+"                  <br/>\n"
+"                </span>"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_credit_note.onmi_report_exportacion_document
+msgid ""
+"<span>\n"
+"              <strong>CONTRAT NO:</strong>\n"
+"              <br/>\n"
+"            </span>"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_credit_note.onmi_report_exportacion_document
+msgid ""
+"<span>\n"
+"              <strong>CREDIT NOTE DATE:</strong>\n"
+"          <br/>\n"
+"            </span>"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_credit_note.onmi_report_exportacion_document
+msgid ""
+"<span>\n"
+"              <strong>ORIGIN:</strong>\n"
+"              <br/>\n"
+"            </span>"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_credit_note.onmi_report_exportacion_document
+msgid ""
+"<span>\n"
+"              <strong>PORT OF DISCHARGE:</strong>\n"
+"              <br/>\n"
+"            </span>"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_credit_note.onmi_report_exportacion_document
+msgid ""
+"<span>\n"
+"              <strong>TOTAL (kg):</strong>\n"
+"              <br/>\n"
+"            </span>"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_credit_note.onmi_report_exportacion_document
+msgid ""
+"<span><span style=\"font-weight: bolder;\">RECICLADOS MEDIOAMBIENTALES</span><br/><span style=\"font-weight: bolder;\">TURBO PLASTIC SL</span><br/>CR. CARTAGENA-ALHAMA 25<br/>30320 MURCIA<br/>ESPAÑA 968151130<br/>contabilidad@uplusrecycling.com<br/>VAT: ESB30768253\n"
+"        \n"
+"        <br/></span>"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_credit_note.onmi_report_exportacion_document
+msgid "<span>Amount</span>"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_credit_note.onmi_report_exportacion_document
+msgid "<span>BALAS</span>"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_credit_note.onmi_report_exportacion_document
+msgid "<span>Container no</span>"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_credit_note.onmi_report_exportacion_document
+msgid "<span>Description</span>"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_credit_note.onmi_report_exportacion_document
+msgid "<span>Gross Weight</span>"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_credit_note.onmi_report_exportacion_document
+msgid "<span>Net Weight</span>"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_credit_note.onmi_report_exportacion_document
+msgid "<span>Packages</span>"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_credit_note.onmi_report_exportacion_document
+msgid "<span>Price</span>"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_credit_note.onmi_report_exportacion_document
+msgid "<span>Seal No</span>"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model:ir.model.fields,help:onmi_turbo_credit_note.field_account_bank_statement_line__inverse_tax_totals_json
+#: model:ir.model.fields,help:onmi_turbo_credit_note.field_account_move__inverse_tax_totals_json
+#: model:ir.model.fields,help:onmi_turbo_credit_note.field_account_payment__inverse_tax_totals_json
+msgid "Edit Tax amounts if you encounter rounding issues."
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model:ir.actions.report,name:onmi_turbo_credit_note.onmi_action_report_exportacion_document
+msgid "Factura Exportacion"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model:ir.model.fields,field_description:onmi_turbo_credit_note.field_account_move_line__inverse_subtotal
+msgid "Inverse Subtotal"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model:ir.model.fields,field_description:onmi_turbo_credit_note.field_account_bank_statement_line__inverse_total_taxes
+#: model:ir.model.fields,field_description:onmi_turbo_credit_note.field_account_move__inverse_total_taxes
+#: model:ir.model.fields,field_description:onmi_turbo_credit_note.field_account_payment__inverse_total_taxes
+msgid "Inverse Total Taxes"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model:ir.model.fields,field_description:onmi_turbo_credit_note.field_account_bank_statement_line__inverse_total_untaxes
+#: model:ir.model.fields,field_description:onmi_turbo_credit_note.field_account_move__inverse_total_untaxes
+#: model:ir.model.fields,field_description:onmi_turbo_credit_note.field_account_payment__inverse_total_untaxes
+msgid "Inverse Total Untaxes"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model:ir.model.fields,field_description:onmi_turbo_credit_note.field_account_bank_statement_line__inverse_tax_totals_json
+#: model:ir.model.fields,field_description:onmi_turbo_credit_note.field_account_move__inverse_tax_totals_json
+#: model:ir.model.fields,field_description:onmi_turbo_credit_note.field_account_payment__inverse_tax_totals_json
+msgid "Invoice Totals JSON"
+msgstr ""
+
+#. module: onmi_turbo_credit_note
+#: model:ir.model,name:onmi_turbo_credit_note.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+#. module: onmi_turbo_credit_note
+#: model:ir.model,name:onmi_turbo_credit_note.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte contable"

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="onmi_report_delivery_document_inherit_add_weighings_lines"
+                  inherit_id="stock.report_delivery_document">
+            <xpath expr="//table[@name='stock_move_line_table']/thead/tr/th[@name='th_sml_qty_ordered']"
+                   position="before">
+                <th t-if="o.weighing_ids" name="th_sml_1_weight">
+                    <strong>First Weight</strong>
+                </th>
+                <th t-if="o.weighing_ids" name="th_sml_2_weight">
+                    <strong>Second Weight</strong>
+                </th>
+            </xpath>
+            <xpath expr="//table[@name='stock_move_table']/thead/tr/th[@name='th_sm_ordered']" position="before">
+                <th t-if="o.weighing_ids" name="th_sm_1_weight">
+                    <strong>First Weight</strong>
+                </th>
+                <th t-if="o.weighing_ids" name="th_sm_2_weight">
+                    <strong>Second Weight</strong>
+                </th>
+            </xpath>
+
+            <xpath expr="//table[@name='stock_move_table']/tbody/tr/td" position="after">
+                <td t-if="o.weighing_ids">
+                    <span t-field="move.weighing_id.first_weight"/>
+                    <span>kg</span>
+                </td>
+                <td t-if="o.weighing_ids">
+                    <span t-field="move.weighing_id.second_weight"/>
+                    <span>kg</span>
+                </td>
+            </xpath>
+        </template>
+        <template id="onmi_stock_report_delivery_has_serial_move_line_inherit_weighings_weigths"
+                  inherit_id="stock.stock_report_delivery_has_serial_move_line">
+            <xpath expr="//td[@name='move_line_lot_quantity']" position="before">
+                <td t-if="o.weighing_ids">
+                    <span t-field="move_line.move_id.weighing_id.first_weight"/>
+                    <span>kg</span>
+                </td>
+                <td t-if="o.weighing_ids">
+                    <span t-field="move_line.move_id.weighing_id.second_weight"/>
+                    <span>kg</span>
+                </td>
+            </xpath>
+        </template>
+        <template id="onmi_stock_report_delivery_aggregated_move_lines_inherit_waste"
+                  inherit_id="stock.stock_report_delivery_aggregated_move_lines">
+            <xpath expr="//td[@name='move_line_aggregated_qty_ordered']" position="before">
+                <td t-if="o.weighing_ids">
+                    <span t-esc="aggregated_lines[line]['first_weight']"/>
+                    <span>kg</span>
+                </td>
+                <td t-if="o.weighing_ids">
+                    <span t-esc="aggregated_lines[line]['second_weight']"/>
+                    <span>kg</span>
+                </td>
+            </xpath>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Form view carriage order -->
+        <record id="carriage_order_form_view" model="ir.ui.view">
+            <field name="name">carriage_order.form.view</field>
+            <field name="model">carriage.order</field>
+            <field name="arch" type="xml">
+                <form string="Carriage Order">
+                    <header>
+                        <field name="state" nolabel="1" colspan="2" widget="statusbar" onchange="0"/>
+                        <button name="action_processed" type="object" string="Process" invisible="state != 'processing'"/>
+                        <button name="action_cancelled" type="object" string="Cancel" invisible="state == 'cancel'"/>
+                        <button name="action_processing" type="object" string="Return to Processing" invisible="state != 'cancel'"/>
+
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" readonly="state != 'draft'"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="contact" widget="res_partner_many2one" context="{'res_partner_search_mode': 'customer', 'show_address': 1, 'show_vat': True}" options="{&quot;always_reload&quot;: True}"/>
+                                <field name="partner_shipping_alt"/>
+                            </group>
+                            <group>
+                                <field name="processed" widget="boolean_toggle"/>
+                                <field name="delivery_date"/>
+                                <field name="pick_up_date"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Information">
+                                <group>
+                                    <group>
+                                        <field name="weight"/>
+                                        <field name="weight_uom"/>
+                                    </group>
+                                    <group>
+                                        <field name="license_plate_id"/>
+                                        <field name="trailer_id"/>
+                                    </group>
+                                </group>
+                                <group>
+                                    <group>
+                                        <field name="company_id"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Other information">
+                                <group>
+                                    <group>
+                                        <field name="sale_order_id" invisible="not sale_order_id"/>
+                                        <field name="purchase_order_id" invisible="not purchase_order_id"/>
+                                    </group>
+                                    <group>
+                                        <field name="origin"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Form view carriage order for action -->
+        <record id="carriage_order_form_view_for_action" model="ir.ui.view">
+            <field name="name">carriage_order.form.view.for.action</field>
+            <field name="model">carriage.order</field>
+            <field name="arch" type="xml">
+                <form string="Carriage Order" create="0">
+                    <header>
+                        <field name="state" nolabel="1" colspan="2" widget="statusbar" onchange="1"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" readonly="state != 'draft'"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="contact" widget="res_partner_many2one" context="{'res_partner_search_mode': 'customer', 'show_address': 1, 'show_vat': True}" options="{&quot;always_reload&quot;: True}"/>
+                                <field name="partner_shipping_alt"/>
+                            </group>
+                            <group>
+                                <field name="processed" widget="boolean_toggle" readonly="True"/>
+                                <field name="delivery_date"/>
+                                <field name="pick_up_date"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Information">
+                                <group>
+                                    <group>
+                                        <field name="weight" readonly="True"/>
+                                        <field name="weight_uom" invisible="not weight_uom"/>
+                                    </group>
+                                    <group>
+
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Other information">
+                                <group>
+                                    <group>
+                                        <field name="sale_order_id" invisible="not sale_order_id"/>
+                                        <field name="purchase_order_id" invisible="not purchase_order_id"/>
+                                    </group>
+                                    <group>
+                                        <field name="origin"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- Tree view carriage order -->
+        <record id="carriage_order_tree_view" model="ir.ui.view">
+            <field name="name">carriage_order.tree.view</field>
+            <field name="model">carriage.order</field>
+            <field name="arch" type="xml">
+                <list string="Carriage Order">
+                    <field name="name"/>
+                    <field name="contact"/>
+                    <field name="origin"/>
+                    <field name="create_date"/>
+                    <field name="pick_up_date"/>
+                    <field name="delivery_date"/>
+                    <field name="state" widget="badge" decoration-success="state == 'processed'" decoration-info="state == 'processing'" decoration-danger="state == 'cancel'"/>
+
+                </list>
+            </field>
+        </record>
+
+        <record id="carriage_order_tree_view_for_action" model="ir.ui.view">
+            <field name="name">carriage_order.tree.view.action</field>
+            <field name="model">carriage.order</field>
+            <field name="arch" type="xml">
+                <list string="Carriage Order" create="0">
+                    <field name="name"/>
+                    <field name="contact"/>
+                    <field name="origin"/>
+                    <field name="create_date"/>
+                    <field name="pick_up_date"/>
+                    <field name="delivery_date"/>
+                    <field name="state" widget="badge" decoration-success="state == 'processed'" decoration-info="state == 'processing'" decoration-danger="state == 'cancel'"/>
+
+                </list>
+            </field>
+        </record>
+        <!-- Search view carriage order-->
+        <record id="carriage_order_search_view" model="ir.ui.view">
+            <field name="name">carriage_order_search_view</field>
+            <field name="model">carriage.order</field>
+            <field name="arch" type="xml">
+                <search string="Carriage Order Search">
+                    <field name="name"/>
+                    <field name="contact"/>
+                    <separator/>
+                    <filter name="processed" string="Processed" domain="[('processed', '=', True)]"/>
+                    <filter name="not_processed" string="Not Processed" domain="[('processed', '=', False)]"/>
+                    <separator/>
+                    <group expand="1" string="Group By">
+                        <filter string="Sale Order" name="sale_order" domain="[]" context="{'group_by':'sale_order_id'}"/>
+                        <filter string="Purchase Order" name="purchase_order" domain="[]" context="{'group_by':'purchase_order_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

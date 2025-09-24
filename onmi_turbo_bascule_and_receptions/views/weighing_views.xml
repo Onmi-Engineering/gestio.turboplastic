@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="weighing_tree_view" model="ir.ui.view">
+            <field name="name">weighing.tree.view</field>
+            <field name="model">weighing</field>
+            <field name="arch" type="xml">
+                <list string="Weighings" create="0">
+                    <field name="contact"/>
+                    <field name="product_id"/>
+                    <field name="sale_id"/>
+                    <field name="purchase_id"/>
+                    <field name="first_weight"/>
+                    <field name="second_weight"/>
+                    <field name="final_weight"/>
+                    <field name="type"/>
+                    <field name="state" readonly="1" widget="badge"
+                           decoration-success="state == 'confirmed'"
+                           decoration-info="state == 'new'" decoration-danger="state == 'on_weighing'"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="weighing_form_view" model="ir.ui.view">
+            <field name="name">weighing.form.view</field>
+            <field name="model">weighing</field>
+            <field name="arch" type="xml">
+                <form string="Weighings">
+                    <header>
+                        <field name="state" widget="statusbar" readonly="1"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="contact"/>
+                                <field name="product_id"/>
+                                <field name="type"/>
+                            </group>
+                            <group>
+                                <field name="first_weight"/>
+                                <field name="second_weight"/>
+                                <field name="final_weight"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="trailer_id"/>
+                                <field name="license_plate_id"/>
+                            </group>
+                            <group>
+                                <field name="sale_id"/>
+                                <field name="purchase_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

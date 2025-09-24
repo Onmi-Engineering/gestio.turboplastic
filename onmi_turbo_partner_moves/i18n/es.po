@@ -1,0 +1,47 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* onmi_turbo_partner_moves
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-28 11:47+0000\n"
+"PO-Revision-Date: 2022-11-28 12:47+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: onmi_turbo_partner_moves
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_partner_moves.onmi_view_move_search_inherit_contact_picking
+msgid "Contact Picking"
+msgstr "Contacto Albarán"
+
+#. module: onmi_turbo_partner_moves
+#: model:ir.model.fields,field_description:onmi_turbo_partner_moves.field_stock_move__partner_picking_id
+#: model:ir.model.fields,field_description:onmi_turbo_partner_moves.field_stock_move_line__partner_picking_id
+msgid "Partner Picking"
+msgstr "Contacto Albarán"
+
+#. module: onmi_turbo_partner_moves
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_partner_moves.onmi_stock_move_tree_inherit_partner_picking
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_partner_moves.onmi_view_move_form_inherit_partner_picking
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_partner_moves.onmi_view_move_line_form_inherit_partner_picking
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_partner_moves.onmi_view_move_line_tree_inherit_partner_picking
+msgid "Partner of Picking"
+msgstr "Contacto de Albarán"
+
+#. module: onmi_turbo_partner_moves
+#: model:ir.model,name:onmi_turbo_partner_moves.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Movimientos de Producto (Stock Move Line)"
+
+#. module: onmi_turbo_partner_moves
+#: model:ir.model,name:onmi_turbo_partner_moves.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento de existencias"
