@@ -24,7 +24,7 @@ class PurchaseOrder(models.Model):
         if self.picking_ids:
             for picking in self.picking_ids:
 
-                picking.weighings_is_required = True
+                picking.weighings_is_required = False
                 for operation in picking.move_ids_without_package:
                     self.env['weighing'].create({
                         'contact': self.partner_id.id,
