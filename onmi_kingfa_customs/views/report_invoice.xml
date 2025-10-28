@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+          <!-- Heredamos el QWeb de factura y sustituimos la descripción de la línea
+           para NO mostrar el código interno, sólo el nombre del producto -->
+      <template id="report_invoice_hide_product_code"
+                inherit_id="account.report_invoice_document">
+        <!-- 1) XPath principal: cuando la celda contiene un span con t-field="line.name" -->
+        <xpath expr="//td[@name='account_invoice_line_name']/span[@t-field='line.name']"
+               position="replace">
+          <span t-esc="(line.product_id and line.product_id.with_context(lang=o.partner_id.lang).name) or line.name"/>
+        </xpath>
+
+        <!-- 2) Fallback: por si la plantilla de tu base usa otra marca distinta.
+             Reemplaza cualquier hijo dentro de la celda que esté imprimiendo line.name -->
+        <xpath expr="//td[@name='account_invoice_line_name']/*[contains(@t-field, 'line.name') or contains(@t-esc, 'line.name')]"
+               position="replace">
+          <span t-esc="(line.product_id and line.product_id.with_context(lang=o.partner_id.lang).name) or line.name"/>
+        </xpath>
+      </template>
+    </data>
+</odoo>
