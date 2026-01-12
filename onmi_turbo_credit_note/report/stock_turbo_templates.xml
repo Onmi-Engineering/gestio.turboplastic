@@ -179,15 +179,27 @@
                                                 <span t-field="table_line.x_studio_seal_no"/>
                                             </td>
                                             <td>
-                                                <!-- MODIFICACIÓN: Solo mostrar la descripción, no el nombre del producto -->
-                                                <t t-set="description_text" t-value="table_line.name"/>
-                                                <t t-if="'\n' in description_text">
-                                                    <span t-esc="'\n'.join(description_text.split('\n')[1:])"/>
+<!--                                                &lt;!&ndash; MODIFICACIÓN: Solo mostrar la descripción, no el nombre del producto &ndash;&gt;-->
+<!--                                                <t t-set="description_text" t-value="table_line.name"/>-->
+<!--                                                <t t-if="'\n' in description_text">-->
+<!--                                                    <span t-esc="'\n'.join(description_text.split('\n')[1:])"/>-->
+<!--                                                </t>-->
+<!--                                                <t t-else="">-->
+<!--                                                    &lt;!&ndash; Si no hay salto de línea, intentar usar la descripción del producto &ndash;&gt;-->
+<!--                                                    <span t-field="table_line.product_id.description_sale" t-if="table_line.product_id.description_sale"/>-->
+<!--                                                    <span t-field="table_line.name" t-if="not table_line.product_id.description_sale"/>-->
+<!--                                                </t>-->
+                                                <!-- Mostrar solo la descripción, eliminando el nombre del producto si está incluido -->
+                                                <t t-set="name_txt"
+                                                   t-value="table_line.name.replace('\r\n', '\n')"/>
+                                                <t t-set="product_name"
+                                                   t-value="table_line.product_id.display_name or ''"/>
+
+                                                <t t-if="product_name and name_txt.startswith(product_name)">
+                                                    <span t-esc="'\n'.join(name_txt.split('\n')[1:])"/>
                                                 </t>
                                                 <t t-else="">
-                                                    <!-- Si no hay salto de línea, intentar usar la descripción del producto -->
-                                                    <span t-field="table_line.product_id.description_sale" t-if="table_line.product_id.description_sale"/>
-                                                    <span t-field="table_line.name" t-if="not table_line.product_id.description_sale"/>
+                                                    <span t-esc="name_txt"/>
                                                 </t>
                                             </td>
                                             <td>
