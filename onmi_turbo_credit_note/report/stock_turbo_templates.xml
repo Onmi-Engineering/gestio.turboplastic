@@ -56,6 +56,16 @@
                     .label-value {
                         margin-bottom: 5px !important;
                     }
+                    .table {
+                        table-layout: fixed;
+                        width: 100%;
+                    }
+
+                    .table td {
+                        white-space: normal !important;
+                        word-wrap: break-word !important;
+                        word-break: break-word !important;
+                    }
                 </style>
                 <t t-foreach="docs" t-as="doc">
                     <div class="article" t-att-data-oe-model="doc._name" t-att-data-oe-id="doc.id">
@@ -196,10 +206,10 @@
                                                    t-value="table_line.product_id.display_name or ''"/>
 
                                                 <t t-if="product_name and name_txt.startswith(product_name)">
-                                                    <span t-esc="'\n'.join(name_txt.split('\n')[1:])"/>
+                                                    <div t-esc="'\n'.join(name_txt.split('\n')[1:])"/>
                                                 </t>
                                                 <t t-else="">
-                                                    <span t-esc="name_txt"/>
+                                                    <div t-esc="name_txt"/>
                                                 </t>
                                             </td>
                                             <td>
