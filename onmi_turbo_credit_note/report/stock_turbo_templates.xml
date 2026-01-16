@@ -56,6 +56,16 @@
                     .label-value {
                         margin-bottom: 5px !important;
                     }
+                    .table {
+                        table-layout: fixed;
+                        width: 100%;
+                    }
+
+                    .table td {
+                        white-space: normal !important;
+                        word-wrap: break-word !important;
+                        word-break: break-word !important;
+                    }
                 </style>
                 <t t-foreach="docs" t-as="doc">
                     <div class="article" t-att-data-oe-model="doc._name" t-att-data-oe-id="doc.id">
