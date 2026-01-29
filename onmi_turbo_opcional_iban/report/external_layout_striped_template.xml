@@ -2,7 +2,7 @@
 <odoo>
     <data>
         <template id="onmi_report_striped_document_inherit" inherit_id="web.external_layout_striped">
-            <xpath expr="//div[@class='o_footer_content border-top pt-2 text-center']" position="replace">
+            <xpath expr="//div[@class='o_footer_content border-top pt-2 text-center']" position="inside">
                 <t t-if="o">
                     <t t-if="o._table == 'account_move'">
                         <ul t-if="o.show_first or o.show_second or o.show_third or o.show_santander" style="list-style:none;">
