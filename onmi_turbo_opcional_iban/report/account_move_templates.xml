@@ -2,8 +2,8 @@
 <odoo>
     <data>
         <template id="onmi_report_invoice_exportacion_inherit_accounts"
-                  inherit_id="onmi_turbo_credit_note.onmi_report_exportacion_document">
-            <xpath expr="//div[@name='accounts']/t" position="replace">
+                  inherit_id="onmi_turbo_credit_note.onmi_report_exportacion_content">
+            <xpath expr="//div[@name='accounts']" position="inside">
                 <t t-if="o.show_export_cajamar">
                     <br/>
                     <span t-field="o.cajamar_export_text"/>
