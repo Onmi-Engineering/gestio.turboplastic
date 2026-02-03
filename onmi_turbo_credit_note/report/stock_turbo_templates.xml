@@ -69,10 +69,10 @@
                     margin: 0 !important;
                 }
                 .export-invoice .h2 {
-                    font-size: 22px !important;
+                    font-size: 32px !important;
                     font-weight: bold !important;
-                    margin-top: 10px !important;
-                    margin-bottom: 15px !important;
+                    margin-top: 15px !important;
+                    margin-bottom: 20px !important;
                 }
                 .export-invoice .table {
                     font-size: 10px !important;
@@ -88,7 +88,13 @@
                 .export-invoice strong {
                     font-size: 10px !important;
                 }
-                /* Table cells - NO vertical borders, only horizontal */
+                /* Table - NO borders at all, only light horizontal lines between rows */
+                .export-invoice .table,
+                .export-invoice .table-bordered,
+                .export-invoice .o_report_block_table {
+                    border: none !important;
+                    border-collapse: collapse !important;
+                }
                 .export-invoice .table td,
                 .export-invoice .table th {
                     padding: 4px 6px !important;
@@ -105,16 +111,18 @@
                     font-weight: bold !important;
                     background-color: transparent !important;
                 }
-                /* Remove all table borders */
-                .export-invoice .table,
-                .export-invoice .table-bordered,
-                .export-invoice .o_report_block_table {
-                    border: none !important;
-                }
-                .export-invoice .table-bordered td,
-                .export-invoice .table-bordered th {
+                /* First and last cells - no outer borders */
+                .export-invoice .table td:first-child,
+                .export-invoice .table th:first-child {
                     border-left: none !important;
+                }
+                .export-invoice .table td:last-child,
+                .export-invoice .table th:last-child {
                     border-right: none !important;
+                }
+                /* Remove table outer border */
+                .export-invoice .table tbody tr:last-child td {
+                    border-bottom: none !important;
                 }
                 .export-invoice .row {
                     margin-bottom: 3px !important;
@@ -143,10 +151,10 @@
                     margin-bottom: 5px !important;
                 }
                 /* Column widths for invoice lines table */
-                .export-invoice .col-packages { width: 6%; }
+                .export-invoice .col-packages { width: 8%; }
                 .export-invoice .col-container { width: 12%; }
                 .export-invoice .col-seal { width: 10%; }
-                .export-invoice .col-description { width: 34%; }
+                .export-invoice .col-description { width: 32%; }
                 .export-invoice .col-gross { width: 10%; }
                 .export-invoice .col-net { width: 10%; }
                 .export-invoice .col-price { width: 8%; }
