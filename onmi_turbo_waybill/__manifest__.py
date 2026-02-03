@@ -2,7 +2,7 @@
     'name': 'TURBO Waybill',
     'version': '18.0.0.1',
     'summary': 'PDF Carta de Porte',
-    'description': 'PDF Carta de Porte',
+    'description': 'PDF Carta de Porte ',
     'category':  'ONMI develpments',
     'author': 'ONMI Engineering',
     'license': 'LGPL-3',
