@@ -2,11 +2,11 @@
 <odoo>
     <data>
         <template id="onmi_report_invoice_exportacion_inherit_note"
-                  inherit_id="onmi_turbo_credit_note.onmi_report_exportacion_document">
+                  inherit_id="onmi_turbo_credit_note.onmi_report_exportacion_content">
             <xpath expr="//div[@name='ports']" position="before">
-                <t t-if="doc.note">
+                <t t-if="o.note">
                     <div name="note" class="col-4 small">
-                        <span t-field="doc.note"/>
+                        <span t-field="o.note"/>
                     </div>
                 </t>
             </xpath>

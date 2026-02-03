@@ -1,405 +1,404 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+        <!-- External layout for export invoices -->
+        <template id="onmi_external_layout_export_invoice">
+            <t t-if="not o" t-set="o" t-value="doc"/>
+
+            <t t-if="not company">
+                <!-- Multicompany -->
+                <t t-if="company_id">
+                    <t t-set="company" t-value="company_id"/>
+                </t>
+                <t t-elif="o and 'company_id' in o and o.company_id.sudo()">
+                    <t t-set="company" t-value="o.company_id.sudo()"/>
+                </t>
+                <t t-else="">
+                    <t t-set="company" t-value="res_company"/>
+                </t>
+            </t>
+
+            <t t-call="onmi_turbo_credit_note.onmi_external_layout_standard_export_invoice">
+                <t t-out="0"/>
+            </t>
+        </template>
+
+        <!-- External layout standard for export invoices - NO header, only footer -->
+        <template id="onmi_external_layout_standard_export_invoice">
+            <!-- Empty header to override base -->
+            <div class="header" style="display: none;"/>
+
+            <div t-attf-class="article o_report_layout_standard o_company_#{company.id}_layout"
+                 t-att-data-oe-model="o and o._name"
+                 t-att-data-oe-id="o and o.id"
+                 t-att-data-oe-lang="o and o.env.context.get('lang')">
+                <t t-out="0"/>
+            </div>
+
+            <div t-attf-class="footer o_standard_footer o_company_#{company.id}_layout">
+                <div class="text-center" style="border-top: 1px solid black;">
+                    <ul class="list-inline mb4">
+                        <div t-if="company.report_footer_export" t-field="company.report_footer_export"/>
+                        <div t-elif="company.report_footer" t-field="company.report_footer"/>
+                    </ul>
+                    <div t-if="report_type == 'pdf'" class="text-muted">
+                        Page: <span class="page"/> / <span class="topage"/>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <!-- Main document template for export invoice -->
         <template id="onmi_report_exportacion_document">
             <t t-call="web.html_container">
-                <style>
-                    .page {
-                        font-size: 12px !important;
-                        padding: 0 !important;
-                        margin: 0 !important;
-                    }
-                    .page .h2 {
-                        font-size: 18px !important;
-                        margin-top: 3px !important;
-                        margin-bottom: 3px !important;
-                    }
-                    .page .table {
-                        font-size: 12px !important;
-                        margin-bottom: 5px !important;
-                    }
-                    .page span {
-                        font-size: 12px !important;
-                        line-height: 1.1 !important;
-                    }
-                    .page strong {
-                        font-size: 12px !important;
-                    }
-                    .table td, .table th {
-                        padding: 2px !important;
-                        vertical-align: top !important;
-                    }
-                    .row {
-                        margin-bottom: 3px !important;
-                        margin-top: 0 !important;
-                    }
-                    .col-3, .col-5, .col-6 {
-                        padding-right: 3px !important;
-                        padding-left: 3px !important;
-                    }
-                    span br {
-                        line-height: 0.9 !important;
-                    }
-                    .table-sm td {
-                        padding: 1px !important;
-                    }
-                    .footer {
-                        display: none !important;
-                    }
-                    .header {
-                        display: none !important;
-                    }
-                    .invoice-header-row {
-                        margin-top: 10px !important;
-                        margin-bottom: 15px !important;
-                    }
-                    .label-value {
-                        margin-bottom: 5px !important;
-                    }
-                    .table {
-                        table-layout: fixed;
-                        width: 100%;
-                    }
-
-                    .table td {
-                        white-space: normal !important;
-                        word-wrap: break-word !important;
-                        word-break: break-word !important;
-                    }
-                </style>
                 <t t-foreach="docs" t-as="doc">
-                    <div class="article" t-att-data-oe-model="doc._name" t-att-data-oe-id="doc.id">
-                        <div class="page">
-                            <div class="row address">
-                                <div class="col-5">
-                                    <t t-if="doc.company_id.id == 1">
-                                        <span>
-                                            <span style="font-weight: bolder;">RECICLADOS MEDIOAMBIENTALES</span>
-                                            <br/>
-                                            <span style="font-weight: bolder;">TURBO PLASTIC SL</span>
-                                            <br/>CR. CARTAGENA-ALHAMA 25<br/>30320 MURCIA<br/>ESPAÑA 968151130
-                                            <br/>
-                                            contabilidad@uplusrecycling.com<br/>VAT: ESB30768253
-                                        </span>
-                                    </t>
-                                    <t t-if="doc.company_id.id == 4">
-                                        <span>
-                                            <span style="font-weight: bolder;">ENERGY PLASTIC SLU</span>
-                                            <br/>CALLE ÓPALO 2
-                                            <br/>30155 BAÑOS Y MENDIGO (MURCIA)
-                                            <br/>ESPAÑA
-                                            <br/>energyplastic@hotmail.com
-                                            <br/>CIF: ESB05558986
-                                        </span>
-                                    </t>
-                                    <t t-if="doc.company_id.id == 5">
-                                        <span>
-                                            <span style="font-weight: bolder;">RECITOTAL SL</span>
-                                            <br/>CAMINO DEL CONGOSTO S/N<br/>16440 MONTALBO<br/>ESPAÑA 969130357
-                                            <br/>
-                                            recitotal@hotmail.com<br/>VAT: ESB86672680
-                                        </span>
-                                    </t>
-                                </div>
-                                <div class="col-5 offset-2">
-                                    <div t-field="doc.partner_id" t-options-widget="'contact'"
-                                         t-options-fields="['name', 'address', 'phone', 'mobile', 'email', 'vat']"
-                                         class="small"/>
-                                </div>
-                            </div>
-                            <div class="row" style="margin-top: 15px; margin-bottom: 15px;">
-                                <div class="col h2">
-                                    <span t-if="doc.move_type == 'out_refund'">CREDIT NOTE</span>
-                                    <span t-if="doc.move_type == 'in_refund'">CREDIT NOTE</span>
-                                    <span t-if="doc.move_type == 'out_invoice'">INVOICE</span>
-                                    <span t-if="doc.move_type == 'in_invoice'">INVOICE</span>
-                                </div>
-                            </div>
-                            <div class="row invoice-header-row">
-                                <div class="col-4">
-                                    <div class="label-value">
-                                        <span t-if="doc.move_type == 'out_refund'">
-                                            <strong>CREDIT NOTE NO:</strong>
-                                        </span>
-                                        <span t-if="doc.move_type == 'in_refund'">
-                                            <strong>CREDIT NOTE NO:</strong>
-                                        </span>
-                                        <span t-if="doc.move_type == 'out_invoice'">
-                                            <strong>INVOICE NO:</strong>
-                                        </span>
-                                        <span t-if="doc.move_type == 'in_invoice'">
-                                            <strong>INVOICE NO:</strong>
-                                        </span>
-                                    </div>
-                                    <span t-field="doc.name"/>
-                                </div>
-                                <div class="col-4">
-                                    <div class="label-value">
-                                        <span t-if="doc.move_type == 'out_refund'">
-                                            <strong>CREDIT NOTE DATE:</strong>
-                                        </span>
-                                        <span t-if="doc.move_type == 'in_refund'">
-                                            <strong>CREDIT NOTE DATE:</strong>
-                                        </span>
-                                        <span t-if="doc.move_type == 'out_invoice'">
-                                            <strong>INVOICE DATE:</strong>
-                                        </span>
-                                        <span t-if="doc.move_type == 'in_invoice'">
-                                            <strong>INVOICE DATE:</strong>
-                                        </span>
-                                    </div>
-                                    <span t-field="doc.date"/>
-                                </div>
-                                <div class="col-4">
-                                    <div class="label-value">
-                                        <span>
-                                            <strong>CONTRAT NO:</strong>
-                                        </span>
-                                    </div>
-                                    <span t-field="doc.x_studio_contrat_no"/>
-                                </div>
-                            </div>
-                            <table class="table o_report_block_table">
-                                <thead>
-                                    <tr>
-                                        <th><span>Packages</span></th>
-                                        <th><span>Type pack</span></th>
-                                        <th><span>Container no</span></th>
-                                        <th><span>Seal No</span></th>
-                                        <th><span>Description</span></th>
-                                        <th><span>Gross Weight</span></th>
-                                        <th><span>Net Weight</span></th>
-                                        <th><span>Price</span></th>
-                                        <th><span>Amount</span></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr t-foreach="doc.invoice_line_ids" t-as="table_line">
-                                        <t t-if="table_line.display_type != 'line_section' and table_line.display_type != 'line_note'">
-                                            <td>
-                                                <span t-field="table_line.x_studio_packages"/>
-                                            </td>
-                                            <td>
-                                                <span t-field="table_line.inv_package_type"/>
-                                            </td>
-                                            <td>
-                                                <span t-field="table_line.x_studio_container_no"/>
-                                            </td>
-                                            <td>
-                                                <span t-field="table_line.x_studio_seal_no"/>
-                                            </td>
-                                            <td>
-                                                <!-- MODIFICACIÓN: Solo mostrar la descripción, no el nombre del producto -->
-                                                <t t-set="description_text" t-value="table_line.name"/>
-                                                <t t-if="'\n' in description_text">
-                                                    <span t-esc="'\n'.join(description_text.split('\n')[1:])"/>
-                                                </t>
-                                                <t t-else="">
-                                                    <!-- Si no hay salto de línea, intentar usar la descripción del producto -->
-                                                    <span t-field="table_line.product_id.description_sale" t-if="table_line.product_id.description_sale"/>
-                                                    <span t-field="table_line.name" t-if="not table_line.product_id.description_sale"/>
-                                                </t>
-                                            </td>
-                                            <td>
-                                                <span t-field="table_line.x_studio_gross_weight"/>
-                                                <span t-field="table_line.product_uom_id.name"/>
-                                            </td>
-                                            <td>
-                                                <span t-field="table_line.quantity"/>
-                                                <span t-field="table_line.product_uom_id.name"/>
-                                            </td>
-                                            <td>
-                                                <span t-field="table_line.price_unit"/>
-                                                <span t-field="table_line.currency_id.symbol"/>
-                                            </td>
-                                            <td>
-                                                <span t-if="doc.move_type == 'out_refund'"
-                                                      t-field="table_line.inverse_subtotal"/>
-                                                <span t-if="doc.move_type == 'in_refund'"
-                                                      t-field="table_line.inverse_subtotal"/>
-                                                <span t-if="doc.move_type == 'out_refund'"
-                                                      t-field="table_line.currency_id.symbol"/>
-                                                <span t-if="doc.move_type == 'in_refund'"
-                                                      t-field="table_line.currency_id.symbol"/>
-                                                <span t-if="doc.move_type == 'out_invoice'"
-                                                      t-field="table_line.price_subtotal"/>
-                                                <span t-if="doc.move_type == 'in_invoice'"
-                                                      t-field="table_line.price_subtotal"/>
-                                            </td>
-                                        </t>
-                                        <t t-else="">
-                                            <td colspan="8">
-                                                <span t-field="table_line.name"/>
-                                            </td>
-                                        </t>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="row" style="margin-top: 10px;">
-                                <div class="col-4">
-                                    <div class="label-value">
-                                        <span>
-                                            <strong>HS CODE:</strong>
-                                        </span>
-                                    </div>
-                                    <span t-field="doc.x_studio_hs_code"/>
-                                </div>
-                                <div class="col-4">
-                                    <div class="label-value">
-                                        <span>
-                                            <strong>TOTAL (kg):</strong>
-                                        </span>
-                                    </div>
-                                    <span t-field="doc.total_kg"/>
-                                </div>
-                                <div class="col-4">
-                                    <div class="label-value">
-                                        <span>
-                                            <strong>TOTAL (Packages):</strong>
-                                        </span>
-                                    </div>
-                                    <span t-field="doc.total_pkg"/>
-                                </div>
-                            </div>
-                            <div class="row" style="margin-top: 10px;">
-                                <div class="col-6"/>
-                                <div t-if="doc.move_type == 'out_refund' or doc.move_type == 'in_refund' or doc.move_type == 'out_invoice' or doc.move_type == 'in_invoice'" class="col-6">
-                                    <table class="table table-sm">
-                                        <tr>
-                                            <td><strong>Subtotal</strong></td>
-                                            <td class="text-right">
-                                                <span t-if="doc.move_type == 'out_refund' or doc.move_type == 'in_refund'" t-field="doc.inverse_total_untaxes"/>
-                                                <span t-if="doc.move_type == 'out_invoice' or doc.move_type == 'in_invoice'" t-field="doc.amount_untaxed"/>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Total</strong></td>
-                                            <td class="text-right">
-                                                <span t-if="doc.move_type == 'out_refund' or doc.move_type == 'in_refund'" t-field="doc.inverse_total_taxes"/>
-                                                <span t-if="doc.move_type == 'out_invoice' or doc.move_type == 'in_invoice'" t-field="doc.amount_total"/>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                            <div class="row" style="margin-top: 10px;">
-                                <div class="col-3">
-                                    <div class="label-value">
-                                        <span>
-                                            <strong>INCOTERM:</strong>
-                                        </span>
-                                    </div>
-                                    <span t-field="table_line.move_id.invoice_incoterm_id.name"/>
-                                </div>
-                                <div class="col-3">
-                                    <div class="label-value">
-                                        <span>
-                                            <strong>ORIGIN:</strong>
-                                        </span>
-                                    </div>
-                                    <span t-field="table_line.move_id.x_studio_origin"/>
-                                </div>
-                                <div class="col-3"/>
-                                <div class="col-3"/>
-                            </div>
-                            <div name="ports" class="row" style="margin-top: 5px;">
-                                <div class="col-3">
-                                    <div class="label-value">
-                                        <span>
-                                            <strong>PORT OF LOADING:</strong>
-                                        </span>
-                                    </div>
-                                    <span t-field="table_line.move_id.x_studio_port_of_loading"/>
-                                </div>
-                                <div class="col-3">
-                                    <div class="label-value">
-                                        <span>
-                                            <strong>PORT OF DISCHARGE:</strong>
-                                        </span>
-                                    </div>
-                                    <span t-field="table_line.move_id.x_studio_port_of_discharge"/>
-                                </div>
-                                <div class="col-3"/>
-                                <div class="col-3"/>
-                            </div>
-                            <div class="row" style="margin-top: 15px;">
-                                <div class="col-6">
-                                    <t t-if="doc.company_id.id == 1">
-                                        <span>
-                                            RECICLADOS MEDIOAMBIENTALES TURBO PLASTIC S.L.
-                                            <br/>
-                                            CTRA. CARTAGENA -ALHAMA KM 25.
-                                            <br/>
-                                            30320 FUENTE ALAMO DE MURCIA (MURCIA) ESPAÑA
-                                            <br/>
-                                            TAX ID: ESB30768253
-                                        </span>
-                                    </t>
-                                    <t t-if="doc.company_id.id == 4">
-                                        <span>
-                                            ENERGY PLASTIC SLU
-                                            <br/>
-                                            CALLE ÓPALO 2
-                                            <br/>
-                                            30155 BAÑOS Y MENDIGO (MURCIA) ESPAÑA
-                                            <br/>
-                                            TAX ID: ESB05558986
-                                        </span>
-                                    </t>
-                                    <t t-if="doc.company_id.id == 5">
-                                        <span>
-                                            RECITOTAL SL
-                                            <br/>
-                                            CAMINO DEL CONGOSTO S/N
-                                            <br/>
-                                            16440 MONTALBO (CUENCA) ESPAÑA
-                                            <br/>
-                                            TAX ID: ESB86672680
-                                        </span>
-                                    </t>
-                                </div>
-                                <div name="accounts" class="col-6 text-right">
-                                    <t t-if="doc.company_id.id == 1">
-                                        <span>
-                                            BANK NAME:BANCO SANTANDER SA
-                                            <br/>
-                                            BANK ADD:CALLE SANTO DOMINGO 10. 16440 MONTALBO(CUENCA) ESPAÑA
-                                            <br/>
-                                            EUR ACCOUNTE:ES54 0049 2883 5127 1405 2631
-                                            <br/>
-                                            BIC/SWIFT:BSCHESMM
-                                        </span>
-                                    </t>
-                                    <t t-if="doc.company_id.id == 4">
-                                        <span>
-                                            BANK NAME:BANCO SANTANDER SA
-                                            <br/>
-                                            BANK ADD:CALLE SANTO DOMINGO 10. 16440 MONTALBO(CUENCA) ESPAÑA
-                                            <br/>
-                                            EUR ACCOUNT:ES35 0049 2883 5422 1405 3425
-                                            <br/>
-                                            BIC/SWIFT:BSCHESMM
-                                        </span>
-                                    </t>
-                                    <t t-if="doc.company_id.id == 5">
-                                        <span>
-                                            BANK NAME: SANTANDER
-                                            <br/>
-                                            ADRESS: CAMINO DEL CONGOSTO S/N
-                                            <br/>
-                                            EURO ACCOUNT: ES74 0049 2883 5620 1405 2011
-                                            <br/>
-                                            BIC: BSCHESMM
-                                        </span>
-                                    </t>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <t t-set="o" t-value="doc"/>
+                    <t t-call="onmi_turbo_credit_note.onmi_external_layout_export_invoice">
+                        <t t-call="onmi_turbo_credit_note.onmi_report_exportacion_content"/>
+                    </t>
                 </t>
             </t>
         </template>
 
+        <!-- Content template for export invoice (separated for easier inheritance) -->
+        <template id="onmi_report_exportacion_content">
+            <style>
+                .export-invoice .page {
+                    font-size: 11px !important;
+                    padding: 0 !important;
+                    margin: 0 !important;
+                }
+                .export-invoice .h2 {
+                    font-size: 32px !important;
+                    font-weight: bold !important;
+                    margin-top: 15px !important;
+                    margin-bottom: 20px !important;
+                }
+                .export-invoice .table {
+                    font-size: 10px !important;
+                    margin-bottom: 5px !important;
+                    table-layout: fixed;
+                    width: 100%;
+                    border-collapse: collapse;
+                }
+                .export-invoice span {
+                    font-size: 10px !important;
+                    line-height: 1.2 !important;
+                }
+                .export-invoice strong {
+                    font-size: 10px !important;
+                }
+                /* Table - NO borders at all, only light horizontal lines between rows */
+                .export-invoice .table,
+                .export-invoice .table-bordered,
+                .export-invoice .o_report_block_table {
+                    border: none !important;
+                    border-collapse: collapse !important;
+                }
+                .export-invoice .table td,
+                .export-invoice .table th {
+                    padding: 4px 6px !important;
+                    vertical-align: middle !important;
+                    white-space: normal !important;
+                    word-wrap: break-word !important;
+                    word-break: break-word !important;
+                    border: none !important;
+                    border-bottom: 1px solid #dee2e6 !important;
+                }
+                .export-invoice .table thead th {
+                    border: none !important;
+                    border-bottom: 1px solid #000 !important;
+                    font-weight: bold !important;
+                    background-color: transparent !important;
+                }
+                /* First and last cells - no outer borders */
+                .export-invoice .table td:first-child,
+                .export-invoice .table th:first-child {
+                    border-left: none !important;
+                }
+                .export-invoice .table td:last-child,
+                .export-invoice .table th:last-child {
+                    border-right: none !important;
+                }
+                /* Remove table outer border */
+                .export-invoice .table tbody tr:last-child td {
+                    border-bottom: none !important;
+                }
+                .export-invoice .row {
+                    margin-bottom: 3px !important;
+                    margin-top: 0 !important;
+                }
+                .export-invoice .col-3,
+                .export-invoice .col-4,
+                .export-invoice .col-5,
+                .export-invoice .col-6 {
+                    padding-right: 3px !important;
+                    padding-left: 3px !important;
+                }
+                .export-invoice span br {
+                    line-height: 0.9 !important;
+                }
+                .export-invoice .table-sm td {
+                    padding: 2px 4px !important;
+                    border: none !important;
+                    border-bottom: 1px solid #dee2e6 !important;
+                }
+                .export-invoice .invoice-header-row {
+                    margin-top: 10px !important;
+                    margin-bottom: 15px !important;
+                }
+                .export-invoice .label-value {
+                    margin-bottom: 5px !important;
+                }
+                /* Column widths for invoice lines table */
+                .export-invoice .col-packages { width: 8%; }
+                .export-invoice .col-container { width: 12%; }
+                .export-invoice .col-seal { width: 10%; }
+                .export-invoice .col-description { width: 32%; }
+                .export-invoice .col-gross { width: 10%; }
+                .export-invoice .col-net { width: 10%; }
+                .export-invoice .col-price { width: 8%; }
+                .export-invoice .col-amount { width: 10%; }
+
+                /* Text alignment */
+                .export-invoice .text-right {
+                    text-align: right !important;
+                }
+                .export-invoice .text-center {
+                    text-align: center !important;
+                }
+            </style>
+
+            <div class="export-invoice">
+                <div class="page">
+                    <!-- Address section -->
+                    <div class="row address">
+                        <div class="col-5">
+                            <span t-if="o.company_id.company_details_export"
+                                  t-field="o.company_id.company_details_export"/>
+                            <span t-elif="o.company_id.company_details" t-field="o.company_id.company_details"/>
+                        </div>
+                        <div class="col-5 offset-2">
+                            <div t-field="o.partner_id"
+                                 t-options='{"widget": "contact", "fields": ["name", "address", "phone", "mobile", "email", "vat"]}'
+                                 class="small"/>
+                        </div>
+                    </div>
+
+                    <!-- Document title -->
+                    <div class="row" style="margin-top: 15px; margin-bottom: 15px;">
+                        <div class="col h2">
+                            <t t-if="o.move_type in ('out_refund', 'in_refund')">
+                                <span>CREDIT NOTE</span>
+                            </t>
+                            <t t-else="">
+                                <span>INVOICE</span>
+                            </t>
+                        </div>
+                    </div>
+
+                    <!-- Invoice header info -->
+                    <div class="row invoice-header-row">
+                        <div class="col-4">
+                            <div class="label-value">
+                                <t t-if="o.move_type in ('out_refund', 'in_refund')">
+                                    <strong>CREDIT NOTE NO:</strong>
+                                </t>
+                                <t t-else="">
+                                    <strong>INVOICE NO:</strong>
+                                </t>
+                            </div>
+                            <span t-field="o.name"/>
+                        </div>
+                        <div class="col-4">
+                            <div class="label-value">
+                                <t t-if="o.move_type in ('out_refund', 'in_refund')">
+                                    <strong>CREDIT NOTE DATE:</strong>
+                                </t>
+                                <t t-else="">
+                                    <strong>INVOICE DATE:</strong>
+                                </t>
+                            </div>
+                            <span t-field="o.date"/>
+                        </div>
+                        <div class="col-4">
+                            <div class="label-value">
+                                <strong>CONTRAT NO:</strong>
+                            </div>
+                            <span t-field="o.x_studio_contrat_no"/>
+                        </div>
+                    </div>
+
+                    <!-- Lines table -->
+                    <table class="table o_report_block_table" name="invoice_lines_table">
+                        <thead>
+                            <tr>
+                                <th class="col-packages text-center"><span>Packages</span></th>
+                                <th class="col-container"><span>Container no</span></th>
+                                <th class="col-seal"><span>Seal No</span></th>
+                                <th class="col-description"><span>Description</span></th>
+                                <th class="col-gross text-right"><span>Gross Weight</span></th>
+                                <th class="col-net text-right"><span>Net Weight</span></th>
+                                <th class="col-price text-right"><span>Price</span></th>
+                                <th class="col-amount text-right"><span>Amount</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="o.invoice_line_ids" t-as="line">
+                                <t t-if="line.display_type not in ('line_section', 'line_note')">
+                                    <tr>
+                                        <td class="text-center">
+                                            <span t-field="line.x_studio_packages"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.x_studio_container_no"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.x_studio_seal_no"/>
+                                        </td>
+                                        <td name="line_description">
+                                            <span t-field="line.name"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="line.x_studio_gross_weight"/>
+                                            <span> kg</span>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="line.quantity"/>
+                                            <span> kg</span>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="line.price_unit"/>
+                                            <span> </span>
+                                            <span t-field="line.currency_id.symbol"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <t t-if="o.move_type in ('out_refund', 'in_refund')">
+                                                <span t-field="line.inverse_subtotal"/>
+                                                <span> </span>
+                                                <span t-field="line.currency_id.symbol"/>
+                                            </t>
+                                            <t t-else="">
+                                                <span t-field="line.price_subtotal"/>
+                                            </t>
+                                        </td>
+                                    </tr>
+                                </t>
+                                <t t-else="">
+                                    <tr>
+                                        <td colspan="8">
+                                            <span t-field="line.name"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </t>
+                        </tbody>
+                    </table>
+
+                    <!-- Totals row: HS Code, Total kg and Amounts summary side by side -->
+                    <div class="row" style="margin-top: 15px;" name="totals_row">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <strong>HS CODE:</strong><br/>
+                                    <span t-field="o.x_studio_hs_code"/>
+                                </div>
+                                <div class="col-6" name="total_kg_section">
+                                    <strong>TOTAL (kg):</strong><br/>
+                                    <span t-field="o.total_kg"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6" name="amounts_summary">
+                            <table class="table table-sm">
+                                <tr>
+                                    <td><strong>Importe libre de impuestos</strong></td>
+                                    <td class="text-end">
+                                        <t t-if="o.move_type in ('out_refund', 'in_refund')">
+                                            <span t-field="o.inverse_total_untaxes"/>
+                                        </t>
+                                        <t t-else="">
+                                            <span t-field="o.amount_untaxed"/>
+                                        </t>
+                                    </td>
+                                </tr>
+                                <t t-foreach="o.tax_totals.get('subtotals', [])" t-as="subtotal">
+                                    <t t-foreach="o.tax_totals.get('groups_by_subtotal', {}).get(subtotal.get('name'), [])" t-as="tax_group">
+                                        <tr>
+                                            <td><span t-esc="tax_group.get('tax_group_name')"/></td>
+                                            <td class="text-end">
+                                                <span t-esc="tax_group.get('formatted_tax_group_amount')"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </t>
+                                <tr>
+                                    <td><strong>Total</strong></td>
+                                    <td class="text-end">
+                                        <t t-if="o.move_type in ('out_refund', 'in_refund')">
+                                            <span t-field="o.inverse_total_taxes"/>
+                                        </t>
+                                        <t t-else="">
+                                            <span t-field="o.amount_total"/>
+                                        </t>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Incoterm and origin -->
+                    <div class="row" style="margin-top: 10px;" name="incoterm_origin">
+                        <div class="col-3">
+                            <div class="label-value">
+                                <strong>INCOTERM:</strong>
+                            </div>
+                            <span t-field="o.invoice_incoterm_id.name"/>
+                        </div>
+                        <div class="col-3">
+                            <div class="label-value">
+                                <strong>ORIGIN:</strong>
+                            </div>
+                            <span t-field="o.x_studio_origin"/>
+                        </div>
+                        <div class="col-3"/>
+                        <div class="col-3"/>
+                    </div>
+
+                    <!-- Ports -->
+                    <div name="ports" class="row" style="margin-top: 5px;">
+                        <div class="col-3">
+                            <div class="label-value">
+                                <strong>PORT OF LOADING:</strong>
+                            </div>
+                            <span t-field="o.x_studio_port_of_loading"/>
+                        </div>
+                        <div class="col-3">
+                            <div class="label-value">
+                                <strong>PORT OF DISCHARGE:</strong>
+                            </div>
+                            <span t-field="o.x_studio_port_of_discharge"/>
+                        </div>
+                        <div class="col-3"/>
+                        <div class="col-3"/>
+                    </div>
+
+                    <!-- Company and bank details footer section -->
+                    <div class="row" style="margin-top: 15px;" name="company_bank_details">
+                        <div class="col-6" name="company_footer_details">
+                            <span t-if="o.company_id.company_details_export"
+                                  t-field="o.company_id.company_details_export"/>
+                            <span t-elif="o.company_id.company_details" t-field="o.company_id.company_details"/>
+                        </div>
+                        <div name="accounts" class="col-6 text-end">
+                            <!-- Bank accounts will be inherited by other modules -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <!-- Report action wrapper -->
         <template id="onmi_report_exportacion">
             <t t-foreach="docs" t-as="o">
                 <t t-call="onmi_turbo_credit_note.onmi_report_exportacion_document"
