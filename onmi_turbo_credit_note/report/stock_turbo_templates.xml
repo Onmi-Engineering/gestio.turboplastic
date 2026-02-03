@@ -322,13 +322,15 @@
                                         </t>
                                     </td>
                                 </tr>
-                                <t t-foreach="o.amount_by_group" t-as="amount_by_group">
-                                    <tr>
-                                        <td><span t-esc="amount_by_group[0]"/></td>
-                                        <td class="text-end">
-                                            <span t-esc="amount_by_group[1]" t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
-                                        </td>
-                                    </tr>
+                                <t t-foreach="o.tax_totals.get('subtotals', [])" t-as="subtotal">
+                                    <t t-foreach="o.tax_totals.get('groups_by_subtotal', {}).get(subtotal.get('name'), [])" t-as="tax_group">
+                                        <tr>
+                                            <td><span t-esc="tax_group.get('tax_group_name')"/></td>
+                                            <td class="text-end">
+                                                <span t-esc="tax_group.get('formatted_tax_group_amount')"/>
+                                            </td>
+                                        </tr>
+                                    </t>
                                 </t>
                                 <tr>
                                     <td><strong>Total</strong></td>
