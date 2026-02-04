@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="onmi_report_waybill_document_inherit_ler" inherit_id="onmi_turbo_waybill.onmi_report_waybill_document">
+        <!-- Modificar la sección de NATURALEZA DE MERCANCÍA para incluir el código LER -->
+        <xpath expr="//td[@colspan='2'][./div[@t-field='o.commodity']]" position="replace">
+            <td colspan="2" style="vertical-align: middle; text-align: center; border:2px solid black; padding: 4px;">
+                <span t-field="o.commodity"/>
+                <!-- Añadir Código LER -->
+                <t t-if="o.move_ids and o.move_ids[0].ler_code">
+                    <span> - Código LER: <span t-field="o.move_ids[0].ler_code"/></span>
+                </t>
+            </td>
+        </xpath>
+    </template>
+</odoo>

@@ -9,12 +9,16 @@
     'depends': [
         'product',
         'stock',
+        'onmi_turbo_waybill',
+        'onmi_turbo_identification_document'
     ],
     'data': [
         'views/product_template_views.xml',
         'views/stock_picking_views.xml',
 
-        'reports/report_deliveryslip.xml'
+        'reports/report_deliveryslip.xml',
+        'reports/report_waybill.xml',
+        'reports/report_identification_document.xml'
     ],
     'installable': True,
     'application': True,
