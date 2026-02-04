@@ -14,7 +14,7 @@
             <xpath expr="//table[@name='stock_move_table']/thead/tr/th[1]" position="after">
                 <t t-set="code" t-value="o.weighing_ids" />
                 <t t-foreach="code" t-as="move">
-                <th t-if="move.code_led" name="th_sm_codeled2">                   
+                <th t-if="move.code_led" name="th_sm_codeled2">
                     <strong>Code L.E.R</strong>
                 </th>
                </t>

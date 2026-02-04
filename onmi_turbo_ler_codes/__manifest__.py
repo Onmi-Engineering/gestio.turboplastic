@@ -13,6 +13,8 @@
     'data': [
         'views/product_template_views.xml',
         'views/stock_picking_views.xml',
+
+        'reports/report_deliveryslip.xml'
     ],
     'installable': True,
     'application': True,
