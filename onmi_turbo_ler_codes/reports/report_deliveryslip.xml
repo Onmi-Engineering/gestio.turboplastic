@@ -33,11 +33,12 @@
     </template>
 
     <!-- Para líneas agregadas (sin serial number) -->
-    <template id="stock_report_delivery_aggregated_move_lines_inherit_ler" inherit_id="stock.stock_report_delivery_aggregated_move_lines">
+    <template id="stock_report_delivery_aggregated_move_lines_inherit_ler" inherit_id="stock.stock_report_delivery_aggregated_move_lines" priority="99">
         <xpath expr="//tr//td[1]" position="after">
             <td name="td_aggregated_ler_code">
                 <span t-esc="aggregated_lines[line].get('ler_code', '')"/>
             </td>
         </xpath>
     </template>
+
 </odoo>

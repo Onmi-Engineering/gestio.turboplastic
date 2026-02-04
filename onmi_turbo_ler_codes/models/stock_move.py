@@ -1,4 +1,7 @@
 from odoo import models, fields
+import logging
+
+_logger = logging.getLogger(__name__)
 
 class StockMove(models.Model):
     _inherit = 'stock.move'
@@ -29,8 +32,12 @@ class StockMoveLine(models.Model):
 
         # Añadir código LER a cada línea agregada
         for line_key in aggregated_move_lines:
-            move_line = self.filtered(lambda ml: (ml.product_id, ml.move_id.description_picking or '') == line_key[:2])
-            if move_line:
-                aggregated_move_lines[line_key]['ler_code'] = move_line[0].ler_code or ''
+            # Obtener el producto desde el diccionario ya generado
+            product = aggregated_move_lines[line_key].get('product')
+
+            if product and product.product_tmpl_id:
+                aggregated_move_lines[line_key]['ler_code'] = product.product_tmpl_id.ler_code or ''
+            else:
+                aggregated_move_lines[line_key]['ler_code'] = ''
 
         return aggregated_move_lines
