@@ -181,12 +181,6 @@
                     margin-top: 25px !important; /* Aumentado de 15px a 25px */
                 }
 
-                /* Separación entre las secciones de HS CODE, TOTAL kg, etc */
-                .export-invoice div[name="total_kg_section"],
-                .export-invoice div[name="total_pkg_section"] {
-                    margin-top: 10px !important;
-                }
-
                 /* Aumentar separación de incoterm/origin respecto a totales */
                 .export-invoice div[name="incoterm_origin"] {
                     margin-top: 20px !important; /* Aumentado de 10px a 20px */
@@ -300,7 +294,8 @@
                                             <span t-field="line.x_studio_seal_no"/>
                                         </td>
                                         <td name="line_description">
-                                            <span t-field="line.name"/>
+                                            <t t-set="desc" t-value="(line.name or '').split('\n', 1)"/>
+                                            <span t-esc="desc[1] if len(desc) > 1 else ''"/>
                                         </td>
                                         <td class="text-right">
                                             <span t-field="line.x_studio_gross_weight"/>
