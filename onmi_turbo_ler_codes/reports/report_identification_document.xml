@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="onmi_report_waybill_document_inherit_ler" inherit_id="onmi_turbo_identification_document.onmi_report_identification_document_document">
+        <!-- Añadir código LER al lado de la descripción del producto -->
+        <xpath expr="//span[@t-field='o.ewl']" position="after">
+            <t t-if="o.move_ids_without_package and o.move_ids_without_package[0].ler_code">
+                <span style="display:inline;"><span t-field="o.move_ids_without_package[0].ler_code"/></span>
+            </t>
+        </xpath>
+    </template>
+</odoo>
