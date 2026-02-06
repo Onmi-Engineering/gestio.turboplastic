@@ -181,12 +181,6 @@
                     margin-top: 25px !important; /* Aumentado de 15px a 25px */
                 }
 
-                /* Separación entre las secciones de HS CODE, TOTAL kg, etc */
-                .export-invoice div[name="total_kg_section"],
-                .export-invoice div[name="total_pkg_section"] {
-                    margin-top: 10px !important;
-                }
-
                 /* Aumentar separación de incoterm/origin respecto a totales */
                 .export-invoice div[name="incoterm_origin"] {
                     margin-top: 20px !important; /* Aumentado de 10px a 20px */
