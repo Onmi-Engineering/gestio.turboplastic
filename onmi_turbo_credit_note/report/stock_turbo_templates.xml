@@ -300,7 +300,8 @@
                                             <span t-field="line.x_studio_seal_no"/>
                                         </td>
                                         <td name="line_description">
-                                            <span t-field="line.name"/>
+                                            <t t-set="desc" t-value="(line.name or '').split('\n', 1)"/>
+                                            <span t-esc="desc[1] if len(desc) > 1 else ''"/>
                                         </td>
                                         <td class="text-right">
                                             <span t-field="line.x_studio_gross_weight"/>
