@@ -69,10 +69,15 @@
                     margin: 0 !important;
                 }
                 .export-invoice .h2 {
-                    font-size: 32px !important;
+                    font-size: 30px !important;
                     font-weight: bold !important;
                     margin-top: 15px !important;
                     margin-bottom: 20px !important;
+                }
+                .export-invoice .h2 span {
+                    font-size: 30px !important;
+                    font-weight: bold !important;
+                    line-height: 1.2 !important;
                 }
                 .export-invoice .table {
                     font-size: 10px !important;
@@ -164,13 +169,42 @@
                 .export-invoice .col-net { width: 10%; }
                 .export-invoice .col-price { width: 9%; }
                 .export-invoice .col-amount { width: 11%; }
-
                 /* Text alignment */
                 .export-invoice .text-right {
                     text-align: right !important;
                 }
                 .export-invoice .text-center {
                     text-align: center !important;
+                }
+                /* Aumentar separación del row de totales respecto a la tabla */
+                .export-invoice div[name="totals_row"] {
+                    margin-top: 25px !important; /* Aumentado de 15px a 25px */
+                }
+
+                /* Separación entre las secciones de HS CODE, TOTAL kg, etc */
+                .export-invoice div[name="total_kg_section"],
+                .export-invoice div[name="total_pkg_section"] {
+                    margin-top: 10px !important;
+                }
+
+                /* Aumentar separación de incoterm/origin respecto a totales */
+                .export-invoice div[name="incoterm_origin"] {
+                    margin-top: 20px !important; /* Aumentado de 10px a 20px */
+                }
+
+                /* Aumentar separación de ports respecto a incoterm */
+                .export-invoice div[name="ports"] {
+                    margin-top: 15px !important; /* Aumentado de 5px a 15px */
+                }
+
+                /* Aumentar separación de company/bank details respecto a ports */
+                .export-invoice div[name="company_bank_details"] {
+                    margin-top: 25px !important; /* Aumentado de 15px a 25px */
+                }
+
+                /* Separación entre elementos dentro de label-value */
+                .export-invoice .label-value {
+                    margin-bottom: 8px !important; /* Aumentado de 5px a 8px */
                 }
             </style>
 
