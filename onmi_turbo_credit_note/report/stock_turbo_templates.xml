@@ -87,6 +87,7 @@
                 }
                 .export-invoice strong {
                     font-size: 10px !important;
+                    font-weight: bold !important;
                 }
                 /* Table - NO borders at all, only light horizontal lines between rows */
                 .export-invoice .table,
@@ -150,15 +151,19 @@
                 .export-invoice .label-value {
                     margin-bottom: 5px !important;
                 }
+                .export-invoice .label-value strong {
+                    font-weight: bold !important;
+                }
                 /* Column widths for invoice lines table */
-                .export-invoice .col-packages { width: 8%; }
+                .export-invoice .col-packages { width: 7%; }
+                .export-invoice .col-inv_package_type { width: 9%; }
                 .export-invoice .col-container { width: 12%; }
                 .export-invoice .col-seal { width: 10%; }
-                .export-invoice .col-description { width: 32%; }
+                .export-invoice .col-description { width: 22%; }
                 .export-invoice .col-gross { width: 10%; }
                 .export-invoice .col-net { width: 10%; }
-                .export-invoice .col-price { width: 8%; }
-                .export-invoice .col-amount { width: 10%; }
+                .export-invoice .col-price { width: 9%; }
+                .export-invoice .col-amount { width: 11%; }
 
                 /* Text alignment */
                 .export-invoice .text-right {
@@ -234,6 +239,7 @@
                         <thead>
                             <tr>
                                 <th class="col-packages text-center"><span>Packages</span></th>
+                                <th class="col-inv_package_type text-center"><span>Type pack</span></th>
                                 <th class="col-container"><span>Container no</span></th>
                                 <th class="col-seal"><span>Seal No</span></th>
                                 <th class="col-description"><span>Description</span></th>
@@ -249,6 +255,9 @@
                                     <tr>
                                         <td class="text-center">
                                             <span t-field="line.x_studio_packages"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-field="line.inv_package_type"/>
                                         </td>
                                         <td>
                                             <span t-field="line.x_studio_container_no"/>
@@ -286,7 +295,7 @@
                                 </t>
                                 <t t-else="">
                                     <tr>
-                                        <td colspan="8">
+                                        <td colspan="9">
                                             <span t-field="line.name"/>
                                         </td>
                                     </tr>
@@ -295,7 +304,7 @@
                         </tbody>
                     </table>
 
-                    <!-- Totals row: HS Code, Total kg and Amounts summary side by side -->
+                    <!-- Totals row: HS Code, Total kg, Total Packages and Amounts summary side by side -->
                     <div class="row" style="margin-top: 15px;" name="totals_row">
                         <div class="col-6">
                             <div class="row">
@@ -306,6 +315,10 @@
                                 <div class="col-6" name="total_kg_section">
                                     <strong>TOTAL (kg):</strong><br/>
                                     <span t-field="o.total_kg"/>
+                                </div>
+                                <div class="col-6" name="total_pkg_section">
+                                    <strong>TOTAL PACKAGES:</strong><br/>
+                                    <span t-field="o.total_pkg"/>
                                 </div>
                             </div>
                         </div>
