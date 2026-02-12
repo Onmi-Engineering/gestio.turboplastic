@@ -113,7 +113,7 @@
                 }
                 .export-invoice .table thead th {
                     border: none !important;
-                    border-bottom: 1px solid #000 !important;
+                    border-bottom: 1px solid #dee2e6 !important;
                     font-weight: bold !important;
                     background-color: transparent !important;
                 }
@@ -433,7 +433,12 @@
                             <span t-elif="o.company_id.company_details" t-field="o.company_id.company_details"/>
                         </div>
                         <div name="accounts" class="col-6 text-end">
-                            <!-- Bank accounts will be inherited by other modules -->
+                            <div class="bank-details">
+                                <strong>BANK NAME:</strong> CAJAMAR CAJA RURAL<br/>
+                                <strong>ADDRESS:</strong> AV.MIGUEL DE CERVANTES 9,30009 MURCIA (ESPAÑA)<br/>
+                                <strong>EURO ACCOUNT:</strong> ES59 3058 0236 0827 2002 1618<br/>
+                                <strong>BIC:</strong>CCRIES2AXXX
+                            </div>
                         </div>
                     </div>
                 </div>
