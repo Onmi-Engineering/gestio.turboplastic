@@ -113,7 +113,7 @@
                 }
                 .export-invoice .table thead th {
                     border: none !important;
-                    border-bottom: 1px solid #000 !important;
+                    border-bottom: 1px solid #dee2e6 !important;
                     font-weight: bold !important;
                     background-color: transparent !important;
                 }
