@@ -94,40 +94,41 @@
                     font-size: 10px !important;
                     font-weight: bold !important;
                 }
-
                 /* Table - NO borders at all, only light horizontal lines between rows */
-                .export-invoice table[name="invoice_lines_table"] {
+                .export-invoice .table,
+                .export-invoice .table-bordered,
+                .export-invoice .o_report_block_table {
                     border: none !important;
                     border-collapse: collapse !important;
                 }
-                .export-invoice table[name="invoice_lines_table"] td,
-                .export-invoice table[name="invoice_lines_table"] th {
+                .export-invoice .table td,
+                .export-invoice .table th {
                     padding: 4px 6px !important;
                     vertical-align: middle !important;
                     white-space: normal !important;
                     word-wrap: break-word !important;
                     word-break: break-word !important;
                     border: none !important;
-                    border-bottom: 1px solid #000 !important;
+                    border-bottom: 1px solid #dee2e6 !important;
                 }
-                .export-invoice table[name="invoice_lines_table"] thead th {
+                .export-invoice .table thead th {
                     border: none !important;
-                    border-bottom: 2px solid #000 !important;
+                    border-bottom: 1px solid #000 !important;
                     font-weight: bold !important;
                     background-color: transparent !important;
                 }
-                /* Sin bordes laterales */
-                .export-invoice table[name="invoice_lines_table"] td:first-child,
-                .export-invoice table[name="invoice_lines_table"] th:first-child {
+                /* First and last cells - no outer borders */
+                .export-invoice .table td:first-child,
+                .export-invoice .table th:first-child {
                     border-left: none !important;
                 }
-                .export-invoice table[name="invoice_lines_table"] td:last-child,
-                .export-invoice table[name="invoice_lines_table"] th:last-child {
+                .export-invoice .table td:last-child,
+                .export-invoice .table th:last-child {
                     border-right: none !important;
                 }
-                /* Sin borde superior en tabla */
-                .export-invoice table[name="invoice_lines_table"] thead tr:first-child th {
-                    border-top: none !important;
+                /* Remove table outer border */
+                .export-invoice .table tbody tr:last-child td {
+                    border-bottom: none !important;
                 }
                 .export-invoice .row {
                     margin-bottom: 3px !important;
