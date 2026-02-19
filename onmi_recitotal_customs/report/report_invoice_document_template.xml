@@ -157,7 +157,7 @@
 
         <record id="onmi_turbo_identification_document.onmi_action_report_identification_document" model="ir.actions.report">            
             <field name="paperformat_id" 
-              ref="onmi_recit_DI_improvements.paperformat_identification_document_123">
+              ref="onmi_recitotal_customs.paperformat_identification_document_123">
             </field>    
         </record>
     </data>

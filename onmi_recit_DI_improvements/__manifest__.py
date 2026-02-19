@@ -6,11 +6,9 @@
     'category':  'ONMI developments',
     'author': 'ONMI Engineering',
     'license': 'LGPL-3',
-    'depends': ['base', 'onmi_turbo_identification_document', 'stock'],
+    'depends': [],
     'data': [
-        'views/stock_picking_views.xml',
-        'views/res_partner_views.xml',
-        'report/report_invoice_document_template.xml'
+
         ],
     'installable': True,
     'application': True,

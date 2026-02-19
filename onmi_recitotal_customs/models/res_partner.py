@@ -1,7 +1,7 @@
 
-from odoo import models, fields, api
+from odoo import models, fields
 
-class incloud_relation(models.Model):
+class IncloudRelation(models.Model):
     _inherit = 'res.partner'
     
     check_carrier = fields.Boolean(string='Transportista')

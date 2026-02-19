@@ -6,10 +6,9 @@
     'category':  'ONMI developments',
     'author': 'ONMI Engineering',
     'license': 'LGPL-3',
-    'depends': ['base', 'account', 'onmi_turbo_invoice_export_note'],
+    'depends': [],
     'data': [
-        'views/account_move_views.xml',
-        'report/report_export_invoice_document_template.xml'
+
         ],
     'installable': True,
     'application': True,

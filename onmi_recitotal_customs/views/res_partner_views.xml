@@ -46,7 +46,6 @@
         name="Transportistas"
         action='action_partner_carrier_tree_view'
         sequence="60"
-       
         />
 
     </data>
