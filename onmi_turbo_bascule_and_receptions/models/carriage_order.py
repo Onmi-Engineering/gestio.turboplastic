@@ -98,12 +98,14 @@ class CarriageOrder(models.Model):
         for rec in self:
             rec.write({'state': 'processing'})
             rec.write({'processed': False})
-    @api.model
-    def create(self, vals):
-        if vals.get('name') == _('New') or vals.get('name') == 'New':
-            vals['name'] = self.env['ir.sequence'].next_by_code('carriage.order')
-        vals['state'] = 'processing'
-        return super().create(vals)
+
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            if vals.get('name') == _('New') or vals.get('name') == 'New':
+                vals['name'] = self.env['ir.sequence'].next_by_code('carriage.order')
+            vals['state'] = 'processing'
+        return super().create(vals_list)
 
     def unlink(self):
         for rec in self:

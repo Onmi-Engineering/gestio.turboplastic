@@ -6,7 +6,10 @@
     'category':  'ONMI develpments',
     'author': 'ONMI Engineering',
     'license': 'LGPL-3',
-    'depends': ['base', 'sale', 'purchase'],
+    'depends': ['base',
+                'sale',
+                'stock',
+                'purchase'],
     'data': [
         'security/ir_rule.xml',
         'views/license_plate_views.xml',
