@@ -1,51 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <template id="onmi_external_layout_standard_stock_identification_document_inherit"  inherit_id="onmi_turbo_credit_note.onmi_report_exportacion_document">
-            <!-- Esta primera parte parece estar bien, solo añade contenido después de un elemento existente -->
-<!--            <xpath expr="//div[@class='row address']/div/t[1]" position="after">-->
-<!--                <t t-if="doc.company_id.id == 5">-->
-<!--                    <span>-->
-<!--                        <span style="font-weight: bolder;">RECITOTAL SL</span>-->
-<!--                        <br/>CAMINO DEL CONGOSTO S/N<br/>16440 MONTALBO<br/>ESPAÑA 969130357-->
-<!--                        <br/>-->
-<!--                        recitotal@hotmail.com<br/>VAT: ESB86672680-->
-<!--                    </span>-->
-<!--                </t>-->
-<!--            </xpath>-->
-
-<!--            &lt;!&ndash; Esta parte usa una expresión basada en posición que está fallando. Cambiémosla por una más semántica &ndash;&gt;-->
-<!--            <xpath expr="//div[@class='row']/div[@class='col-6'][1]" position="inside">-->
-<!--                <t t-if="doc.company_id.id == 5">-->
-<!--                    <span>-->
-<!--                        RECITOTAL SL-->
-<!--                        <br/>-->
-<!--                        CAMINO DEL CONGOSTO S/N-->
-<!--                        <br/>-->
-<!--                        16440 MONTALBO (CUENCA) ESPAÑA-->
-<!--                        <br/>-->
-<!--                        TAX ID: ESB86672680-->
-<!--                        <br/>-->
-<!--                    </span>-->
-<!--                </t>-->
-<!--            </xpath>-->
-
-<!--            &lt;!&ndash; Esta parte también usa una expresión basada en posición que está fallando. Cambiémosla por una más semántica &ndash;&gt;-->
-<!--            <xpath expr="//div[@name='accounts']" position="inside">-->
-<!--                <t t-if="doc.company_id.id == 5">-->
-<!--                    <span>-->
-<!--                        BANK NAME: SANTANDER-->
-<!--                        <br/>-->
-<!--                        ADRESS: CAMINO DEL CONGOSTO S/N-->
-<!--                        <br/>-->
-<!--                        EURO ACCOUNT: ES74 0049 2883 5620 1405 2011-->
-<!--                        <br/>-->
-<!--                        BIC: BSCHESMM-->
-<!--                        <br/>-->
-<!--                    </span>-->
-<!--                </t>-->
-<!--            </xpath>-->
-        </template>
         <template id="onmi_external_layout_report_invoice_document_inherit"  inherit_id="account.report_invoice_document">
             <xpath expr="//p[@name='payment_communication']" position="after">
                 <p t-if="o.company_id.id == 5 and o.payment_reference" >EURO ACCOUNT: ES74 0049 2883 5620 1405 2011</p>
