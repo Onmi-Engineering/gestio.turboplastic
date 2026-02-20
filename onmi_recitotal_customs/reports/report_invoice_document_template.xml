@@ -10,7 +10,7 @@
 
 
         <template id="onmi_report_identification_document_document_inherit"  inherit_id="onmi_turbo_identification_document.onmi_report_identification_document_document">
-            <xpath expr="//table[3]/tbody/tr[@style='height:50px !important;']" position="replace">
+            <xpath expr="//table[3]//tr[@style='height:50px !important;']" position="replace">
               
               <tr>
 
