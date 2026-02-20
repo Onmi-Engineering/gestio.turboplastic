@@ -2,7 +2,7 @@
     'name': 'ONMI RECITOTAL CUSTOMS',
     'version': '18.0.0.1',
     'summary': 'Customizations for Recitotal',
-    'description': 'Customizations for Recitotal',
+    'description': 'Customizations for Recitotal.',
     'category':  'ONMI developments',
     'author': 'ONMI Engineering',
     'license': 'LGPL-3',
