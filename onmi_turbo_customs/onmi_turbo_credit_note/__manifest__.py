@@ -2,7 +2,7 @@
     'name': 'TURBO Export Invoice',
     'version': '18.0.0.2',
     'summary': 'Export invoice report for Turbo Plastic',
-    'description': 'Custom export invoice report with configurable header and footer',
+    'description': 'Custom export invoice report with configurable header and footer.',
     'category': 'ONMI developments',
     'author': 'ONMI Engineering',
     'license': 'LGPL-3',
