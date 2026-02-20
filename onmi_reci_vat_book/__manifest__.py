@@ -6,7 +6,7 @@
     'category':  'ONMI developments',
     'author': 'ONMI Engineering',
     'license': 'LGPL-3',
-    'depends': ['l10n_es_aeat'],
+    'depends': ['l10n_es_vat_book'],
     'data': [
         ],
     'installable': True,

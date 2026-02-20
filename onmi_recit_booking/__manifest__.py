@@ -6,8 +6,9 @@
     'category':  'ONMI developments',
     'author': 'ONMI Engineering',
     'license': 'LGPL-3',
-    'depends': ['l10n_es_aeat'],
+    'depends': ['base', 'account', 'account_edi'],
     'data': [
+        'views/account_move_view.xml'
         ],
     'installable': True,
     'application': True,
