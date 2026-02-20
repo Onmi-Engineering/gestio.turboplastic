@@ -1,7 +1,7 @@
 {
     'name': 'RECITOTAL DI improvement',
     'version': '18.0.0.1',
-    'summary': 'DI improvement',
+    'summary': 'DI improvement.',
     'description': 'DI improvement',
     'category':  'ONMI developments',
     'author': 'ONMI Engineering',
