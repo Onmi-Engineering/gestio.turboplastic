@@ -13,8 +13,8 @@ class StockPicking(models.Model):
     @api.depends('name')
     def _compute_num_identidication(self):
 
-        # nima = 00000
-        # year = 2023
+        nima = 00000
+        year = 2023
         numero_con_ceros = 1234567
         for rec in self:
             nombre = rec.name

@@ -33,6 +33,11 @@
             <field name="view_ids" eval="[(5, 0, 0),
                     (0, 0, {'view_mode': 'list', 'view_id': ref('carrier_partner_tree_view')}),
                     ]"/>
+            <!-- <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create a register
+                </p>
+            </field> -->
         </record>
 
         <menuitem
@@ -41,6 +46,7 @@
         name="Transportistas"
         action='action_partner_carrier_tree_view'
         sequence="60"
+       
         />
 
     </data>

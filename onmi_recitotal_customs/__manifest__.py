@@ -15,12 +15,7 @@
                 'onmi_turbo_identification_document',
                 'onmi_turbo_invoice_export_note',],
     'data': [
-        'views/account_move_view.xml',
-        'views/account_move_views.xml',
-        'views/stock_picking_views.xml',
-        'views/res_partner_views.xml',
-        'reports/report_invoice_document_template.xml',
-        'reports/report_export_invoice_document_template.xml',
+
         ],
     'installable': True,
     'application': True,
