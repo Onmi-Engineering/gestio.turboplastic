@@ -433,12 +433,7 @@
                             <span t-elif="o.company_id.company_details" t-field="o.company_id.company_details"/>
                         </div>
                         <div name="accounts" class="col-6 text-end">
-                            <div class="bank-details">
-                                <strong>BANK NAME:</strong> CAJAMAR CAJA RURAL<br/>
-                                <strong>ADDRESS:</strong> AV.MIGUEL DE CERVANTES 9,30009 MURCIA (ESPAÑA)<br/>
-                                <strong>EURO ACCOUNT:</strong> ES59 3058 0236 0827 2002 1618<br/>
-                                <strong>BIC:</strong>CCRIES2AXXX
-                            </div>
+                            <!-- Aquí aparece la información bancaria heredada de otro módulo -->
                         </div>
                     </div>
                 </div>

@@ -6,7 +6,8 @@
     'category': 'ONMI developments',
     'author': 'ONMI Engineering',
     'license': 'LGPL-3',
-    'depends': ['account_accountant', 'web'],
+    'depends': ['account_accountant',
+                'web'],
     'data': [
         'views/base_document_layout_views.xml',
         'report/report_turbo.xml',
