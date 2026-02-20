@@ -6,14 +6,15 @@
     'category':  'ONMI developments',
     'author': 'ONMI Engineering',
     'license': 'LGPL-3',
-    'depends': ['l10n_es_aeat',
+    'depends': [
                 'base',
                 'account',
                 'account_edi',
                 'contacts',
                 'stock',
                 'onmi_turbo_identification_document',
-                'onmi_turbo_invoice_export_note',],
+                'onmi_turbo_invoice_export_note',
+    ],
     'data': [
         'views/account_move_view.xml',
         'views/account_move_views.xml',
