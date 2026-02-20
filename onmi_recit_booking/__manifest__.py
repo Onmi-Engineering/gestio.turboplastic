@@ -8,7 +8,6 @@
     'license': 'LGPL-3',
     'depends': ['base', 'account', 'account_edi'],
     'data': [
-        'views/account_move_view.xml'
         ],
     'installable': True,
     'application': True,
