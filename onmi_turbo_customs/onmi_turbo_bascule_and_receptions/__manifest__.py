@@ -1,0 +1,28 @@
+{
+    'name': 'TURBO Bascule and receptions',
+    'version': '18.0.3.0',
+    'summary': 'Add in/out weighing related with transactions and sale/purchase order. ',
+    'description': 'Add in/out weighing related with transactions and sale/purchase order. ',
+    'category':  'ONMI develpments',
+    'author': 'ONMI Engineering',
+    'license': 'LGPL-3',
+    'depends': ['base',
+                'sale',
+                'stock',
+                'purchase'],
+    'data': [
+        'security/ir_rule.xml',
+        'views/license_plate_views.xml',
+        'views/trailer_views.xml',
+        'views/carriage_order_views.xml',
+        'views/sale_order_views.xml',
+        'views/purchase_order_views.xml',
+        'views/stock_picking_views.xml',
+        'views/weighing_views.xml',
+        'views/menuitems.xml',
+        'report/stock_picking_templates.xml',
+    ],
+    'installable': True,
+    'application': True,
+    'auto_install': False
+}

@@ -6,7 +6,7 @@
     'category':  'ONMI developments',
     'author': 'ONMI Engineering',
     'license': 'LGPL-3',
-    'depends': [],
+    'depends': ['base', 'account', 'account_edi'],
     'data': [
         ],
     'installable': True,
