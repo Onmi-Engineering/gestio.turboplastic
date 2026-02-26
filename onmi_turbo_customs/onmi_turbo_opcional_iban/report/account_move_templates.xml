@@ -4,17 +4,9 @@
         <template id="onmi_report_invoice_exportacion_inherit_accounts"
                   inherit_id="onmi_turbo_credit_note.onmi_report_exportacion_content">
             <xpath expr="//div[@name='accounts']" position="inside">
-                <t t-if="o.show_export_cajamar">
-                    <br/>
-                    <span t-field="o.cajamar_export_text"/>
-                </t>
-                <t t-if="o.show_export_santander">
-                    <br/>
-                    <span t-field="o.santander_export_text"/>
-                </t>
-                <t t-if="o.show_four">
-                    <br/>
-                    <span t-field="o.four_iban"/>
+                <t t-if="o.selected_export_bank_id">
+                    <span t-field="o.selected_export_bank_id.display_text"
+                          style="white-space: pre-line;"/>
                 </t>
             </xpath>
         </template>

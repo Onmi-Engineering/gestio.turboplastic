@@ -5,18 +5,10 @@
             <xpath expr="//div[@class='o_footer_content border-top pt-2 text-center']" position="inside">
                 <t t-if="o">
                     <t t-if="o._table == 'account_move'">
-                        <ul t-if="o.show_first or o.show_second or o.show_third or o.show_santander" style="list-style:none;">
-                            <li t-if="o.show_first">
-                                <span t-field="o.first_iban" style="color: grey;"/>
-                            </li>
-                            <li t-if="o.show_second">
-                                <span t-field="o.second_iban" style="color: grey;"/>
-                            </li>
-                            <li t-if="o.show_third">
-                                <span t-field="o.third_iban" style="color: grey;"/>
-                            </li>
-                            <li t-if="o.show_santander">
-                                <span t-field="o.santander_iban" style="color: grey;"/>
+                         <ul t-if="o.selected_bank_id" style="list-style:none;">
+                            <li>
+                                <span t-field="o.selected_bank_id.display_text"
+                                      style="color: grey; white-space: pre-line;"/>
                             </li>
                         </ul>
                     </t>
