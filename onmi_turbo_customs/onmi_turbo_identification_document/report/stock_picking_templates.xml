@@ -638,9 +638,8 @@
                                             style="border:1px solid black; border-collapse: collapse; text-align: left;">
                                             <strong>First Transfer: Init date:</strong>
                                         </td>
-                                        <td colspan="1"
-                                            style="border:1px solid black; border-collapse: collapse; text-align: left;">
-
+                                        <td colspan="1" style="border:1px solid black; border-collapse: collapse; text-align: left;">
+                                            <span t-field="o.scheduled_date" t-options="{'widget': 'date'}"/>
                                         </td>
                                         <td colspan="1"
                                             style="border:1px solid black; border-collapse: collapse; text-align: left;">
