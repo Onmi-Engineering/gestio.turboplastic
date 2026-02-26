@@ -659,8 +659,74 @@
                                             <span t-field="o.license_plate_id.name"/>
                                         </td>
                                     </tr>
-                                    <t t-call="onmi_turbo_identification_document.onmi_tbody_company_for_identification_document"/>
                                     <tr>
+                                        <td colspan="1" style="border:1px solid black; border-collapse: collapse; text-align: left;">
+                                            <strong>Bussiness Name/ Name:</strong>
+                                        </td>
+                                        <td colspan="3" style="border:1px solid black; border-collapse: collapse; text-align: left;">&#160;</td>
+                                        <td colspan="1" style="border:1px solid black; border-collapse: collapse; text-align: left;">
+                                            <strong>NIF:</strong>
+                                        </td>
+                                        <td colspan="1" style="border:1px solid black; border-collapse: collapse; text-align: left;">&#160;</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" style="border:1px solid black; border-collapse: collapse; text-align: left;">
+                                            <strong>NIMA:</strong>
+                                        </td>
+                                        <td colspan="3" style="border:1px solid black; border-collapse: collapse; text-align: left;">&#160;</td>
+                                        <td colspan="1" style="border:1px solid black; border-collapse: collapse; text-align: left;">
+                                            <strong>C.N.A.E.:</strong>
+                                        </td>
+                                        <td colspan="1" style="border:1px solid black; border-collapse: collapse; text-align: left;">&#160;</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" style="border:1px solid black; border-collapse: collapse; text-align: left;">
+                                            <strong>Address:</strong>
+                                        </td>
+                                        <td colspan="3" style="border:1px solid black; border-collapse: collapse; text-align: left;">&#160;</td>
+                                        <td colspan="1" style="border:1px solid black; border-collapse: collapse; text-align: left;">
+                                            <strong>RPGR:</strong>
+                                        </td>
+                                        <td colspan="1" style="border:1px solid black; border-collapse: collapse; text-align: left;">&#160;</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1" style="border:1px solid black; border-collapse: collapse; text-align: left;">
+                                            <strong>City:</strong>
+                                        </td>
+                                        <td colspan="3" style="border:1px solid black; border-collapse: collapse; text-align: left;">&#160;</td>
+                                        <td colspan="1" style="border:1px solid black; border-collapse: collapse; text-align: left;">
+                                            <strong>ZIP:</strong>
+                                        </td>
+                                        <td colspan="1" style="border:1px solid black; border-collapse: collapse; text-align: left;">&#160;</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border:1px solid black; border-collapse: collapse; text-align: left;">
+                                            <strong>State:</strong>
+                                        </td>
+                                        <td style="border:1px solid black; border-collapse: collapse; text-align: left;">&#160;</td>
+                                        <td style="border:1px solid black; border-collapse: collapse; text-align: left;">
+                                            <strong>State 2:</strong>
+                                        </td>
+                                        <td style="border:1px solid black; border-collapse: collapse; text-align: left;">&#160;</td>
+                                        <td style="border:1px solid black; border-collapse: collapse; text-align: left;">
+                                            <strong>Country:</strong>
+                                        </td>
+                                        <td style="border:1px solid black; border-collapse: collapse; text-align: left;">&#160;</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border:1px solid black; border-collapse: collapse; text-align: left;">
+                                            <strong>Telephone:</strong>
+                                        </td>
+                                        <td style="border:1px solid black; border-collapse: collapse; text-align: left;">&#160;</td>
+                                        <td style="border:1px solid black; border-collapse: collapse; text-align: left;">
+                                            <strong>Mobile:</strong>
+                                        </td>
+                                        <td style="border:1px solid black; border-collapse: collapse; text-align: left;">&#160;</td>
+                                        <td style="border:1px solid black; border-collapse: collapse; text-align: left;">
+                                            <strong>E-mail:</strong>
+                                        </td>
+                                        <td style="border:1px solid black; border-collapse: collapse; text-align: left;">&#160;</td>
+                                    </tr>                                    <tr>
                                         <td style="border:1px solid black; border-collapse: collapse; text-align: left;">
                                             <strong>User:</strong>
                                         </td>
