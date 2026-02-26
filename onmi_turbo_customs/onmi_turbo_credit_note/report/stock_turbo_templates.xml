@@ -385,6 +385,34 @@
                                         </t>
                                     </td>
                                 </tr>
+                                <!-- Total en divisa secundaria -->
+                                <t t-set="eur_currency" t-value="o.env['res.currency'].search([('name', '=', 'EUR')], limit=1)"/>
+                                <t t-set="usd_currency" t-value="o.env['res.currency'].search([('name', '=', 'USD')], limit=1)"/>
+                                <t t-if="o.currency_id.name == 'EUR' and usd_currency">
+                                    <t t-set="converted" t-value="o.currency_id._convert(
+                                        o.amount_total, usd_currency, o.company_id,
+                                        o.invoice_date or o.date
+                                    )"/>
+                                    <tr>
+                                        <td><strong>Total (USD)</strong></td>
+                                        <td class="text-end">
+                                            <span t-esc="usd_currency.format(converted)"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                                <t t-elif="o.currency_id.name == 'USD' and eur_currency">
+                                    <t t-set="converted" t-value="o.currency_id._convert(
+                                        o.amount_total, eur_currency, o.company_id,
+                                        o.invoice_date or o.date
+                                    )"/>
+                                    <tr>
+                                        <td><strong>Total (EUR)</strong></td>
+                                        <td class="text-end">
+                                            <span t-esc="eur_currency.format(converted)"/>
+                                        </td>
+                                    </tr>
+                                </t>
+
                             </table>
                         </div>
                     </div>
