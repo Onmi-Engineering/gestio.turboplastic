@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="onmi_view_res_partner_bank_form_inherit" model="ir.ui.view">
+            <field name="name">onmi.view.res.partner.bank.form.inherit</field>
+            <field name="model">res.partner.bank</field>
+            <field name="inherit_id" ref="base.view_partner_bank_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="account_type"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

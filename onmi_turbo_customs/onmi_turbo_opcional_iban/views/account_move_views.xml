@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="onmi_view_account_move_iban_inherit" model="ir.ui.view">
+            <field name="name">onmi.view.account.move.iban.inherit</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='other_info']" position="after">
+                    <page id="optional_iban" string="Selección de cuentas" name="iban">
+                        <group string="Cuenta bancaria para factura">
+                            <field name="selected_bank_id"
+                                   options="{'no_create': True}"
+                                   widget="many2one"/>
+                        </group>
+                        <group string="Cuenta bancaria para factura exportación">
+                            <field name="selected_export_bank_id"
+                                   options="{'no_create': True}"
+                                   widget="many2one"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
