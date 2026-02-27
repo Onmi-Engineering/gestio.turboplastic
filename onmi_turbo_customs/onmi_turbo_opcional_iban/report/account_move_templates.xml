@@ -4,9 +4,10 @@
         <template id="onmi_report_invoice_exportacion_inherit_accounts"
                   inherit_id="onmi_turbo_credit_note.onmi_report_exportacion_content">
             <xpath expr="//div[@name='accounts']" position="inside">
-                <t t-if="o.selected_export_bank_id">
-                    <span t-field="o.selected_export_bank_id.display_text"
-                          style="white-space: pre-line;"/>
+                <t t-if="o.selected_export_bank_ids">
+                    <t t-foreach="o.selected_export_bank_ids" t-as="bank">
+                        <span t-esc="bank.display_text" t-attf-style="white-space: pre-line; display: block; #{'' if bank_first else 'margin-top: 12px;'}"/>
+                    </t>
                 </t>
             </xpath>
         </template>

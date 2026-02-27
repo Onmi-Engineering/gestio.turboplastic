@@ -9,14 +9,14 @@
                 <xpath expr="//page[@name='other_info']" position="after">
                     <page id="optional_iban" string="Selección de cuentas" name="iban">
                         <group string="Cuenta bancaria para factura">
-                            <field name="selected_bank_id"
+                            <field name="selected_bank_ids"
                                    options="{'no_create': True}"
-                                   widget="many2one"/>
+                                   widget="many2many_tags"/>
                         </group>
                         <group string="Cuenta bancaria para factura exportación">
-                            <field name="selected_export_bank_id"
+                            <field name="selected_export_bank_ids"
                                    options="{'no_create': True}"
-                                   widget="many2one"/>
+                                   widget="many2many_tags"/>
                         </group>
                     </page>
                 </xpath>

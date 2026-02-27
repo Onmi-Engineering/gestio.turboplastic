@@ -5,11 +5,12 @@
             <xpath expr="//div[@class='o_footer_content border-top pt-2 text-center']" position="inside">
                 <t t-if="o">
                     <t t-if="o._table == 'account_move'">
-                         <ul t-if="o.selected_bank_id" style="list-style:none;">
-                            <li>
-                                <span t-field="o.selected_bank_id.display_text"
-                                      style="color: grey; white-space: pre-line;"/>
-                            </li>
+                         <ul t-if="o.selected_bank_ids" style="list-style:none;">
+                             <t t-foreach="o.selected_bank_ids" t-as="bank">
+                                <li>
+                                    <span t-esc="bank.display_text" t-attf-style="white-space: pre-line; display: block; #{'' if bank_first else 'margin-top: 12px;'}"/>
+                                </li>
+                             </t>
                         </ul>
                     </t>
                     <t t-else="">
