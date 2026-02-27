@@ -26,10 +26,8 @@ class ResPartnerBank(models.Model):
                 lines.append(f"EURO ACCOUNT: {rec.acc_number}")
             if rec.bank_bic:
                 lines.append(f"BIC: {rec.bank_bic}")
-            if rec.partner_id.street:
-                lines.append(f"ADDRESS: {rec.partner_id.street}")
-            if rec.partner_id.city:
-                lines.append(f"{rec.partner_id.city}")
-            if rec.partner_id.country_id.name:
-                lines.append(f"{rec.partner_id.country_id.name}")
+            if rec.bank_id.street:
+                lines.append(f"ADDRESS: {rec.partner_id.street}, {rec.partner_id.street2 or ''}, {rec.partner_id.zip or ''}")
+            if rec.bank_id.city and rec.bank_id.country.name:
+                lines.append(f"{rec.partner_id.city}, {rec.partner_id.country_id.name}")
             rec.display_text = '\n'.join(lines)
