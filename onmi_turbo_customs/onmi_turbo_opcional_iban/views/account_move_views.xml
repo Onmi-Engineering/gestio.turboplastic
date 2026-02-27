@@ -12,17 +12,11 @@
                             <field name="selected_bank_id"
                                    options="{'no_create': True}"
                                    widget="many2one"/>
-                            <field name="selected_bank_display"
-                                   readonly="1"
-                                   style="white-space: pre-line;"/>
                         </group>
                         <group string="Cuenta bancaria para factura exportación">
                             <field name="selected_export_bank_id"
                                    options="{'no_create': True}"
                                    widget="many2one"/>
-                            <field name="selected_export_bank_display"
-                                   readonly="1"
-                                   style="white-space: pre-line;"/>
                         </group>
                     </page>
                 </xpath>

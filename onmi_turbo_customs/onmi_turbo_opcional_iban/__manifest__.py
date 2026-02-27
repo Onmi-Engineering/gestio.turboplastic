@@ -10,7 +10,8 @@
                 'stock',
                 'onmi_turbo_credit_note',],
     'data': [
-        # 'views/account_move_views.xml',
+        'views/account_move_views.xml',
+        'views/res_partner_bank_views.xml',
 
         'report/external_layout_striped_template.xml',
         'report/account_move_templates.xml',
