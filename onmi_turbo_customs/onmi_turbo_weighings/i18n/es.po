@@ -381,7 +381,7 @@ msgstr "Transportes asociados a este pedido"
 
 #. module: onmi_turbo_weighings
 #: model_terms:ir.ui.view,arch_db:onmi_turbo_weighings.onmi_stock_picking_form_inherit_add_weighings
-msgid " Weighings"
+msgid "Weighings"
 msgstr " Pesajes"
 
 #. module: onmi_turbo_weighings
