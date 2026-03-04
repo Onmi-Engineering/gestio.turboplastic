@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="weighing_tree_view" model="ir.ui.view">
+            <field name="name">weighing.tree.view</field>
+            <field name="model">weighing</field>
+            <field name="arch" type="xml">
+                <list string="Weighings" create="0">
+                    <field name="contact"/>
+                    <field name="product_id"/>
+                    <field name="sale_id"/>
+                    <field name="purchase_id"/>
+                    <field name="first_weight"/>
+                    <field name="second_weight"/>
+                    <field name="final_weight"/>
+                    <field name="type"/>
+                    <field name="state" readonly="1" widget="badge"
+                           decoration-success="state == 'confirmed'"
+                           decoration-info="state == 'new'" decoration-danger="state == 'on_weighing'"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="weighing_form_view" model="ir.ui.view">
+            <field name="name">weighing.form.view</field>
+            <field name="model">weighing</field>
+            <field name="arch" type="xml">
+                <form string="Weighings">
+                    <header>
+                        <field name="state" widget="statusbar" readonly="1"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="contact"/>
+                                <field name="product_id"/>
+                                <field name="type"/>
+                            </group>
+                            <group>
+                                <field name="first_weight"/>
+                                <field name="second_weight"/>
+                                <field name="final_weight"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="trailer_id"/>
+                                <field name="license_plate_id"/>
+                            </group>
+                            <group>
+                                <field name="sale_id"/>
+                                <field name="purchase_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="report_weighing_tree_view" model="ir.ui.view">
+            <field name="name">weighing.tree</field>
+            <field name="model">weighing</field>
+            <field name="arch" type="xml">
+                <list string="Weighings" create="0">
+                    <field name="picking_id"/>
+                    <field name="license_plate_id"/>
+                    <field name="trailer_id"/>
+                    <field name="date_done_picking"/>
+                    <field name="type"/>
+                    <field name="final_weight"/>
+                    <field name="waste"/>
+                    <field name="partner_picking" string="Partner"/>
+                    <field name="product_id"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="report_weighing_pivot_view" model="ir.ui.view">
+            <field name="name">weighing.pivot</field>
+            <field name="model">weighing</field>
+            <field name="arch" type="xml">
+                <pivot string="Weighings" display_quantity="0" sample="0">
+                    <field name="partner_picking" type="row"/>
+                    <field name="final_weight_calculate" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="report_weighing_search_view" model="ir.ui.view">
+            <field name="name">report.weighing.search.view</field>
+            <field name="model">weighing</field>
+            <field name="arch" type="xml">
+                <search string="Search Weighing">
+                    <field name="picking_id" string="Picking"
+                           filter_domain="[('picking_id.name', 'ilike', self)]"/>
+                    <field name="product_id" string="Product"
+                           filter_domain="['|','|',('product_id', 'ilike', self),('product_id.name', 'ilike', self), ('product_id', 'ilike', self)]"/>
+                    <field name="partner_picking" string="Partner"
+                           filter_domain="[('partner_picking', 'ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="onmi_view_sale_order_form_inherit_weighing_view" model="ir.ui.view">
+            <field name="name">onmi.sale.order.form.inherit.wehhing.view</field>
+            <field name="model">weighing</field>
+            <field name="inherit_id" ref="onmi_turbo_weighings.report_weighing_tree_view"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//list/field[@name='product_id']" position="after">
+                    <field name="description"/>
+                </xpath>
+
+            </field>
+        </record>
+
+        <record id="weighing_act_window" model="ir.actions.act_window">
+            <field name="name">Weighings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">weighing</field>
+            <field name="view_mode">list,pivot</field>
+            <field name="domain">[('state', '=', 'confirmed'), ('company_id','=', allowed_company_ids[0])]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="onmi_turbo_weighings.report_weighing_search_view"/>
+            <field name="view_ids"
+                   eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'list', 'view_id': ref('report_weighing_tree_view')}),
+                          (0, 0, {'view_mode': 'pivot', 'view_id': ref('report_weighing_pivot_view')})]"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    This is a view like a report for records to review.
+                    You don't have registers with this conditions.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

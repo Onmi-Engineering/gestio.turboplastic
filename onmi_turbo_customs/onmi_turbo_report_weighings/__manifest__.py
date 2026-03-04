@@ -6,9 +6,8 @@
     'category':  'ONMI developments',
     'author': 'ONMI Engineering',
     'license': 'LGPL-3',
-    'depends': ['onmi_turbo_bascule_and_receptions'],
+    'depends': [],
     'data': [
-        'views/weighing_views.xml',
     ],
     'installable': True,
     'application': True,

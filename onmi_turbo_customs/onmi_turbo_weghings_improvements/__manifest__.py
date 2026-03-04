@@ -6,11 +6,9 @@
     'category':  'ONMI developments',
     'author': 'ONMI Engineering',
     'license': 'LGPL-3',
-    'depends': ['stock', 'base', 'sale', 'purchase', 'onmi_turbo_bascule_and_receptions'],
+    'depends': [],
     'data': [
-    'report/stock_picking_templates.xml',
-    'views/stock_picking_views.xml',
-    'views/weighing_views.xml'
+
     ],
     'installable': True,
     'application': True,

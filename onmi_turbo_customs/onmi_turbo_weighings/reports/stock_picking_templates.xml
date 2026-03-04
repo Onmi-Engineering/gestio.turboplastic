@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="onmi_report_stock_picking_inherit" inherit_id="stock.report_picking">
+            <xpath expr="//div[@name='div_sched_date']" position="after">
+                <div class="col-auto" name="div_license_plate">
+                    <strong>License plate:</strong>
+                    <p t-field="o.license_plate_id.name"/>
+                </div>
+                <div class="col-auto" name="div_trailer">
+                    <strong>Trailer:</strong>
+                    <p t-field="o.trailer_id.name"/>
+                </div>
+            </xpath>
+        </template>
+
+        <template id="onmi_report_delivery_document_inherit"
+                  inherit_id="stock.report_delivery_document">
+
+            <xpath expr="//div[@name='div_sched_date']" position="after">
+                <div class="col-auto" name="div_license_plate">
+                    <strong>License plate:</strong>
+                    <p t-field="o.license_plate_id.name"/>
+                </div>
+                <div class="col-auto" name="div_trailer">
+                    <strong>Trailer:</strong>
+                    <p t-field="o.trailer_id.name"/>
+                </div>
+            </xpath>
+
+            <xpath expr="//table[@name='stock_move_table']/thead/tr/th[@name='th_sm_ordered']" position="after">
+                <th name="th_sm_waste">
+                    <strong>Waste</strong>
+                </th>
+            </xpath>
+
+            <xpath expr="//table[@name='stock_move_table']/tbody/tr/td[2]" position="after">
+                <td>
+                    <span t-field="move.waste_qty"/>
+                    <span t-field="move.product_uom"/>
+                </td>
+            </xpath>
+
+            <xpath expr="//th[@name='th_sml_qty_ordered']" position="after">
+                <th name="th_sml_waste">
+                    <strong>Waste</strong>
+                </th>
+            </xpath>
+
+            <xpath expr="//table[@name='stock_move_line_table']" position="after">
+                <table class="table table-sm mt48" style="width:50%;margin-left: 50%;">
+                    <tr width="50%">
+                        <th>
+                            <strong>Total Ordered</strong>
+                        </th>
+                        <th>
+                            <strong>Total wasted</strong>
+                        </th>
+                        <th>
+                            <strong>Total Delivered</strong>
+                        </th>
+                    </tr>
+                    <tr width="50%">
+                        <td style="text-align: center;">
+                            <span t-field="o.total_ordered"/> kg
+                        </td>
+                        <td style="text-align: center;">
+                            <span t-field="o.total_wasted"/> kg
+                        </td>
+                        <td style="text-align: center;">
+                            <span t-field="o.total_delivered"/> kg
+                        </td>
+                    </tr>
+                </table>
+            </xpath>
+
+        </template>
+
+        <template id="onmi_report_delivery_document_inherit_add_weighings_lines"
+                  inherit_id="stock.report_delivery_document">
+
+            <xpath expr="//table[@name='stock_move_line_table']/thead/tr/th[@name='th_sml_qty_ordered']"
+                   position="before">
+                <th t-if="o.weighing_ids" name="th_sml_1_weight">
+                    <strong>First Weight</strong>
+                </th>
+                <th t-if="o.weighing_ids" name="th_sml_2_weight">
+                    <strong>Second Weight</strong>
+                </th>
+            </xpath>
+
+            <xpath expr="//table[@name='stock_move_table']/thead/tr/th[@name='th_sm_ordered']" position="before">
+                <th t-if="o.weighing_ids" name="th_sm_1_weight">
+                    <strong>First Weight</strong>
+                </th>
+                <th t-if="o.weighing_ids" name="th_sm_2_weight">
+                    <strong>Second Weight</strong>
+                </th>
+            </xpath>
+
+            <xpath expr="//table[@name='stock_move_table']/tbody/tr/td" position="after">
+                <td t-if="o.weighing_ids">
+                    <span t-field="move.weighing_id.first_weight"/>
+                    <span>kg</span>
+                </td>
+                <td t-if="o.weighing_ids">
+                    <span t-field="move.weighing_id.second_weight"/>
+                    <span>kg</span>
+                </td>
+            </xpath>
+
+        </template>
+
+        <template id="onmi_stock_report_delivery_has_serial_move_line_inherit_weighings_weigths"
+                  inherit_id="stock.stock_report_delivery_has_serial_move_line">
+
+            <xpath expr="//td[@name='move_line_lot_quantity']" position="before">
+                <td t-if="o.weighing_ids">
+                    <span t-field="move_line.move_id.weighing_id.first_weight"/>
+                    <span>kg</span>
+                </td>
+                <td t-if="o.weighing_ids">
+                    <span t-field="move_line.move_id.weighing_id.second_weight"/>
+                    <span>kg</span>
+                </td>
+            </xpath>
+
+        </template>
+
+        <template id="onmi_stock_report_delivery_aggregated_move_lines_inherit_waste"
+                  inherit_id="stock.stock_report_delivery_aggregated_move_lines">
+
+            <xpath expr="//td[@name='move_line_aggregated_qty_ordered']" position="before">
+                <td t-if="o.weighing_ids">
+                    <span t-esc="aggregated_lines[line]['first_weight']"/>
+                    <span>kg</span>
+                </td>
+                <td t-if="o.weighing_ids">
+                    <span t-esc="aggregated_lines[line]['second_weight']"/>
+                    <span>kg</span>
+                </td>
+            </xpath>
+
+        </template>
+
+        <template id="onmi_report_delivery_document_inherit_tracking"
+                  inherit_id="onmi_turbo_weighings.onmi_report_delivery_document_inherit">
+
+            <xpath expr="//table[@class='table table-borderless mt48']/thead/tr/th[1]" position="after">
+                <t t-set="code" t-value="o.weighing_ids" />
+                <t t-foreach="code" t-as="move">
+                    <th t-if="move.code_led" name="th_sm_codeled1">
+                        <strong>Code L.E.R</strong>
+                    </th>
+                </t>
+            </xpath>
+
+            <xpath expr="//table[@name='stock_move_table']/thead/tr/th[1]" position="after">
+                <t t-set="code" t-value="o.weighing_ids" />
+                <t t-foreach="code" t-as="move">
+                    <th t-if="move.code_led" name="th_sm_codeled2">
+                        <strong>Code L.E.R</strong>
+                    </th>
+               </t>
+            </xpath>
+
+            <xpath expr="//table[@name='stock_move_table']/tbody/tr/td" position="after">
+                <td t-if="move.weighing_id.code_led"  class="text-center" name="th_sm_codeled5">
+                    <span t-field="move.weighing_id.code_led" />
+                </td>
+            </xpath>
+
+            <xpath expr="//div[@name='div_sched_date']" position="before">
+                <div t-if="o.weighing_ids" class="col-auto" name="div_date_planned">
+                    <strong>Date weigh-in:</strong>
+                    <p t-if="o.date_planned" t-field="o.date_planned" />
+                </div>
+            </xpath>
+
+        </template>
+
+        <template id="onmi_report_delivery_aggregated_document_inherit_code_led"
+                  inherit_id="stock.stock_report_delivery_aggregated_move_lines">
+            <xpath expr="//td[1]" position="after">
+                <t t-set="code" t-value="o.weighing_ids" />
+                <t t-foreach="code" t-as="move">
+                    <td t-if="move.code_led" class="text-center" name="move_line_aggregated_led_code">
+                        <span t-esc="aggregated_lines[line]['code_led']" />
+                        <br></br>
+                    </td>
+                </t>
+            </xpath>
+
+        </template>
+
+    </data>
+</odoo>
