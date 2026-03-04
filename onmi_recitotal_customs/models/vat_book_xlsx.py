@@ -42,10 +42,7 @@ class CustomVatNumberXlsx(models.AbstractModel):
                     with_total = False
                     row += 1
 
-
-    def fill_issued_row_data(
-            self, sheet, row, line, tax_line, with_total, draft_export
-    ):
+    def fill_issued_row_data(self, sheet, row, line, tax_line, with_total, draft_export):
 
         country_code, identifier_type, vat_number = (
                 line.partner_id and line.partner_id._parse_aeat_vat_info() or ("ES", "", "")

@@ -6,7 +6,7 @@
     'category':  'ONMI developments',
     'author': 'ONMI Engineering',
     'license': 'LGPL-3',
-    'depends': ['base', 'onmi_turbo_identification_document', 'stock'],
+    'depends': [],
     'data': [
         ],
     'installable': True,

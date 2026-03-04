@@ -6,7 +6,7 @@
     'category':  'ONMI developments',
     'author': 'ONMI Engineering',
     'license': 'LGPL-3',
-    'depends': ['base', 'account', 'onmi_turbo_invoice_export_note'],
+    'depends': [],
     'data': [
 
         ],
