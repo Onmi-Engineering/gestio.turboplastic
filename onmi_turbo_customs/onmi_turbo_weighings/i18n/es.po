@@ -1,0 +1,405 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* onmi_turbo_weighings
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-01 00:00+0000\n"
+"PO-Revision-Date: 2025-01-01 00:00+0000\n"
+"Last-Translator: ONMI Engineering\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model,name:onmi_turbo_weighings.model_carriage_order
+msgid "Carriage Orders"
+msgstr "Órdenes de Transporte"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_carriage_order__name
+msgid "name"
+msgstr "Nombre"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_carriage_order__contact
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_carriage_order__partner_shipping_alt
+msgid "Alternative Delivery Address"
+msgstr "Dirección de Entrega Alternativa"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_carriage_order__weight
+msgid "Approximate weight"
+msgstr "Peso aproximado"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_carriage_order__weight_uom
+msgid "Unit of Measure"
+msgstr "Unidad de Medida"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_carriage_order__processed
+msgid "Not Processed/ Processed"
+msgstr "No Procesado / Procesado"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_carriage_order__origin
+msgid "Origin"
+msgstr "Origen"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_carriage_order__sale_order_id
+msgid "Sale Order #"
+msgstr "Pedido de Venta #"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_carriage_order__purchase_order_id
+msgid "Purchase Order #"
+msgstr "Pedido de Compra #"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_carriage_order__license_plate_id
+msgid "License Plate"
+msgstr "Matrícula"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_carriage_order__trailer_id
+msgid "Trailer"
+msgstr "Remolque"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_carriage_order__pick_up_date
+msgid "Pick Up Date"
+msgstr "Fecha de Recogida"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_carriage_order__delivery_date
+msgid "Delivery Date"
+msgstr "Fecha de Entrega"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_carriage_order__company_id
+msgid "Company"
+msgstr "Empresa"
+
+#. module: onmi_turbo_weighings
+#, python-format
+msgid "MISSING DATA TO FILL\nYou have to fill data of license plate and trailer to processed.\nPlease, check if it is occurring."
+msgstr "FALTAN DATOS POR RELLENAR\nDebes rellenar los campos de matrícula y remolque para procesar.\nPor favor, comprueba si está ocurriendo."
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_sale_order__carriage_ids
+msgid "Carriages associated to this manufacturing order"
+msgstr "Transportes asociados a este pedido"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_sale_order__carriage_count
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_purchase_order__carriage_count
+msgid "Carriage Orders"
+msgstr "Órdenes de Transporte"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_sale_order__license_plate_id
+msgid "Matrícula"
+msgstr "Matrícula"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_sale_order__trailer_id
+msgid "Remolque"
+msgstr "Remolque"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_sale_order__upload_date
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_stock_picking__upload_date
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_weighing__upload_date
+msgid "Fecha carga"
+msgstr "Fecha de Carga"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_stock_picking__date_planned
+msgid "Date final weight"
+msgstr "Fecha peso final"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_stock_picking__weighing_ids
+msgid "Weighings"
+msgstr "Pesajes"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_stock_picking__confirmed_weighings
+msgid "Confirmed Weighing"
+msgstr "Pesaje Confirmado"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_stock_picking__active_reconfirm_new_weighings
+msgid "Active new weighings"
+msgstr "Activar nuevos pesajes"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_stock_picking__text_warning
+msgid "Text Warning"
+msgstr "Aviso"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_stock_picking__weighings_is_required
+msgid "Weighings is required"
+msgstr "Pesajes requeridos"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_stock_picking__total_ordered
+msgid "Total ordered"
+msgstr "Total pedido"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_stock_picking__total_wasted
+msgid "Total wasted"
+msgstr "Total merma"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_stock_picking__total_delivered
+msgid "Total delivered"
+msgstr "Total entregado"
+
+#. module: onmi_turbo_weighings
+#, python-format
+msgid "CARRIAGE ORDER NOT PROCESSED\nCarriage order related to this picking is not processed. You will know that this is done if license plate and trailer take some value.\nContact logistic workers to ask  for this."
+msgstr "ORDEN DE TRANSPORTE NO PROCESADA\nLa orden de transporte relacionada con este albarán no está procesada. Sabrás que está hecho cuando matrícula y remolque tengan algún valor.\nContacta con el equipo de logística para solicitarlo."
+
+#. module: onmi_turbo_weighings
+#, python-format
+msgid "Some Final Weight are <= 0.\nMaybe you forgot to put some weight on any lines of Weighing.\nPlease, check if it is occurring."
+msgstr "Algunos Pesos Finales son <= 0.\nQuizás olvidaste introducir el peso en alguna línea de pesaje.\nPor favor, comprueba si está ocurriendo."
+
+#. module: onmi_turbo_weighings
+#, python-format
+msgid "Some weighings are different from qty on picking.\nIf you want to take this weight you can press on the next button.\n"
+msgstr "Algunos pesajes son diferentes a las cantidades del albarán.\nSi deseas aceptar estos pesos, pulsa el siguiente botón.\n"
+
+#. module: onmi_turbo_weighings
+#, python-format
+msgid "PICKING DONE OR CANCEL\nYou can't reset weighings if picking is on state Done or cancel.\nPlease, check if it is occurring."
+msgstr "ALBARÁN HECHO O CANCELADO\nNo puedes resetear los pesajes si el albarán está en estado Hecho o Cancelado.\nPor favor, comprueba si está ocurriendo."
+
+#. module: onmi_turbo_weighings
+#, python-format
+msgid "WEIGHINGS NOT CONFIRMED\nThere are some weighing lines that are not confirmed.\nPlease, check if it is occurring."
+msgstr "PESAJES NO CONFIRMADOS\nHay líneas de pesaje que no están confirmadas.\nPor favor, comprueba si está ocurriendo."
+
+#. module: onmi_turbo_weighings
+#: model:ir.model,name:onmi_turbo_weighings.model_weighing
+msgid "Weighing records"
+msgstr "Registros de Pesaje"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_weighing__first_weight
+msgid "First Weight"
+msgstr "Primer Peso"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_weighing__second_weight
+msgid "Second Weight"
+msgstr "Segundo Peso"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_weighing__waste
+msgid "Waste"
+msgstr "Merma"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_weighing__final_weight
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_weighing__final_weight_calculate
+msgid "Final Weight"
+msgstr "Peso Final"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_weighing__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_weighing__license_plate_id
+msgid "License Plate"
+msgstr "Matrícula"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_weighing__trailer_id
+msgid "Trailer"
+msgstr "Remolque"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_weighing__contact
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_weighing__picking_id
+msgid "Picking"
+msgstr "Albarán"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_weighing__sale_id
+msgid "Sale Order"
+msgstr "Pedido de Venta"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_weighing__purchase_id
+msgid "Purchase Order"
+msgstr "Pedido de Compra"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_weighing__move_line_id
+msgid "Move Line"
+msgstr "Línea de Movimiento"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_weighing__code_led
+msgid "L.E.R"
+msgstr "L.E.R."
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_weighing__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_weighing__partner_picking
+msgid "Partner"
+msgstr "Empresa/Contacto"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_weighing__date_done_picking
+msgid "Entry date"
+msgstr "Fecha de entrada"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_weighing__company_id
+msgid "Company"
+msgstr "Empresa"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_weighing__picking_state
+msgid "Picking State"
+msgstr "Estado del Albarán"
+
+#. module: onmi_turbo_weighings
+#, python-format
+msgid "First Weight can´t be upper than second one on Weighings from Sale Orders.\nPlease, check this value for the correct calculation.\n"
+msgstr "El Primer Peso no puede ser mayor que el Segundo en pesajes de Pedidos de Venta.\nPor favor, comprueba este valor para el cálculo correcto.\n"
+
+#. module: onmi_turbo_weighings
+#, python-format
+msgid "Second Weight can´t be upper than first one on Weighings from Purchase Orders.\nPlease, check these values for the correct calculation.\n"
+msgstr "El Segundo Peso no puede ser mayor que el Primero en pesajes de Pedidos de Compra.\nPor favor, comprueba estos valores para el cálculo correcto.\n"
+
+#. module: onmi_turbo_weighings
+#, python-format
+msgid "not defined"
+msgstr "no definido"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model,name:onmi_turbo_weighings.model_license_plate
+msgid "License Plate"
+msgstr "Matrícula"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_license_plate__name
+msgid "Identificator"
+msgstr "Identificador"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_license_plate__description
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_trailer__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_license_plate__weighing_count
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_trailer__weighing_count
+msgid "Weighing Count"
+msgstr "Nº de Pesajes"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_license_plate__weighing_ids
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_trailer__weighing_ids
+msgid "Weighings"
+msgstr "Pesajes"
+
+#. module: onmi_turbo_weighings
+#: model:ir.ui.message:onmi_turbo_weighings.constraint_license_plate_name_uniq
+msgid "You can not have two license plates with the same name!"
+msgstr "¡No puedes tener dos matrículas con el mismo nombre!"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model,name:onmi_turbo_weighings.model_trailer
+msgid "Trailer"
+msgstr "Remolque"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_trailer__name
+msgid "Identificator"
+msgstr "Identificador"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_trailer__license_plate_id
+msgid "License Plate"
+msgstr "Matrícula"
+
+#. module: onmi_turbo_weighings
+#: model:ir.ui.message:onmi_turbo_weighings.constraint_trailer_name_uniq
+msgid "You can not have two trailers with the same name!"
+msgstr "¡No puedes tener dos remolques con el mismo nombre!"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_stock_move__code_led
+msgid "L.E.R"
+msgstr "L.E.R."
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_stock_move__weighing_id
+msgid "Weighing"
+msgstr "Pesaje"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_stock_move__waste_qty
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_stock_move_line__waste_qty
+msgid "Waste qty"
+msgstr "Cantidad merma"
+
+#. module: onmi_turbo_weighings
+#: model:ir.model.fields,field_description:onmi_turbo_weighings.field_purchase_order__carriage_ids
+msgid "Carriages associated to this manufacturing order"
+msgstr "Transportes asociados a este pedido"
+
+#. module: onmi_turbo_weighings
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_weighings.onmi_stock_picking_form_inherit_add_weighings
+msgid " Weighings"
+msgstr " Pesajes"
+
+#. module: onmi_turbo_weighings
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_weighings.onmi_stock_picking_form_inherit_add_weighings
+msgid "Recalculate weighings"
+msgstr "Recalcular pesajes"
+
+#. module: onmi_turbo_weighings
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_weighings.onmi_stock_picking_form_inherit_add_weighings
+msgid "Reconfirm weighings"
+msgstr "Reconfirmar pesajes"
+
+#. module: onmi_turbo_weighings
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_weighings.onmi_stock_picking_form_inherit_add_weighings
+msgid "Confirm weighings"
+msgstr "Confirmar pesajes"
+
+#. module: onmi_turbo_weighings
+#: model_terms:ir.ui.view,arch_db:onmi_turbo_weighings.onmi_stock_picking_form_inherit_add_weighings
+msgid "Reset weighings"
+msgstr "Reiniciar pesajes"
