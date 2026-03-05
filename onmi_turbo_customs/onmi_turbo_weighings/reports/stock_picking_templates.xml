@@ -4,11 +4,11 @@
         <template id="onmi_report_stock_picking_inherit" inherit_id="stock.report_picking">
             <xpath expr="//div[@name='div_sched_date']" position="after">
                 <div class="col-auto" name="div_license_plate">
-                    <strong>License plate:</strong>
+                    <strong>Matrícula:</strong>
                     <p t-field="o.license_plate_id.name"/>
                 </div>
                 <div class="col-auto" name="div_trailer">
-                    <strong>Trailer:</strong>
+                    <strong>Remolque:</strong>
                     <p t-field="o.trailer_id.name"/>
                 </div>
             </xpath>
@@ -19,18 +19,18 @@
 
             <xpath expr="//div[@name='div_sched_date']" position="after">
                 <div class="col-auto" name="div_license_plate">
-                    <strong>License plate:</strong>
+                    <strong>Matrícula:</strong>
                     <p t-field="o.license_plate_id.name"/>
                 </div>
                 <div class="col-auto" name="div_trailer">
-                    <strong>Trailer:</strong>
+                    <strong>Remolque:</strong>
                     <p t-field="o.trailer_id.name"/>
                 </div>
             </xpath>
 
             <xpath expr="//table[@name='stock_move_table']/thead/tr/th[@name='th_sm_ordered']" position="after">
                 <th name="th_sm_waste">
-                    <strong>Waste</strong>
+                    <strong>Merma:</strong>
                 </th>
             </xpath>
 
@@ -43,7 +43,7 @@
 
             <xpath expr="//th[@name='th_sml_qty_ordered']" position="after">
                 <th name="th_sml_waste">
-                    <strong>Waste</strong>
+                    <strong>Merma:</strong>
                 </th>
             </xpath>
 
@@ -51,13 +51,13 @@
                 <table class="table table-sm mt48" style="width:50%;margin-left: 50%;">
                     <tr width="50%">
                         <th>
-                            <strong>Total Ordered</strong>
+                            <strong>Total Pedido:</strong>
                         </th>
                         <th>
-                            <strong>Total wasted</strong>
+                            <strong>Total Merma:</strong>
                         </th>
                         <th>
-                            <strong>Total Delivered</strong>
+                            <strong>Total Entregado:</strong>
                         </th>
                     </tr>
                     <tr width="50%">
@@ -82,19 +82,19 @@
             <xpath expr="//table[@name='stock_move_line_table']/thead/tr/th[@name='th_sml_qty_ordered']"
                    position="before">
                 <th t-if="o.weighing_ids" name="th_sml_1_weight">
-                    <strong>First Weight</strong>
+                    <strong>Primer pesaje:</strong>
                 </th>
                 <th t-if="o.weighing_ids" name="th_sml_2_weight">
-                    <strong>Second Weight</strong>
+                    <strong>Segundo pesaje:</strong>
                 </th>
             </xpath>
 
             <xpath expr="//table[@name='stock_move_table']/thead/tr/th[@name='th_sm_ordered']" position="before">
                 <th t-if="o.weighing_ids" name="th_sm_1_weight">
-                    <strong>First Weight</strong>
+                    <strong>Primer pesaje:</strong>
                 </th>
                 <th t-if="o.weighing_ids" name="th_sm_2_weight">
-                    <strong>Second Weight</strong>
+                    <strong>Segundo pesaje:</strong>
                 </th>
             </xpath>
 
@@ -150,7 +150,7 @@
                 <t t-set="code" t-value="o.weighing_ids" />
                 <t t-foreach="code" t-as="move">
                     <th t-if="move.code_led" name="th_sm_codeled1">
-                        <strong>Code L.E.R</strong>
+                        <strong>Código L.E.R</strong>
                     </th>
                 </t>
             </xpath>
@@ -159,7 +159,7 @@
                 <t t-set="code" t-value="o.weighing_ids" />
                 <t t-foreach="code" t-as="move">
                     <th t-if="move.code_led" name="th_sm_codeled2">
-                        <strong>Code L.E.R</strong>
+                        <strong>Código L.E.R</strong>
                     </th>
                </t>
             </xpath>
@@ -172,7 +172,7 @@
 
             <xpath expr="//div[@name='div_sched_date']" position="before">
                 <div t-if="o.weighing_ids" class="col-auto" name="div_date_planned">
-                    <strong>Date weigh-in:</strong>
+                    <strong>Fecha de pesaje:</strong>
                     <p t-if="o.date_planned" t-field="o.date_planned" />
                 </div>
             </xpath>
