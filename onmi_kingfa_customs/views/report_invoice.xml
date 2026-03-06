@@ -2,7 +2,7 @@
 <odoo>
     <data>
           <!-- Heredamos el QWeb de factura y sustituimos la descripción de la línea
-           para NO mostrar el código interno, sólo el nombre del producto -->
+           para NO mostrar el código interno, solo el nombre del producto -->
       <template id="report_invoice_hide_product_code"
                 inherit_id="account.report_invoice_document">
         <!-- 1) XPath principal: cuando la celda contiene un span con t-field="line.name" -->

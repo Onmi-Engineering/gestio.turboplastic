@@ -134,7 +134,7 @@ class StockPicking(models.Model):
 
     def action_confirm_weighings(self):
         """
-            Traspaso de Pesos finales a cantidades hechas de las operaciones y pasado a estado "Confirmado"
+            Traspaso de Pesos finales a cantidades hechas de las operaciones y pasar a estado "Confirmado"
         si pasa las validaciones.
 
             * Validaciones:
@@ -227,7 +227,7 @@ class StockPicking(models.Model):
 
     def action_reset_weighings(self):
         """
-            Retorna a estado "En Pesaje", para volver a calcular los pesos finales.
+            Retornar a estado "En Pesaje", para volver a calcular los pesos finales.
         :return:
         """
         if self.state == 'done':

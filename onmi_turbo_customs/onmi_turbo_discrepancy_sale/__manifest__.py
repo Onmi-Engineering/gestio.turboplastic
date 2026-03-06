@@ -6,9 +6,9 @@
     'category':  'ONMI developments',
     'author': 'ONMI Engineering',
     'license': 'LGPL-3',
-    'depends': ['base', 'onmi_turbo_discrepancy_stock'],
+    'depends': [],
     'data': [
-        'views/sale_order_views.xml'
+
         ],
     'installable': True,
     'application': True,

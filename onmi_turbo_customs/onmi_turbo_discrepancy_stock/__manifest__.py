@@ -6,7 +6,7 @@
     'category':  'ONMI develpments',
     'author': 'ONMI Engineering',
     'license': 'LGPL-3',
-    'depends': ['sale', 'purchase'],
+    'depends': [],
     'data': [
         'security/ir_rule.xml',
         # 'views/sale_order_views.xml', #Se elimina por peticion del cliente pero queda por si lo vuelven a solicitar
